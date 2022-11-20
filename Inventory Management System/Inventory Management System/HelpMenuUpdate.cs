@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Inventory_Management_System
 {
-    public partial class HelpMenu : Form
+    public partial class HelpMenuUpdate : Form
     {
-        public HelpMenu()
+        public HelpMenuUpdate()
         {
             InitializeComponent();
         }
-
-        private void HelpMenu_Load(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }
