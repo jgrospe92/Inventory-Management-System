@@ -38,10 +38,6 @@
             this.createHelpMenuLink = new System.Windows.Forms.LinkLabel();
             this.updateHelpMenuLink = new System.Windows.Forms.LinkLabel();
             this.navBarHelpMenuPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.userHelpMenuBtn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.logoutHelpMenuBtn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.reportHelpMenuBtn = new System.Windows.Forms.Button();
@@ -49,6 +45,10 @@
             this.helpMenuBtn = new System.Windows.Forms.Button();
             this.createHelpMenuBtn = new System.Windows.Forms.Button();
             this.notificationHelpBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.userHelpMenuBtn = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.logoutHelpMenuBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.navBarHelpMenuPanel.SuspendLayout();
@@ -69,7 +69,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(315, 114);
+            this.label1.Location = new System.Drawing.Point(333, 112);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(387, 35);
             this.label1.TabIndex = 18;
@@ -79,7 +79,7 @@
             // 
             this.welcomeHelpMenuLabel.AutoSize = true;
             this.welcomeHelpMenuLabel.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.welcomeHelpMenuLabel.Location = new System.Drawing.Point(315, 64);
+            this.welcomeHelpMenuLabel.Location = new System.Drawing.Point(333, 62);
             this.welcomeHelpMenuLabel.Name = "welcomeHelpMenuLabel";
             this.welcomeHelpMenuLabel.Size = new System.Drawing.Size(403, 35);
             this.welcomeHelpMenuLabel.TabIndex = 17;
@@ -160,50 +160,6 @@
             this.navBarHelpMenuPanel.Size = new System.Drawing.Size(127, 460);
             this.navBarHelpMenuPanel.TabIndex = 20;
             // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button1.Location = new System.Drawing.Point(25, 518);
-            this.button1.Margin = new System.Windows.Forms.Padding(1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(66, 43);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "User";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // userHelpMenuBtn
-            // 
-            this.userHelpMenuBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.userHelpMenuBtn.Location = new System.Drawing.Point(24, 694);
-            this.userHelpMenuBtn.Margin = new System.Windows.Forms.Padding(1);
-            this.userHelpMenuBtn.Name = "userHelpMenuBtn";
-            this.userHelpMenuBtn.Size = new System.Drawing.Size(66, 43);
-            this.userHelpMenuBtn.TabIndex = 12;
-            this.userHelpMenuBtn.Text = "User";
-            this.userHelpMenuBtn.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button2.Location = new System.Drawing.Point(25, 573);
-            this.button2.Margin = new System.Windows.Forms.Padding(1);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(66, 43);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Logout";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // logoutHelpMenuBtn
-            // 
-            this.logoutHelpMenuBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.logoutHelpMenuBtn.Location = new System.Drawing.Point(24, 749);
-            this.logoutHelpMenuBtn.Margin = new System.Windows.Forms.Padding(1);
-            this.logoutHelpMenuBtn.Name = "logoutHelpMenuBtn";
-            this.logoutHelpMenuBtn.Size = new System.Drawing.Size(66, 43);
-            this.logoutHelpMenuBtn.TabIndex = 11;
-            this.logoutHelpMenuBtn.Text = "Logout";
-            this.logoutHelpMenuBtn.UseVisualStyleBackColor = true;
-            // 
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -281,6 +237,50 @@
             this.notificationHelpBtn.TabIndex = 22;
             this.notificationHelpBtn.Text = "Alerts";
             this.notificationHelpBtn.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button1.Location = new System.Drawing.Point(25, 518);
+            this.button1.Margin = new System.Windows.Forms.Padding(1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(66, 43);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "User";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // userHelpMenuBtn
+            // 
+            this.userHelpMenuBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.userHelpMenuBtn.Location = new System.Drawing.Point(24, 694);
+            this.userHelpMenuBtn.Margin = new System.Windows.Forms.Padding(1);
+            this.userHelpMenuBtn.Name = "userHelpMenuBtn";
+            this.userHelpMenuBtn.Size = new System.Drawing.Size(66, 43);
+            this.userHelpMenuBtn.TabIndex = 12;
+            this.userHelpMenuBtn.Text = "User";
+            this.userHelpMenuBtn.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button2.Location = new System.Drawing.Point(25, 573);
+            this.button2.Margin = new System.Windows.Forms.Padding(1);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(66, 43);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "Logout";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // logoutHelpMenuBtn
+            // 
+            this.logoutHelpMenuBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.logoutHelpMenuBtn.Location = new System.Drawing.Point(24, 749);
+            this.logoutHelpMenuBtn.Margin = new System.Windows.Forms.Padding(1);
+            this.logoutHelpMenuBtn.Name = "logoutHelpMenuBtn";
+            this.logoutHelpMenuBtn.Size = new System.Drawing.Size(66, 43);
+            this.logoutHelpMenuBtn.TabIndex = 11;
+            this.logoutHelpMenuBtn.Text = "Logout";
+            this.logoutHelpMenuBtn.UseVisualStyleBackColor = true;
             // 
             // HelpMenu
             // 
