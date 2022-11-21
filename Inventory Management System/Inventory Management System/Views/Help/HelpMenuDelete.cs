@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Inventory_Management_System
+namespace Inventory_Management_System.Views.Help
 {
-    public partial class ProductDetails : Form
+    public partial class HelpMenuDelete : Form
     {
-        public ProductDetails()
+        public HelpMenuDelete()
         {
             InitializeComponent();
         }

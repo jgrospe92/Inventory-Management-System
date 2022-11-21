@@ -1,4 +1,4 @@
-﻿namespace Inventory_Management_System
+﻿namespace Inventory_Management_System.Views.Help
 {
     partial class HelpMenuLogin
     {

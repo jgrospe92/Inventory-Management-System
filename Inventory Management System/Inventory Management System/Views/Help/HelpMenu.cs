@@ -8,13 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Inventory_Management_System
+namespace Inventory_Management_System.Views.Help
 {
-    public partial class HelpMenuUpdate : Form
+    public partial class HelpMenu : Form
     {
-        public HelpMenuUpdate()
+        public HelpMenu()
         {
             InitializeComponent();
         }
+
+        private void HelpMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
