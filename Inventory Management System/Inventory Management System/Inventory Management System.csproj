@@ -28,8 +28,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="Controllers\" />
+    <Folder Include="Resources\Icons\" />
+    <Folder Include="Resources\Images\" />
     <Folder Include="Views\Help\" />
   </ItemGroup>
 
