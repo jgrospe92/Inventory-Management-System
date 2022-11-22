@@ -36,11 +36,19 @@
             this.helpBtn = new System.Windows.Forms.Button();
             this.userBtn = new System.Windows.Forms.Button();
             this.logoutBtn = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.usernameTxt = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.passwordTxt = new System.Windows.Forms.TextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.homeButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.createButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.notificationButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.statsButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.infoButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.accountButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutButton = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // homeBtn
@@ -113,14 +121,6 @@
             this.logoutBtn.Text = "Logout";
             this.logoutBtn.UseVisualStyleBackColor = true;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(-5, 0);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(2089, 135);
-            this.textBox1.TabIndex = 7;
-            // 
             // usernameTxt
             // 
             this.usernameTxt.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -157,16 +157,113 @@
             this.passwordTxt.Enter += new System.EventHandler(this.Password_Enter_Text);
             this.passwordTxt.Leave += new System.EventHandler(this.Password_Leave_Text);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.homeButton,
+            this.createButton,
+            this.notificationButton,
+            this.statsButton,
+            this.infoButton,
+            this.accountButton,
+            this.logoutButton});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(207, 1399);
+            this.menuStrip1.TabIndex = 13;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // homeButton
+            // 
+            this.homeButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.homeButton.ForeColor = System.Drawing.Color.Transparent;
+            this.homeButton.Image = ((System.Drawing.Image)(resources.GetObject("homeButton.Image")));
+            this.homeButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.homeButton.Name = "homeButton";
+            this.homeButton.Size = new System.Drawing.Size(192, 100);
+            this.homeButton.Text = "H";
+            this.homeButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // createButton
+            // 
+            this.createButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.createButton.ForeColor = System.Drawing.Color.Transparent;
+            this.createButton.Image = ((System.Drawing.Image)(resources.GetObject("createButton.Image")));
+            this.createButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.createButton.Name = "createButton";
+            this.createButton.Size = new System.Drawing.Size(192, 100);
+            this.createButton.Text = "C";
+            this.createButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // notificationButton
+            // 
+            this.notificationButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.notificationButton.ForeColor = System.Drawing.Color.Transparent;
+            this.notificationButton.Image = ((System.Drawing.Image)(resources.GetObject("notificationButton.Image")));
+            this.notificationButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.notificationButton.Name = "notificationButton";
+            this.notificationButton.Size = new System.Drawing.Size(192, 100);
+            this.notificationButton.Text = "N";
+            this.notificationButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // statsButton
+            // 
+            this.statsButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.statsButton.ForeColor = System.Drawing.Color.Transparent;
+            this.statsButton.Image = ((System.Drawing.Image)(resources.GetObject("statsButton.Image")));
+            this.statsButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.statsButton.Name = "statsButton";
+            this.statsButton.Size = new System.Drawing.Size(192, 100);
+            this.statsButton.Text = "S";
+            this.statsButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // infoButton
+            // 
+            this.infoButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.infoButton.ForeColor = System.Drawing.Color.Transparent;
+            this.infoButton.Image = ((System.Drawing.Image)(resources.GetObject("infoButton.Image")));
+            this.infoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.infoButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.infoButton.Name = "infoButton";
+            this.infoButton.Size = new System.Drawing.Size(192, 100);
+            this.infoButton.Text = "I";
+            // 
+            // accountButton
+            // 
+            this.accountButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.accountButton.ForeColor = System.Drawing.Color.Transparent;
+            this.accountButton.Image = ((System.Drawing.Image)(resources.GetObject("accountButton.Image")));
+            this.accountButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.accountButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.accountButton.Margin = new System.Windows.Forms.Padding(0, 127, 0, 0);
+            this.accountButton.Name = "accountButton";
+            this.accountButton.Size = new System.Drawing.Size(192, 100);
+            this.accountButton.Text = "A";
+            // 
+            // logoutButton
+            // 
+            this.logoutButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.logoutButton.ForeColor = System.Drawing.Color.Transparent;
+            this.logoutButton.Image = ((System.Drawing.Image)(resources.GetObject("logoutButton.Image")));
+            this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.logoutButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(192, 100);
+            this.logoutButton.Text = "O";
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(20F, 48F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(2084, 1399);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.passwordTxt);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.usernameTxt);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.logoutBtn);
             this.Controls.Add(this.userBtn);
             this.Controls.Add(this.helpBtn);
@@ -177,6 +274,8 @@
             this.Name = "Register";
             this.Text = "Register";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,9 +290,16 @@
         private Button helpBtn;
         private Button userBtn;
         private Button logoutBtn;
-        private TextBox textBox1;
         private TextBox usernameTxt;
         private PictureBox pictureBox1;
         private TextBox passwordTxt;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem homeButton;
+        private ToolStripMenuItem createButton;
+        private ToolStripMenuItem notificationButton;
+        private ToolStripMenuItem statsButton;
+        private ToolStripMenuItem infoButton;
+        private ToolStripMenuItem accountButton;
+        private ToolStripMenuItem logoutButton;
     }
 }
