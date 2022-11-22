@@ -29,61 +29,40 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HelpMenu));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.welcomeHelpMenuLabel = new System.Windows.Forms.Label();
+            this.helpMenuLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.loginHelpMenuLink = new System.Windows.Forms.LinkLabel();
             this.deleteHelpMenuLink = new System.Windows.Forms.LinkLabel();
             this.createHelpMenuLink = new System.Windows.Forms.LinkLabel();
             this.updateHelpMenuLink = new System.Windows.Forms.LinkLabel();
-            this.navBarHelpMenuPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.userHelpMenuBtn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.logoutHelpMenuBtn = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.reportHelpMenuBtn = new System.Windows.Forms.Button();
-            this.homeHelpMenuBtn = new System.Windows.Forms.Button();
-            this.helpMenuBtn = new System.Windows.Forms.Button();
-            this.createHelpMenuBtn = new System.Windows.Forms.Button();
-            this.notificationHelpBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.homeButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.createToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.notificationButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.notificationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statsButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.infoButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.accountButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.userToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
-            this.navBarHelpMenuPanel.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // helpMenuLabel
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(397, 176);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(239, 226);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(315, 114);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(387, 35);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Select a link for more information";
-            // 
-            // welcomeHelpMenuLabel
-            // 
-            this.welcomeHelpMenuLabel.AutoSize = true;
-            this.welcomeHelpMenuLabel.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.welcomeHelpMenuLabel.Location = new System.Drawing.Point(315, 64);
-            this.welcomeHelpMenuLabel.Name = "welcomeHelpMenuLabel";
-            this.welcomeHelpMenuLabel.Size = new System.Drawing.Size(403, 35);
-            this.welcomeHelpMenuLabel.TabIndex = 17;
-            this.welcomeHelpMenuLabel.Text = "Welcome to the Help Menu Page";
+            this.helpMenuLabel.AutoSize = true;
+            this.helpMenuLabel.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.helpMenuLabel.Location = new System.Drawing.Point(310, 86);
+            this.helpMenuLabel.Name = "helpMenuLabel";
+            this.helpMenuLabel.Size = new System.Drawing.Size(353, 30);
+            this.helpMenuLabel.TabIndex = 17;
+            this.helpMenuLabel.Text = "Welcome to the Help Menu Page";
             // 
             // panel1
             // 
@@ -92,9 +71,9 @@
             this.panel1.Controls.Add(this.deleteHelpMenuLink);
             this.panel1.Controls.Add(this.createHelpMenuLink);
             this.panel1.Controls.Add(this.updateHelpMenuLink);
-            this.panel1.Location = new System.Drawing.Point(122, -2);
+            this.panel1.Location = new System.Drawing.Point(143, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(145, 457);
+            this.panel1.Size = new System.Drawing.Size(141, 630);
             this.panel1.TabIndex = 21;
             // 
             // loginHelpMenuLink
@@ -107,6 +86,7 @@
             this.loginHelpMenuLink.TabIndex = 4;
             this.loginHelpMenuLink.TabStop = true;
             this.loginHelpMenuLink.Text = "Login";
+            this.loginHelpMenuLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.loginHelpMenuLink_LinkClicked);
             // 
             // deleteHelpMenuLink
             // 
@@ -118,6 +98,7 @@
             this.deleteHelpMenuLink.TabIndex = 7;
             this.deleteHelpMenuLink.TabStop = true;
             this.deleteHelpMenuLink.Text = "Delete";
+            this.deleteHelpMenuLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.deleteHelpMenuLink_LinkClicked);
             // 
             // createHelpMenuLink
             // 
@@ -129,6 +110,7 @@
             this.createHelpMenuLink.TabIndex = 5;
             this.createHelpMenuLink.TabStop = true;
             this.createHelpMenuLink.Text = "Create";
+            this.createHelpMenuLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.createHelpMenuLink_LinkClicked);
             // 
             // updateHelpMenuLink
             // 
@@ -140,190 +122,202 @@
             this.updateHelpMenuLink.TabIndex = 6;
             this.updateHelpMenuLink.TabStop = true;
             this.updateHelpMenuLink.Text = "Update";
+            this.updateHelpMenuLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.updateHelpMenuLink_LinkClicked);
             // 
-            // navBarHelpMenuPanel
+            // menuStrip1
             // 
-            this.navBarHelpMenuPanel.BackColor = System.Drawing.Color.Gainsboro;
-            this.navBarHelpMenuPanel.Controls.Add(this.button3);
-            this.navBarHelpMenuPanel.Controls.Add(this.button4);
-            this.navBarHelpMenuPanel.Controls.Add(this.reportHelpMenuBtn);
-            this.navBarHelpMenuPanel.Controls.Add(this.homeHelpMenuBtn);
-            this.navBarHelpMenuPanel.Controls.Add(this.helpMenuBtn);
-            this.navBarHelpMenuPanel.Controls.Add(this.createHelpMenuBtn);
-            this.navBarHelpMenuPanel.Controls.Add(this.notificationHelpBtn);
-            this.navBarHelpMenuPanel.Controls.Add(this.button1);
-            this.navBarHelpMenuPanel.Controls.Add(this.userHelpMenuBtn);
-            this.navBarHelpMenuPanel.Controls.Add(this.button2);
-            this.navBarHelpMenuPanel.Controls.Add(this.logoutHelpMenuBtn);
-            this.navBarHelpMenuPanel.Location = new System.Drawing.Point(-1, -2);
-            this.navBarHelpMenuPanel.Name = "navBarHelpMenuPanel";
-            this.navBarHelpMenuPanel.Size = new System.Drawing.Size(127, 460);
-            this.navBarHelpMenuPanel.TabIndex = 20;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.homeButton,
+            this.createButton,
+            this.notificationButton,
+            this.statsButton,
+            this.infoButton,
+            this.accountButton,
+            this.logoutButton});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(140, 630);
+            this.menuStrip1.TabIndex = 22;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // button1
+            // homeButton
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button1.Location = new System.Drawing.Point(25, 518);
-            this.button1.Margin = new System.Windows.Forms.Padding(1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(66, 43);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "User";
-            this.button1.UseVisualStyleBackColor = true;
+            this.homeButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.homeToolStripMenuItem});
+            this.homeButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.homeButton.ForeColor = System.Drawing.Color.Transparent;
+            this.homeButton.Image = ((System.Drawing.Image)(resources.GetObject("homeButton.Image")));
+            this.homeButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.homeButton.Name = "homeButton";
+            this.homeButton.Size = new System.Drawing.Size(125, 76);
+            this.homeButton.Text = "H";
+            this.homeButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // userHelpMenuBtn
+            // homeToolStripMenuItem
             // 
-            this.userHelpMenuBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.userHelpMenuBtn.Location = new System.Drawing.Point(24, 694);
-            this.userHelpMenuBtn.Margin = new System.Windows.Forms.Padding(1);
-            this.userHelpMenuBtn.Name = "userHelpMenuBtn";
-            this.userHelpMenuBtn.Size = new System.Drawing.Size(66, 43);
-            this.userHelpMenuBtn.TabIndex = 12;
-            this.userHelpMenuBtn.Text = "User";
-            this.userHelpMenuBtn.UseVisualStyleBackColor = true;
+            this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(191, 46);
+            this.homeToolStripMenuItem.Text = "Home";
             // 
-            // button2
+            // createButton
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button2.Location = new System.Drawing.Point(25, 573);
-            this.button2.Margin = new System.Windows.Forms.Padding(1);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(66, 43);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Logout";
-            this.button2.UseVisualStyleBackColor = true;
+            this.createButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.createToolStripMenuItem});
+            this.createButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.createButton.ForeColor = System.Drawing.Color.Transparent;
+            this.createButton.Image = ((System.Drawing.Image)(resources.GetObject("createButton.Image")));
+            this.createButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.createButton.Name = "createButton";
+            this.createButton.Size = new System.Drawing.Size(125, 78);
+            this.createButton.Text = "C";
+            this.createButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // logoutHelpMenuBtn
+            // createToolStripMenuItem
             // 
-            this.logoutHelpMenuBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.logoutHelpMenuBtn.Location = new System.Drawing.Point(24, 749);
-            this.logoutHelpMenuBtn.Margin = new System.Windows.Forms.Padding(1);
-            this.logoutHelpMenuBtn.Name = "logoutHelpMenuBtn";
-            this.logoutHelpMenuBtn.Size = new System.Drawing.Size(66, 43);
-            this.logoutHelpMenuBtn.TabIndex = 11;
-            this.logoutHelpMenuBtn.Text = "Logout";
-            this.logoutHelpMenuBtn.UseVisualStyleBackColor = true;
+            this.createToolStripMenuItem.Name = "createToolStripMenuItem";
+            this.createToolStripMenuItem.Size = new System.Drawing.Size(196, 46);
+            this.createToolStripMenuItem.Text = "Create";
             // 
-            // button3
+            // notificationButton
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button3.Location = new System.Drawing.Point(26, 337);
-            this.button3.Margin = new System.Windows.Forms.Padding(1);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(66, 43);
-            this.button3.TabIndex = 26;
-            this.button3.Text = "User";
-            this.button3.UseVisualStyleBackColor = true;
+            this.notificationButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.notificationToolStripMenuItem});
+            this.notificationButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.notificationButton.ForeColor = System.Drawing.Color.Transparent;
+            this.notificationButton.Image = ((System.Drawing.Image)(resources.GetObject("notificationButton.Image")));
+            this.notificationButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.notificationButton.Name = "notificationButton";
+            this.notificationButton.Size = new System.Drawing.Size(125, 64);
+            this.notificationButton.Text = "N";
+            this.notificationButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // button4
+            // notificationToolStripMenuItem
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button4.Location = new System.Drawing.Point(26, 392);
-            this.button4.Margin = new System.Windows.Forms.Padding(1);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(66, 43);
-            this.button4.TabIndex = 25;
-            this.button4.Text = "Logout";
-            this.button4.UseVisualStyleBackColor = true;
+            this.notificationToolStripMenuItem.Name = "notificationToolStripMenuItem";
+            this.notificationToolStripMenuItem.Size = new System.Drawing.Size(264, 46);
+            this.notificationToolStripMenuItem.Text = "Notification";
             // 
-            // reportHelpMenuBtn
+            // statsButton
             // 
-            this.reportHelpMenuBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.reportHelpMenuBtn.Location = new System.Drawing.Point(26, 191);
-            this.reportHelpMenuBtn.Margin = new System.Windows.Forms.Padding(1);
-            this.reportHelpMenuBtn.Name = "reportHelpMenuBtn";
-            this.reportHelpMenuBtn.Size = new System.Drawing.Size(66, 43);
-            this.reportHelpMenuBtn.TabIndex = 24;
-            this.reportHelpMenuBtn.Text = "Report";
-            this.reportHelpMenuBtn.UseVisualStyleBackColor = true;
+            this.statsButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reportToolStripMenuItem});
+            this.statsButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.statsButton.ForeColor = System.Drawing.Color.Transparent;
+            this.statsButton.Image = ((System.Drawing.Image)(resources.GetObject("statsButton.Image")));
+            this.statsButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.statsButton.Name = "statsButton";
+            this.statsButton.Size = new System.Drawing.Size(125, 78);
+            this.statsButton.Text = "S";
+            this.statsButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // homeHelpMenuBtn
+            // reportToolStripMenuItem
             // 
-            this.homeHelpMenuBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.homeHelpMenuBtn.Location = new System.Drawing.Point(26, 26);
-            this.homeHelpMenuBtn.Margin = new System.Windows.Forms.Padding(1);
-            this.homeHelpMenuBtn.Name = "homeHelpMenuBtn";
-            this.homeHelpMenuBtn.Size = new System.Drawing.Size(66, 43);
-            this.homeHelpMenuBtn.TabIndex = 20;
-            this.homeHelpMenuBtn.Text = "Home";
-            this.homeHelpMenuBtn.UseVisualStyleBackColor = true;
+            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
+            this.reportToolStripMenuItem.Size = new System.Drawing.Size(199, 46);
+            this.reportToolStripMenuItem.Text = "Report";
             // 
-            // helpMenuBtn
+            // infoButton
             // 
-            this.helpMenuBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.helpMenuBtn.BackColor = System.Drawing.Color.LightGreen;
-            this.helpMenuBtn.Location = new System.Drawing.Point(26, 246);
-            this.helpMenuBtn.Margin = new System.Windows.Forms.Padding(1);
-            this.helpMenuBtn.Name = "helpMenuBtn";
-            this.helpMenuBtn.Size = new System.Drawing.Size(66, 43);
-            this.helpMenuBtn.TabIndex = 23;
-            this.helpMenuBtn.Text = "Help";
-            this.helpMenuBtn.UseVisualStyleBackColor = false;
+            this.infoButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.helpToolStripMenuItem});
+            this.infoButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.infoButton.ForeColor = System.Drawing.Color.Transparent;
+            this.infoButton.Image = ((System.Drawing.Image)(resources.GetObject("infoButton.Image")));
+            this.infoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.infoButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.infoButton.Name = "infoButton";
+            this.infoButton.Size = new System.Drawing.Size(125, 66);
+            this.infoButton.Text = "I";
             // 
-            // createHelpMenuBtn
+            // helpToolStripMenuItem
             // 
-            this.createHelpMenuBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.createHelpMenuBtn.Location = new System.Drawing.Point(26, 80);
-            this.createHelpMenuBtn.Margin = new System.Windows.Forms.Padding(1);
-            this.createHelpMenuBtn.Name = "createHelpMenuBtn";
-            this.createHelpMenuBtn.Size = new System.Drawing.Size(66, 43);
-            this.createHelpMenuBtn.TabIndex = 21;
-            this.createHelpMenuBtn.Text = "Files";
-            this.createHelpMenuBtn.UseVisualStyleBackColor = true;
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(172, 46);
+            this.helpToolStripMenuItem.Text = "Help";
             // 
-            // notificationHelpBtn
+            // accountButton
             // 
-            this.notificationHelpBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.notificationHelpBtn.Location = new System.Drawing.Point(26, 136);
-            this.notificationHelpBtn.Margin = new System.Windows.Forms.Padding(1);
-            this.notificationHelpBtn.Name = "notificationHelpBtn";
-            this.notificationHelpBtn.Size = new System.Drawing.Size(66, 43);
-            this.notificationHelpBtn.TabIndex = 22;
-            this.notificationHelpBtn.Text = "Alerts";
-            this.notificationHelpBtn.UseVisualStyleBackColor = true;
+            this.accountButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.userToolStripMenuItem});
+            this.accountButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.accountButton.ForeColor = System.Drawing.Color.Transparent;
+            this.accountButton.Image = ((System.Drawing.Image)(resources.GetObject("accountButton.Image")));
+            this.accountButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.accountButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.accountButton.Margin = new System.Windows.Forms.Padding(0, 127, 0, 0);
+            this.accountButton.Name = "accountButton";
+            this.accountButton.Size = new System.Drawing.Size(125, 66);
+            this.accountButton.Text = "A";
+            // 
+            // userToolStripMenuItem
+            // 
+            this.userToolStripMenuItem.Name = "userToolStripMenuItem";
+            this.userToolStripMenuItem.Size = new System.Drawing.Size(170, 46);
+            this.userToolStripMenuItem.Text = "User";
+            // 
+            // logoutButton
+            // 
+            this.logoutButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.logoutToolStripMenuItem});
+            this.logoutButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.logoutButton.ForeColor = System.Drawing.Color.Transparent;
+            this.logoutButton.Image = ((System.Drawing.Image)(resources.GetObject("logoutButton.Image")));
+            this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.logoutButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(125, 69);
+            this.logoutButton.Text = "O";
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(205, 46);
+            this.logoutToolStripMenuItem.Text = "Logout";
             // 
             // HelpMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1100, 630);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.navBarHelpMenuPanel);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.welcomeHelpMenuLabel);
+            this.Controls.Add(this.helpMenuLabel);
             this.Name = "HelpMenu";
             this.Text = "HelpMenu";
             this.Load += new System.EventHandler(this.HelpMenu_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.navBarHelpMenuPanel.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private PictureBox pictureBox1;
-        private Label label1;
-        private Label welcomeHelpMenuLabel;
+        private Label helpMenuLabel;
         private Panel panel1;
         private LinkLabel loginHelpMenuLink;
         private LinkLabel deleteHelpMenuLink;
         private LinkLabel createHelpMenuLink;
         private LinkLabel updateHelpMenuLink;
-        private Panel navBarHelpMenuPanel;
-        private Button button1;
-        private Button userHelpMenuBtn;
-        private Button button2;
-        private Button logoutHelpMenuBtn;
-        private Button button3;
-        private Button button4;
-        private Button reportHelpMenuBtn;
-        private Button homeHelpMenuBtn;
-        private Button helpMenuBtn;
-        private Button createHelpMenuBtn;
-        private Button notificationHelpBtn;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem homeButton;
+        private ToolStripMenuItem createButton;
+        private ToolStripMenuItem notificationButton;
+        private ToolStripMenuItem statsButton;
+        private ToolStripMenuItem infoButton;
+        private ToolStripMenuItem accountButton;
+        private ToolStripMenuItem logoutButton;
+        private ToolStripMenuItem homeToolStripMenuItem;
+        private ToolStripMenuItem createToolStripMenuItem;
+        private ToolStripMenuItem notificationToolStripMenuItem;
+        private ToolStripMenuItem reportToolStripMenuItem;
+        private ToolStripMenuItem helpToolStripMenuItem;
+        private ToolStripMenuItem userToolStripMenuItem;
+        private ToolStripMenuItem logoutToolStripMenuItem;
     }
 }
