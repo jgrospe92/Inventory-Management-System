@@ -101,6 +101,7 @@
             this.createProductBtn.TabIndex = 43;
             this.createProductBtn.Text = "Create Product";
             this.createProductBtn.UseVisualStyleBackColor = false;
+            this.createProductBtn.Click += new System.EventHandler(this.createProductBtn_Click);
             // 
             // brandDetailLabel
             // 
