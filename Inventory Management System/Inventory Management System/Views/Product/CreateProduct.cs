@@ -12,12 +12,15 @@ namespace Inventory_Management_System.Views.Product
 {
     public partial class CreateProduct : Form
     {
-        /* This is what i eventually would need to do.
-         * Product product = new Product(lotNumberDetailTextBox.Text, );
-        List<Product> myList = new List<Product>();
+        /* 
+            This is what i eventually would need to do. 
 
-        myList.Add(product);
-            myList.get(0).getLocation;*/
+            Product product = new Product(lotNumberDetailTextBox.Text, );
+            List<Product> myList = new List<Product>();
+
+            myList.Add(product);
+            myList.get(0).getLocation;
+        */
 
         List<string> myArr = new List<string>();
 
@@ -43,8 +46,9 @@ namespace Inventory_Management_System.Views.Product
             for (int i = 0; i < myArr.Count; i++)
             {
                 MessageBox.Show(myArr[i]);
+       
             }
-
+            myArr.Clear();
             }
         }
 }
