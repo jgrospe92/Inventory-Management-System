@@ -58,7 +58,7 @@
             // 
             this.helpMenuLabel.AutoSize = true;
             this.helpMenuLabel.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.helpMenuLabel.Location = new System.Drawing.Point(310, 86);
+            this.helpMenuLabel.Location = new System.Drawing.Point(303, 86);
             this.helpMenuLabel.Name = "helpMenuLabel";
             this.helpMenuLabel.Size = new System.Drawing.Size(353, 30);
             this.helpMenuLabel.TabIndex = 17;
