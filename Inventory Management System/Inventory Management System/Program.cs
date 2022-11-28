@@ -15,7 +15,7 @@ namespace Inventory_Management_System
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             //Application.Run(new ProductDetails()); 
-            Application.Run(new CreateProduct());
+            Application.Run(new CreateProduct());   
         }
     }
 }
