@@ -1,5 +1,5 @@
-//using Inventory_Management_System.Views.Product;
-using Inventory_Management_System.Views.Help;
+
+using Inventory_Management_System.Views.Main;
 using System.Data.SqlClient;
 using System.Runtime.InteropServices;
 
@@ -15,44 +15,44 @@ namespace Inventory_Management_System
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
-            //ApplicationConfiguration.Initialize();
-            //Application.Run(new HelpMenu());
-        
-            SqlConnection con = new SqlConnection(@"Data Source=localhost;Initial Catalog=Ecom; Integrated Security=True");
-            SqlDataReader rdr = null;
-            AllocConsole();
-            [DllImport("kernel32.dll", SetLastError = true)]
-            [return: MarshalAs(UnmanagedType.Bool)]
-            static extern bool AllocConsole();
-            Console.WriteLine("Hello");
+            ApplicationConfiguration.Initialize();
+            Application.Run(new Main());
 
-            try
-            {
-                con.Open();
+            //    SqlConnection con = new SqlConnection(@"Data Source=localhost;Initial Catalog=Ecom; Integrated Security=True");
+            //    SqlDataReader rdr = null;
+            //    AllocConsole();
+            //    [DllImport("kernel32.dll", SetLastError = true)]
+            //    [return: MarshalAs(UnmanagedType.Bool)]
+            //    static extern bool AllocConsole();
+            //    Console.WriteLine("Hello");
 
-                SqlCommand cmd = new SqlCommand("SELECT * FROM account", con);
-                rdr = cmd.ExecuteReader();
+            //    try
+            //    {
+            //        con.Open();
+
+            //        SqlCommand cmd = new SqlCommand("SELECT * FROM account", con);
+            //        rdr = cmd.ExecuteReader();
 
 
-                while (rdr.Read())
-                {
-                    Console.WriteLine(rdr[1]);
-           
-                }
-                Console.ReadLine();
-            }
-            finally
-            {
-                if (rdr != null)
-                {
-                    rdr.Close();
-                }
+            //        while (rdr.Read())
+            //        {
+            //            Console.WriteLine(rdr[1]);
 
-                if (con != null)
-                {
-                    con.Close();
-                }
-            }
+            //        }
+            //        Console.ReadLine();
+            //    }
+            //    finally
+            //    {
+            //        if (rdr != null)
+            //        {
+            //            rdr.Close();
+            //        }
+
+            //        if (con != null)
+            //        {
+            //            con.Close();
+            //        }
+            //    }
 
         }
     }
