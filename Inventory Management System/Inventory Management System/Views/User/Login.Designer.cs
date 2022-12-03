@@ -1,6 +1,6 @@
 ﻿namespace Inventory_Management_System.Views.User
 {
-    partial class Register
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.homeBtn = new System.Windows.Forms.Button();
             this.filesBtn = new System.Windows.Forms.Button();
             this.reportBtn = new System.Windows.Forms.Button();

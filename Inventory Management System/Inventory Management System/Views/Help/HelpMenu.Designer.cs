@@ -50,6 +50,7 @@
             this.userToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutButton = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -159,7 +160,7 @@
             // homeToolStripMenuItem
             // 
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(191, 46);
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(224, 46);
             this.homeToolStripMenuItem.Text = "Home";
             // 
             // createButton
@@ -171,7 +172,7 @@
             this.createButton.Image = ((System.Drawing.Image)(resources.GetObject("createButton.Image")));
             this.createButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.createButton.Name = "createButton";
-            this.createButton.Size = new System.Drawing.Size(125, 78);
+            this.createButton.Size = new System.Drawing.Size(142, 78);
             this.createButton.Text = "C";
             this.createButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -190,7 +191,7 @@
             this.notificationButton.Image = ((System.Drawing.Image)(resources.GetObject("notificationButton.Image")));
             this.notificationButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.notificationButton.Name = "notificationButton";
-            this.notificationButton.Size = new System.Drawing.Size(125, 64);
+            this.notificationButton.Size = new System.Drawing.Size(142, 64);
             this.notificationButton.Text = "N";
             this.notificationButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -209,7 +210,7 @@
             this.statsButton.Image = ((System.Drawing.Image)(resources.GetObject("statsButton.Image")));
             this.statsButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.statsButton.Name = "statsButton";
-            this.statsButton.Size = new System.Drawing.Size(125, 78);
+            this.statsButton.Size = new System.Drawing.Size(142, 78);
             this.statsButton.Text = "S";
             this.statsButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -229,13 +230,13 @@
             this.infoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.infoButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.infoButton.Name = "infoButton";
-            this.infoButton.Size = new System.Drawing.Size(125, 66);
+            this.infoButton.Size = new System.Drawing.Size(142, 66);
             this.infoButton.Text = "I";
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(172, 46);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(224, 46);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // accountButton
@@ -249,7 +250,7 @@
             this.accountButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.accountButton.Margin = new System.Windows.Forms.Padding(0, 127, 0, 0);
             this.accountButton.Name = "accountButton";
-            this.accountButton.Size = new System.Drawing.Size(125, 66);
+            this.accountButton.Size = new System.Drawing.Size(142, 66);
             this.accountButton.Text = "A";
             // 
             // userToolStripMenuItem
@@ -268,7 +269,7 @@
             this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.logoutButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(125, 69);
+            this.logoutButton.Size = new System.Drawing.Size(142, 69);
             this.logoutButton.Text = "O";
             // 
             // logoutToolStripMenuItem
@@ -277,11 +278,19 @@
             this.logoutToolStripMenuItem.Size = new System.Drawing.Size(205, 46);
             this.logoutToolStripMenuItem.Text = "Logout";
             // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(143, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(956, 618);
+            this.panel2.TabIndex = 23;
+            // 
             // HelpMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 630);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.helpMenuLabel);
@@ -319,5 +328,6 @@
         private ToolStripMenuItem helpToolStripMenuItem;
         private ToolStripMenuItem userToolStripMenuItem;
         private ToolStripMenuItem logoutToolStripMenuItem;
+        private Panel panel2;
     }
 }

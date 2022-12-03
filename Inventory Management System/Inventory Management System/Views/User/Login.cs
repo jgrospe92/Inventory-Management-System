@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Inventory_Management_System.Views.User
 {
-    public partial class Register : Form
+    public partial class Login : Form
     {
-        public Register()
+        public Login()
         {
             InitializeComponent();
         }

@@ -1,5 +1,7 @@
 //using Inventory_Management_System.Views.Product;
 using Inventory_Management_System.Views.Help;
+using System.Data.SqlClient;
+using System.Runtime.InteropServices;
 
 namespace Inventory_Management_System
 {
@@ -13,8 +15,45 @@ namespace Inventory_Management_System
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            Application.Run(new HelpMenu());
+            //ApplicationConfiguration.Initialize();
+            //Application.Run(new HelpMenu());
+        
+            SqlConnection con = new SqlConnection(@"Data Source=localhost;Initial Catalog=Ecom; Integrated Security=True");
+            SqlDataReader rdr = null;
+            AllocConsole();
+            [DllImport("kernel32.dll", SetLastError = true)]
+            [return: MarshalAs(UnmanagedType.Bool)]
+            static extern bool AllocConsole();
+            Console.WriteLine("Hello");
+
+            try
+            {
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand("SELECT * FROM account", con);
+                rdr = cmd.ExecuteReader();
+
+
+                while (rdr.Read())
+                {
+                    Console.WriteLine(rdr[1]);
+           
+                }
+                Console.ReadLine();
+            }
+            finally
+            {
+                if (rdr != null)
+                {
+                    rdr.Close();
+                }
+
+                if (con != null)
+                {
+                    con.Close();
+                }
+            }
+
         }
     }
 }
