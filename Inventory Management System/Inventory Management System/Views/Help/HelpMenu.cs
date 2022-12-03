@@ -22,13 +22,6 @@ namespace Inventory_Management_System.Views.Help
 
         }
 
-        public void Report(Object object sender, EventArgs e)
-
-        {
-
-            Form report = new Form1();
-            panel2.replace(
-        }
 
         private void loginHelpMenuLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
