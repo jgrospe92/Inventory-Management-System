@@ -35,21 +35,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.menuButton = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.homeButton = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.insertButton = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.alertButton = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.reportButton = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.helpButton = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
+            this.logoutButton = new System.Windows.Forms.Button();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -116,80 +116,86 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.homeButton);
             this.panel2.Location = new System.Drawing.Point(3, 69);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(161, 55);
             this.panel2.TabIndex = 0;
             // 
-            // button1
+            // homeButton
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Consolas", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Inventory_Management_System.Properties.Resources.home_;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(-19, -3);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(197, 68);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "     Home";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.homeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.homeButton.Font = new System.Drawing.Font("Consolas", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.homeButton.ForeColor = System.Drawing.Color.White;
+            this.homeButton.Image = global::Inventory_Management_System.Properties.Resources.home_;
+            this.homeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.homeButton.Location = new System.Drawing.Point(-19, -3);
+            this.homeButton.Name = "homeButton";
+            this.homeButton.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.homeButton.Size = new System.Drawing.Size(197, 68);
+            this.homeButton.TabIndex = 1;
+            this.homeButton.Text = "     Home";
+            this.homeButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.homeButton.UseVisualStyleBackColor = true;
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
+            this.homeButton.Leave += new System.EventHandler(this.deactiveButton);
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.insertButton);
             this.panel3.Location = new System.Drawing.Point(3, 130);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(161, 55);
             this.panel3.TabIndex = 1;
             // 
-            // button2
+            // insertButton
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Consolas", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(-18, -3);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(197, 68);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "     Add Item";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            this.insertButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.insertButton.Font = new System.Drawing.Font("Consolas", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.insertButton.ForeColor = System.Drawing.Color.White;
+            this.insertButton.Image = ((System.Drawing.Image)(resources.GetObject("insertButton.Image")));
+            this.insertButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.insertButton.Location = new System.Drawing.Point(-18, -3);
+            this.insertButton.Name = "insertButton";
+            this.insertButton.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.insertButton.Size = new System.Drawing.Size(197, 68);
+            this.insertButton.TabIndex = 1;
+            this.insertButton.Text = "     Add Item";
+            this.insertButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.insertButton.UseVisualStyleBackColor = true;
+            this.insertButton.Click += new System.EventHandler(this.insertButton_Click);
+            this.insertButton.Leave += new System.EventHandler(this.deactiveButton);
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button3);
+            this.panel4.Controls.Add(this.alertButton);
             this.panel4.Location = new System.Drawing.Point(3, 191);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(161, 55);
             this.panel4.TabIndex = 2;
             // 
-            // button3
+            // alertButton
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Consolas", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(-21, -3);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(197, 68);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "     Alert";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
+            this.alertButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.alertButton.Font = new System.Drawing.Font("Consolas", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.alertButton.ForeColor = System.Drawing.Color.White;
+            this.alertButton.Image = ((System.Drawing.Image)(resources.GetObject("alertButton.Image")));
+            this.alertButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.alertButton.Location = new System.Drawing.Point(-21, -3);
+            this.alertButton.Name = "alertButton";
+            this.alertButton.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.alertButton.Size = new System.Drawing.Size(197, 68);
+            this.alertButton.TabIndex = 1;
+            this.alertButton.Text = "     Alert";
+            this.alertButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.alertButton.UseVisualStyleBackColor = true;
+            this.alertButton.Click += new System.EventHandler(this.alertButton_Click);
+            this.alertButton.Leave += new System.EventHandler(this.deactiveButton);
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.panel6);
-            this.panel5.Controls.Add(this.button4);
+            this.panel5.Controls.Add(this.reportButton);
             this.panel5.Location = new System.Drawing.Point(3, 252);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(161, 55);
@@ -219,26 +225,28 @@
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // reportButton
             // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Consolas", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(-22, -3);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(197, 68);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "     Report";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
+            this.reportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reportButton.Font = new System.Drawing.Font("Consolas", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.reportButton.ForeColor = System.Drawing.Color.White;
+            this.reportButton.Image = ((System.Drawing.Image)(resources.GetObject("reportButton.Image")));
+            this.reportButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.reportButton.Location = new System.Drawing.Point(-22, -3);
+            this.reportButton.Name = "reportButton";
+            this.reportButton.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.reportButton.Size = new System.Drawing.Size(197, 68);
+            this.reportButton.TabIndex = 1;
+            this.reportButton.Text = "     Report";
+            this.reportButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.reportButton.UseVisualStyleBackColor = true;
+            this.reportButton.Click += new System.EventHandler(this.reportButton_Click);
+            this.reportButton.Leave += new System.EventHandler(this.deactiveButton);
             // 
             // panel8
             // 
             this.panel8.Controls.Add(this.panel9);
-            this.panel8.Controls.Add(this.button8);
+            this.panel8.Controls.Add(this.helpButton);
             this.panel8.Location = new System.Drawing.Point(3, 313);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(161, 55);
@@ -268,46 +276,48 @@
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // helpButton
             // 
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Consolas", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(-22, -3);
-            this.button8.Name = "button8";
-            this.button8.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(197, 68);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "     Help";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = true;
+            this.helpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.helpButton.Font = new System.Drawing.Font("Consolas", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.helpButton.ForeColor = System.Drawing.Color.White;
+            this.helpButton.Image = ((System.Drawing.Image)(resources.GetObject("helpButton.Image")));
+            this.helpButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.helpButton.Location = new System.Drawing.Point(-22, -3);
+            this.helpButton.Name = "helpButton";
+            this.helpButton.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.helpButton.Size = new System.Drawing.Size(197, 68);
+            this.helpButton.TabIndex = 1;
+            this.helpButton.Text = "     Help";
+            this.helpButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.helpButton.UseVisualStyleBackColor = true;
+            this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
+            this.helpButton.Leave += new System.EventHandler(this.deactiveButton);
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.button7);
+            this.panel7.Controls.Add(this.logoutButton);
             this.panel7.Location = new System.Drawing.Point(3, 471);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 100, 3, 3);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(161, 55);
             this.panel7.TabIndex = 4;
             // 
-            // button7
+            // logoutButton
             // 
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Consolas", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(-21, -3);
-            this.button7.Name = "button7";
-            this.button7.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(197, 68);
-            this.button7.TabIndex = 1;
-            this.button7.Text = "     Logout";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.UseVisualStyleBackColor = true;
+            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutButton.Font = new System.Drawing.Font("Consolas", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.logoutButton.ForeColor = System.Drawing.Color.White;
+            this.logoutButton.Image = ((System.Drawing.Image)(resources.GetObject("logoutButton.Image")));
+            this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logoutButton.Location = new System.Drawing.Point(-21, -3);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.logoutButton.Size = new System.Drawing.Size(197, 68);
+            this.logoutButton.TabIndex = 1;
+            this.logoutButton.Text = "     Logout";
+            this.logoutButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logoutButton.UseVisualStyleBackColor = true;
             // 
             // sidebarTimer
             // 
@@ -344,24 +354,24 @@
 
         private FlowLayoutPanel sidebar;
         private Panel panel1;
-        private Button button1;
+        private Button homeButton;
         private Panel panel2;
         private Panel panel3;
-        private Button button2;
+        private Button insertButton;
         private Panel panel4;
-        private Button button3;
+        private Button alertButton;
         private Panel panel5;
-        private Button button4;
+        private Button reportButton;
         private Panel panel6;
         private Button button5;
         private Label label1;
         private PictureBox menuButton;
         private System.Windows.Forms.Timer sidebarTimer;
         private Panel panel7;
-        private Button button7;
+        private Button logoutButton;
         private Panel panel8;
         private Panel panel9;
         private Button button6;
-        private Button button8;
+        private Button helpButton;
     }
 }
