@@ -23,7 +23,7 @@ namespace Inventory_Management_System.Views.Main
         Bitmap noAlert = new Bitmap(Resource.bell_ring);
         Bitmap hasAlert = new Bitmap(Resource.notification);
 
-        Button currentButton;
+        Button currentButton = null;
         Form activeForm;
 
         public Main()
@@ -95,8 +95,11 @@ namespace Inventory_Management_System.Views.Main
 
         private void deactiveButton(object sender, EventArgs e)
         {
-        
-            currentButton.BackColor = Color.FromArgb(52, 56, 57);
+               if (currentButton != null)
+            {
+                currentButton.BackColor = Color.FromArgb(52, 56, 57);
+            }
+          
    
         }
 
@@ -154,6 +157,16 @@ namespace Inventory_Management_System.Views.Main
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to quit?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+           
         }
     }
 }

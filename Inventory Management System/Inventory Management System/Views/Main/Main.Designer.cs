@@ -322,6 +322,7 @@
             this.logoutButton.Text = "     Logout";
             this.logoutButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.logoutButton.UseVisualStyleBackColor = true;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // sidebarTimer
             // 

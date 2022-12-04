@@ -24,7 +24,7 @@ namespace Inventory_Management_System.Helper
                 try
                 {
                     conn = new MySqlConnection(Properties.Settings.Default.rh);
-                    MessageBox.Show("aaa");
+                    MessageBox.Show("successfully connected to the Database");
                 }
                 
                 catch (MySqlException ex)
@@ -34,5 +34,7 @@ namespace Inventory_Management_System.Helper
             }
             return conn;
         }
+
+        public static void DispposeConn() => conn?.Dispose();
     }
 }

@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Runtime.InteropServices;
 using MySqlConnector;
 using Inventory_Management_System.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace Inventory_Management_System
 {
@@ -19,12 +20,16 @@ namespace Inventory_Management_System
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
 
-            //ApplicationConfiguration.Initialize();
-            //Application.Run(new Main());
+            ApplicationConfiguration.Initialize();
+            Application.Run(new Main());
+            //string passwordHashed = Helper.LockPickHelper.HashPassword("jeffrey");
+            //bool check = Helper.LockPickHelper.VerifyPassword(passwordHashed, "jeffrey2");
+            //MessageBox.Show("password id :" + check);
 
-            User labelTect = new User("Monica", "1234", "Label Technician");
-            Controllers.UserDAO userDao = new Controllers.UserDAO();
-            userDao.insert(labelTect);
+
+            //User labelTect = new User("Monica2", passwordHashed, "Label Technician");
+            //Controllers.UserDAO userDao = new Controllers.UserDAO();
+            //labelTect.insert();
 
             //    SqlConnection con = new SqlConnection(@"Data Source=localhost;Initial Catalog=Ecom; Integrated Security=True");
             //    SqlDataReader rdr = null;

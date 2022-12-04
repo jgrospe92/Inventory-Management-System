@@ -11,7 +11,7 @@ namespace Inventory_Management_System.Controllers
     {
         void get();
         void getAll();
-        void insert(User user);
+        void insert();
         void update();
         void delete();
 

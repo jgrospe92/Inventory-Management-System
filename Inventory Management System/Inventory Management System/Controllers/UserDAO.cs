@@ -26,35 +26,11 @@ namespace Inventory_Management_System.Controllers
             throw new NotImplementedException();
         }
 
-        public async void insert(User user)
+        public void insert()
         {
-            MySqlConnection con = Helper.DbHelper.createConnection();
-
-            con.OpenAsync().Wait();
-
-            var cmd = new MySqlCommand();
-            cmd.Connection = con;
-            cmd.CommandText = "INSERT INTO user(userName, password, role) VALUES(@userName, @password, @role)";
-            cmd.Parameters.AddWithValue("userName", user.Username);
-            cmd.Parameters.AddWithValue("password", user.Password);
-            cmd.Parameters.AddWithValue("role", user.Role);
-
-            int i = await cmd.ExecuteNonQueryAsync();
-            MessageBox.Show("Done " + i);
-
+            throw new NotImplementedException();
         }
 
-        public void testCreate()
-        {
-
-            MySqlConnection con = Helper.DbHelper.createConnection();
-            string createTable = "create table test(id int, name varchar(20))";
-            MySqlCommand cmd = new MySqlCommand(createTable, con);
-            con.Open();
-            int i = cmd.ExecuteNonQuery();
-            MessageBox.Show("Success " + i.ToString());
-            MessageBox.Show("hello world");
-        }
         public void update()
         {
             throw new NotImplementedException();
