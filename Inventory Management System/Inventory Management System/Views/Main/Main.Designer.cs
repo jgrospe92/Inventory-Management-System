@@ -51,6 +51,9 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.logoutButton = new System.Windows.Forms.Button();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
+            this.titleBar = new System.Windows.Forms.Panel();
+            this.titleLabel = new System.Windows.Forms.Label();
+            this.containerPanel = new System.Windows.Forms.Panel();
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
@@ -62,6 +65,7 @@
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.titleBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidebar
@@ -76,10 +80,10 @@
             this.sidebar.Controls.Add(this.panel7);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 0);
-            this.sidebar.MaximumSize = new System.Drawing.Size(179, 608);
+            this.sidebar.MaximumSize = new System.Drawing.Size(179, 570);
             this.sidebar.MinimumSize = new System.Drawing.Size(66, 483);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(66, 561);
+            this.sidebar.Size = new System.Drawing.Size(66, 570);
             this.sidebar.TabIndex = 0;
             // 
             // panel1
@@ -324,13 +328,49 @@
             this.sidebarTimer.Interval = 10;
             this.sidebarTimer.Tick += new System.EventHandler(this.sideBarTimer_tick);
             // 
+            // titleBar
+            // 
+            this.titleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
+            this.titleBar.Controls.Add(this.titleLabel);
+            this.titleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.titleBar.Location = new System.Drawing.Point(66, 0);
+            this.titleBar.Name = "titleBar";
+            this.titleBar.Size = new System.Drawing.Size(889, 63);
+            this.titleBar.TabIndex = 1;
+            this.titleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.titleBar_MouseDown);
+            // 
+            // titleLabel
+            // 
+            this.titleLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.titleLabel.ForeColor = System.Drawing.Color.White;
+            this.titleLabel.Location = new System.Drawing.Point(359, 18);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(65, 23);
+            this.titleLabel.TabIndex = 0;
+            this.titleLabel.Text = "LOGIN";
+            // 
+            // containerPanel
+            // 
+            this.containerPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.containerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.containerPanel.Location = new System.Drawing.Point(66, 63);
+            this.containerPanel.Name = "containerPanel";
+            this.containerPanel.Size = new System.Drawing.Size(889, 507);
+            this.containerPanel.TabIndex = 2;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(877, 561);
+            this.ClientSize = new System.Drawing.Size(955, 570);
+            this.Controls.Add(this.containerPanel);
+            this.Controls.Add(this.titleBar);
             this.Controls.Add(this.sidebar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(973, 617);
+            this.MinimumSize = new System.Drawing.Size(973, 617);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Monica";
@@ -346,6 +386,8 @@
             this.panel8.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
+            this.titleBar.ResumeLayout(false);
+            this.titleBar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -373,5 +415,8 @@
         private Panel panel9;
         private Button button6;
         private Button helpButton;
+        private Panel titleBar;
+        private Label titleLabel;
+        private Panel containerPanel;
     }
 }

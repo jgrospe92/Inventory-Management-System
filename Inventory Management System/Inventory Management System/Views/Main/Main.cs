@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Inventory_Management_System.Views.Main
 {
@@ -23,12 +24,36 @@ namespace Inventory_Management_System.Views.Main
         Bitmap hasAlert = new Bitmap(Resource.notification);
 
         Button currentButton;
+        Form activeForm;
 
         public Main()
         {
             InitializeComponent();
             menuButton.Image = openIcon;
             alertButton.Image = noAlert;
+        }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void openChild(Form childForm, Object btnSender)
+        {
+            if(activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeButton(btnSender);
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.containerPanel.Controls.Add(childForm);
+            this.containerPanel.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            titleLabel.Text = childForm.Text;
         }
 
 
@@ -111,7 +136,7 @@ namespace Inventory_Management_System.Views.Main
 
         private void insertButton_Click(object sender, EventArgs e)
         {
-            activeButton(sender);
+            openChild(new Views.Product.ProductDetails(), sender);
         }
 
         private void reportButton_Click(object sender, EventArgs e)
@@ -121,7 +146,14 @@ namespace Inventory_Management_System.Views.Main
 
         private void helpButton_Click(object sender, EventArgs e)
         {
-            activeButton(sender);
+          
+            openChild(new Views.Help.HelpMenu(), sender);
+        }
+
+        private void titleBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }
