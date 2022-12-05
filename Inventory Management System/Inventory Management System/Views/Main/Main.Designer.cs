@@ -54,6 +54,9 @@
             this.titleBar = new System.Windows.Forms.Panel();
             this.titleLabel = new System.Windows.Forms.Label();
             this.containerPanel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cancelLoginButton = new System.Windows.Forms.Button();
+            this.loginButton = new System.Windows.Forms.Button();
             this.revealPasswordButton = new System.Windows.Forms.Button();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.userNameTextBox = new System.Windows.Forms.TextBox();
@@ -361,6 +364,9 @@
             // containerPanel
             // 
             this.containerPanel.BackColor = System.Drawing.Color.White;
+            this.containerPanel.Controls.Add(this.label2);
+            this.containerPanel.Controls.Add(this.cancelLoginButton);
+            this.containerPanel.Controls.Add(this.loginButton);
             this.containerPanel.Controls.Add(this.revealPasswordButton);
             this.containerPanel.Controls.Add(this.passwordTextBox);
             this.containerPanel.Controls.Add(this.userNameTextBox);
@@ -373,6 +379,46 @@
             this.containerPanel.Size = new System.Drawing.Size(1016, 640);
             this.containerPanel.TabIndex = 2;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(9)))), ((int)(((byte)(47)))));
+            this.label2.Location = new System.Drawing.Point(327, 482);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(296, 36);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Invalid credentials!\r\nPlease contact the Label Technicians";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // cancelLoginButton
+            // 
+            this.cancelLoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(21)))), ((int)(((byte)(46)))));
+            this.cancelLoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelLoginButton.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cancelLoginButton.Location = new System.Drawing.Point(368, 426);
+            this.cancelLoginButton.Name = "cancelLoginButton";
+            this.cancelLoginButton.Padding = new System.Windows.Forms.Padding(2);
+            this.cancelLoginButton.Size = new System.Drawing.Size(94, 34);
+            this.cancelLoginButton.TabIndex = 5;
+            this.cancelLoginButton.Text = "CANCEL";
+            this.cancelLoginButton.UseVisualStyleBackColor = false;
+            this.cancelLoginButton.Click += new System.EventHandler(this.cancelLoginButton_Click);
+            // 
+            // loginButton
+            // 
+            this.loginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(128)))), ((int)(((byte)(82)))));
+            this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginButton.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.loginButton.Location = new System.Drawing.Point(493, 426);
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Padding = new System.Windows.Forms.Padding(2);
+            this.loginButton.Size = new System.Drawing.Size(94, 34);
+            this.loginButton.TabIndex = 4;
+            this.loginButton.Text = "LOGIN";
+            this.loginButton.UseVisualStyleBackColor = false;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
+            // 
             // revealPasswordButton
             // 
             this.revealPasswordButton.BackColor = System.Drawing.Color.Transparent;
@@ -380,7 +426,7 @@
             this.revealPasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.revealPasswordButton.ForeColor = System.Drawing.Color.Transparent;
             this.revealPasswordButton.Image = ((System.Drawing.Image)(resources.GetObject("revealPasswordButton.Image")));
-            this.revealPasswordButton.Location = new System.Drawing.Point(615, 351);
+            this.revealPasswordButton.Location = new System.Drawing.Point(591, 349);
             this.revealPasswordButton.Name = "revealPasswordButton";
             this.revealPasswordButton.Size = new System.Drawing.Size(41, 30);
             this.revealPasswordButton.TabIndex = 3;
@@ -481,5 +527,8 @@
         private Button revealPasswordButton;
         private TextBox passwordTextBox;
         private TextBox userNameTextBox;
+        private Button cancelLoginButton;
+        private Button loginButton;
+        private Label label2;
     }
 }

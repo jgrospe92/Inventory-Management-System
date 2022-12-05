@@ -203,5 +203,16 @@ namespace Inventory_Management_System.Views.Main
             revealPasswordButton.Image = revealPasswordButton.Image == hidePasswordIcon ? showPasswordIcon : hidePasswordIcon;
             passwordTextBox.UseSystemPasswordChar = passwordTextBox.UseSystemPasswordChar == false ? true : false;
         }
+
+        private void cancelLoginButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+            //string passwordHashed = Helper.LockPickHelper.HashPassword("jeffrey");
+            //bool check = Helper.LockPickHelper.VerifyPassword(passwordHashed, "jeffrey2");
+        }
     }
 }
