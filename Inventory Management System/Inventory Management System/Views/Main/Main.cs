@@ -33,6 +33,8 @@ namespace Inventory_Management_System.Views.Main
             InitializeComponent();
             menuButton.Image = openIcon;
             alertButton.Image = noAlert;
+
+            disableAllButton();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -58,6 +60,25 @@ namespace Inventory_Management_System.Views.Main
             titleLabel.Text = childForm.Text;
         }
 
+        public void disableAllButton()
+        {
+            menuButton.Enabled = false;
+            homeButton.Enabled = false; 
+            insertButton.Enabled = false;
+            alertButton.Enabled = false;
+            reportButton.Enabled = false;
+            helpButton.Enabled = false;
+
+            Color disabledBackColor = Color.FromArgb(188, 188, 188);
+            homeButton.BackColor= disabledBackColor;
+            insertButton.BackColor= disabledBackColor;
+            alertButton.BackColor= disabledBackColor;
+            reportButton.BackColor= disabledBackColor;
+            helpButton.BackColor= disabledBackColor;
+
+
+
+        }
 
         private void sideBarTimer_tick(object sender, EventArgs e)
         {
@@ -87,8 +108,9 @@ namespace Inventory_Management_System.Views.Main
             {
                 if (currentButton != (Button) btnSender)
                 {
-           
-                    Color activeBackColor = Color.FromArgb(174, 176, 176);
+
+                    //Color activeBackColor = Color.FromArgb(174, 176, 176);\
+                    Color activeBackColor = Color.FromArgb(0, 180, 54);
                     currentButton = (Button) btnSender;
                     currentButton.BackColor = activeBackColor;
                 }

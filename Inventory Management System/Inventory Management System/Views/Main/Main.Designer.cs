@@ -301,8 +301,8 @@
             // panel7
             // 
             this.panel7.Controls.Add(this.logoutButton);
-            this.panel7.Location = new System.Drawing.Point(3, 571);
-            this.panel7.Margin = new System.Windows.Forms.Padding(3, 200, 3, 3);
+            this.panel7.Location = new System.Drawing.Point(3, 621);
+            this.panel7.Margin = new System.Windows.Forms.Padding(3, 250, 3, 3);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(161, 55);
             this.panel7.TabIndex = 4;
