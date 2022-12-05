@@ -26,6 +26,8 @@ namespace Inventory_Management_System.Views.Main
         Button currentButton = null;
         Form activeForm;
 
+        bool hasActiveUser = false;
+
         public Main()
         {
             InitializeComponent();
@@ -100,7 +102,6 @@ namespace Inventory_Management_System.Views.Main
                 currentButton.BackColor = Color.FromArgb(52, 56, 57);
             }
           
-   
         }
 
         private void menuButton_Click(object sender, EventArgs e)
@@ -134,7 +135,7 @@ namespace Inventory_Management_System.Views.Main
 
         private void homeButton_Click(object sender, EventArgs e)
         {
-            activeButton(sender);
+            openChild(new Views.Home.Home(), sender);
         }
 
         private void insertButton_Click(object sender, EventArgs e)
