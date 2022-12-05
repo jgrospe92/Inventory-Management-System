@@ -54,6 +54,10 @@
             this.titleBar = new System.Windows.Forms.Panel();
             this.titleLabel = new System.Windows.Forms.Label();
             this.containerPanel = new System.Windows.Forms.Panel();
+            this.revealPasswordButton = new System.Windows.Forms.Button();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.userNameTextBox = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
@@ -66,6 +70,8 @@
             this.panel9.SuspendLayout();
             this.panel7.SuspendLayout();
             this.titleBar.SuspendLayout();
+            this.containerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebar
@@ -354,12 +360,61 @@
             // 
             // containerPanel
             // 
-            this.containerPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.containerPanel.BackColor = System.Drawing.Color.White;
+            this.containerPanel.Controls.Add(this.revealPasswordButton);
+            this.containerPanel.Controls.Add(this.passwordTextBox);
+            this.containerPanel.Controls.Add(this.userNameTextBox);
+            this.containerPanel.Controls.Add(this.pictureBox1);
+            this.containerPanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.containerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.containerPanel.ForeColor = System.Drawing.Color.Transparent;
             this.containerPanel.Location = new System.Drawing.Point(66, 63);
             this.containerPanel.Name = "containerPanel";
             this.containerPanel.Size = new System.Drawing.Size(1016, 640);
             this.containerPanel.TabIndex = 2;
+            // 
+            // revealPasswordButton
+            // 
+            this.revealPasswordButton.BackColor = System.Drawing.Color.Transparent;
+            this.revealPasswordButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.revealPasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.revealPasswordButton.ForeColor = System.Drawing.Color.Transparent;
+            this.revealPasswordButton.Image = ((System.Drawing.Image)(resources.GetObject("revealPasswordButton.Image")));
+            this.revealPasswordButton.Location = new System.Drawing.Point(615, 351);
+            this.revealPasswordButton.Name = "revealPasswordButton";
+            this.revealPasswordButton.Size = new System.Drawing.Size(41, 30);
+            this.revealPasswordButton.TabIndex = 3;
+            this.revealPasswordButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.revealPasswordButton.UseVisualStyleBackColor = false;
+            this.revealPasswordButton.Click += new System.EventHandler(this.revealPasswordButton_Click);
+            // 
+            // passwordTextBox
+            // 
+            this.passwordTextBox.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.passwordTextBox.Location = new System.Drawing.Point(368, 347);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.PlaceholderText = "Enter Password";
+            this.passwordTextBox.Size = new System.Drawing.Size(219, 34);
+            this.passwordTextBox.TabIndex = 2;
+            this.passwordTextBox.UseSystemPasswordChar = true;
+            // 
+            // userNameTextBox
+            // 
+            this.userNameTextBox.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.userNameTextBox.Location = new System.Drawing.Point(368, 281);
+            this.userNameTextBox.Name = "userNameTextBox";
+            this.userNameTextBox.PlaceholderText = "Enter username";
+            this.userNameTextBox.Size = new System.Drawing.Size(219, 34);
+            this.userNameTextBox.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(368, 31);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(219, 191);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Main
             // 
@@ -389,6 +444,9 @@
             this.panel7.ResumeLayout(false);
             this.titleBar.ResumeLayout(false);
             this.titleBar.PerformLayout();
+            this.containerPanel.ResumeLayout(false);
+            this.containerPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -419,5 +477,9 @@
         private Panel titleBar;
         private Label titleLabel;
         private Panel containerPanel;
+        private PictureBox pictureBox1;
+        private Button revealPasswordButton;
+        private TextBox passwordTextBox;
+        private TextBox userNameTextBox;
     }
 }
