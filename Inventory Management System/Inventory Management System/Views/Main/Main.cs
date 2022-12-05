@@ -22,6 +22,9 @@ namespace Inventory_Management_System.Views.Main
 
         Bitmap noAlert = new Bitmap(Resource.bell_ring);
         Bitmap hasAlert = new Bitmap(Resource.notification);
+        Bitmap hidePasswordIcon = new Bitmap(Resource.hidden);
+        Bitmap showPasswordIcon = new Bitmap(Resource.view);
+        
 
         Button currentButton = null;
         Form activeForm;
@@ -33,6 +36,7 @@ namespace Inventory_Management_System.Views.Main
             InitializeComponent();
             menuButton.Image = openIcon;
             alertButton.Image = noAlert;
+            revealPasswordButton.Image = showPasswordIcon;
 
             disableAllButton();
         }
@@ -192,6 +196,12 @@ namespace Inventory_Management_System.Views.Main
                 Application.Exit();
             }
            
+        }
+
+        private void revealPasswordButton_Click(object sender, EventArgs e)
+        {
+            revealPasswordButton.Image = revealPasswordButton.Image == hidePasswordIcon ? showPasswordIcon : hidePasswordIcon;
+            passwordTextBox.UseSystemPasswordChar = passwordTextBox.UseSystemPasswordChar == false ? true : false;
         }
     }
 }
