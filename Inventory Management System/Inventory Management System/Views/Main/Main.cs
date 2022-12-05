@@ -131,6 +131,8 @@ namespace Inventory_Management_System.Views.Main
             {
                 alertButton.Image = noAlert;
             }
+
+            openChild(new Views.Product.Notification(), sender);
         }
 
         private void homeButton_Click(object sender, EventArgs e)

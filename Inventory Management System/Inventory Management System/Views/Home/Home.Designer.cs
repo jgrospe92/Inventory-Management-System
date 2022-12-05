@@ -113,7 +113,7 @@
             // applyButton
             // 
             this.applyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.applyButton.Location = new System.Drawing.Point(822, 68);
+            this.applyButton.Location = new System.Drawing.Point(840, 74);
             this.applyButton.Name = "applyButton";
             this.applyButton.Padding = new System.Windows.Forms.Padding(5);
             this.applyButton.Size = new System.Drawing.Size(94, 37);
@@ -203,12 +203,13 @@
             this.curretUserLabel.Size = new System.Drawing.Size(186, 23);
             this.curretUserLabel.TabIndex = 9;
             this.curretUserLabel.Text = "Label Technician";
+            this.curretUserLabel.Click += new System.EventHandler(this.curretUserLabel_Click);
             // 
             // currentDateLabel
             // 
             this.currentDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.currentDateLabel.AutoSize = true;
-            this.currentDateLabel.Location = new System.Drawing.Point(778, 498);
+            this.currentDateLabel.Location = new System.Drawing.Point(800, 498);
             this.currentDateLabel.Name = "currentDateLabel";
             this.currentDateLabel.Size = new System.Drawing.Size(208, 23);
             this.currentDateLabel.TabIndex = 10;

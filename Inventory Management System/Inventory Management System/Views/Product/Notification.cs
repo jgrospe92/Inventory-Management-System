@@ -8,14 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Inventory_Management_System.Views.Home
+namespace Inventory_Management_System.Views.Product
 {
-    public partial class Home : Form
+    public partial class Notification : Form
     {
-        public Home()
+        public Notification()
         {
             InitializeComponent();
         }
 
+        private void Notification_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
