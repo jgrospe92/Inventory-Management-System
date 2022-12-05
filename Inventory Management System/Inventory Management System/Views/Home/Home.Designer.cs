@@ -35,7 +35,7 @@
             this.orderByComboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.applyButton = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.homeProductListView = new System.Windows.Forms.ListView();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
@@ -121,9 +121,9 @@
             this.applyButton.Text = "APPLY";
             this.applyButton.UseVisualStyleBackColor = true;
             // 
-            // listView1
+            // homeProductListView
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.homeProductListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
@@ -133,12 +133,12 @@
             this.columnHeader7,
             this.columnHeader8,
             this.columnHeader9});
-            this.listView1.Location = new System.Drawing.Point(40, 144);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(946, 321);
-            this.listView1.TabIndex = 7;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.homeProductListView.Location = new System.Drawing.Point(40, 144);
+            this.homeProductListView.Name = "homeProductListView";
+            this.homeProductListView.Size = new System.Drawing.Size(946, 321);
+            this.homeProductListView.TabIndex = 7;
+            this.homeProductListView.UseCompatibleStateImageBehavior = false;
+            this.homeProductListView.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -188,7 +188,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label4.Location = new System.Drawing.Point(0, 521);
+            this.label4.Location = new System.Drawing.Point(0, 570);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(164, 23);
             this.label4.TabIndex = 8;
@@ -198,18 +198,17 @@
             // 
             this.curretUserLabel.AutoSize = true;
             this.curretUserLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.curretUserLabel.Location = new System.Drawing.Point(0, 498);
+            this.curretUserLabel.Location = new System.Drawing.Point(0, 547);
             this.curretUserLabel.Name = "curretUserLabel";
             this.curretUserLabel.Size = new System.Drawing.Size(186, 23);
             this.curretUserLabel.TabIndex = 9;
             this.curretUserLabel.Text = "Label Technician";
-            this.curretUserLabel.Click += new System.EventHandler(this.curretUserLabel_Click);
             // 
             // currentDateLabel
             // 
-            this.currentDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.currentDateLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.currentDateLabel.AutoSize = true;
-            this.currentDateLabel.Location = new System.Drawing.Point(800, 498);
+            this.currentDateLabel.Location = new System.Drawing.Point(739, 547);
             this.currentDateLabel.Name = "currentDateLabel";
             this.currentDateLabel.Size = new System.Drawing.Size(208, 23);
             this.currentDateLabel.TabIndex = 10;
@@ -219,11 +218,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1059, 544);
+            this.ClientSize = new System.Drawing.Size(998, 593);
             this.Controls.Add(this.currentDateLabel);
             this.Controls.Add(this.curretUserLabel);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.homeProductListView);
             this.Controls.Add(this.applyButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.orderByComboBox);
@@ -233,6 +232,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.MaximumSize = new System.Drawing.Size(1016, 640);
             this.Name = "Home";
             this.Text = "Home";
             this.ResumeLayout(false);
@@ -249,7 +249,7 @@
         private ComboBox orderByComboBox;
         private Label label3;
         private Button applyButton;
-        private ListView listView1;
+        private ListView homeProductListView;
         private ColumnHeader columnHeader1;
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;
