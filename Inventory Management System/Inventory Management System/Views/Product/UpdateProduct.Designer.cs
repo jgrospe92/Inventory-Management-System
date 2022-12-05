@@ -211,13 +211,13 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCancel.BackColor = System.Drawing.Color.IndianRed;
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Location = new System.Drawing.Point(450, 421);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(136, 52);
             this.btnCancel.TabIndex = 21;
-            this.btnCancel.Text = "Update";
+            this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // tb_sizeHeight
