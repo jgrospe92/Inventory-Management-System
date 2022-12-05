@@ -32,6 +32,7 @@ namespace Inventory_Management_System.Models
         // CRUD OPERATIONS
         public async void insert()
         {
+       
             MySqlConnection con = Helper.DbHelper.createConnection();
 
             con.OpenAsync().Wait();
@@ -44,6 +45,7 @@ namespace Inventory_Management_System.Models
             cmd.Parameters.AddWithValue("role", this.Role);
 
             int i = await cmd.ExecuteNonQueryAsync();
+            con.CloseAsync().Wait();
             MessageBox.Show("Done " + i);
 
         }
@@ -62,12 +64,11 @@ namespace Inventory_Management_System.Models
 
             if (rdr.Read())
             {
-                MessageBox.Show("Done " + rdr.GetString(1));
                 return new User(rdr.GetString(1), rdr.GetString(2), rdr.GetString(3));
 
-            } 
-            
-            MessageBox.Show("Password do not match");
+            }
+            con.CloseAsync().Wait();
+
             return null;
         }
     }

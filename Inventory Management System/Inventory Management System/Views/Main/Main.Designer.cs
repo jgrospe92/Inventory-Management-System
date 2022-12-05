@@ -54,7 +54,6 @@
             this.titleBar = new System.Windows.Forms.Panel();
             this.titleLabel = new System.Windows.Forms.Label();
             this.containerPanel = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.cancelLoginButton = new System.Windows.Forms.Button();
             this.loginButton = new System.Windows.Forms.Button();
             this.revealPasswordButton = new System.Windows.Forms.Button();
@@ -364,7 +363,6 @@
             // containerPanel
             // 
             this.containerPanel.BackColor = System.Drawing.Color.White;
-            this.containerPanel.Controls.Add(this.label2);
             this.containerPanel.Controls.Add(this.cancelLoginButton);
             this.containerPanel.Controls.Add(this.loginButton);
             this.containerPanel.Controls.Add(this.revealPasswordButton);
@@ -378,18 +376,6 @@
             this.containerPanel.Name = "containerPanel";
             this.containerPanel.Size = new System.Drawing.Size(1016, 640);
             this.containerPanel.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(9)))), ((int)(((byte)(47)))));
-            this.label2.Location = new System.Drawing.Point(327, 482);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(296, 36);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Invalid credentials!\r\nPlease contact the Label Technicians";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // cancelLoginButton
             // 
@@ -529,6 +515,5 @@
         private TextBox userNameTextBox;
         private Button cancelLoginButton;
         private Button loginButton;
-        private Label label2;
     }
 }

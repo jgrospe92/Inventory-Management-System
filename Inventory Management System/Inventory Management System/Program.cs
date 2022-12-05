@@ -22,13 +22,12 @@ namespace Inventory_Management_System
 
             ApplicationConfiguration.Initialize();
             Application.Run(new Main());
-            //string passwordHashed = Helper.LockPickHelper.HashPassword("jeffrey");
-            //bool check = Helper.LockPickHelper.VerifyPassword(passwordHashed, "jeffrey2");
-            //MessageBox.Show("password id :" + check);
+            //string passwordhashed = Helper.LockPickHelper.HashPassword("1234");
+            ////bool check = Helper.LockPickHelper.VerifyPassword(passwordHashed, "jeffrey2");
+            ////MessageBox.Show("password id :" + check);
 
 
-            //User labelTect = new User("Monica2", passwordHashed, "Label Technician");
-            //Controllers.UserDAO userDao = new Controllers.UserDAO();
+            //User labelTect = new User("LabelTech", passwordhashed, "Label Technician");
             //labelTect.insert();
 
             //    SqlConnection con = new SqlConnection(@"Data Source=localhost;Initial Catalog=Ecom; Integrated Security=True");

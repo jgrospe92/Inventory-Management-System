@@ -24,7 +24,6 @@ namespace Inventory_Management_System.Helper
                 try
                 {
                     conn = new MySqlConnection(Properties.Settings.Default.rh);
-                    MessageBox.Show("successfully connected to the Database");
                 }
                 
                 catch (MySqlException ex)

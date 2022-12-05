@@ -11,6 +11,15 @@ namespace Inventory_Management_System.Controllers
     public class UserDAO : Controllers.DataAccessObject
     {
 
+        User user;
+
+        public UserDAO() { user = new User();}
+
+        public UserDAO(User user)
+        {
+            this.user = user;
+        }
+
         public void delete()
         {
             throw new NotImplementedException();
@@ -28,12 +37,24 @@ namespace Inventory_Management_System.Controllers
 
         public void insert()
         {
-            throw new NotImplementedException();
+            user.insert();
         }
 
         public void update()
         {
             throw new NotImplementedException();
+        }
+
+        public bool checkCredentials(string username, string password)
+        {
+            
+            User userCheck = user.get(username);
+            if (userCheck == null) { return false; }
+
+            bool verifyPasswordHashed = Helper.LockPickHelper.VerifyPassword(userCheck.Password, password);
+            if (!verifyPasswordHashed) { return false;}
+    
+            return true;
         }
     }
 }

@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Inventory_Management_System.Controllers;
 
 namespace Inventory_Management_System.Views.Main
 {
@@ -64,7 +65,7 @@ namespace Inventory_Management_System.Views.Main
             titleLabel.Text = childForm.Text;
         }
 
-        public void disableAllButton()
+        private void disableAllButton()
         {
             menuButton.Enabled = false;
             homeButton.Enabled = false; 
@@ -79,9 +80,23 @@ namespace Inventory_Management_System.Views.Main
             alertButton.BackColor= disabledBackColor;
             reportButton.BackColor= disabledBackColor;
             helpButton.BackColor= disabledBackColor;
+        }
 
+        private void enableAllBUtton()
+        {
+            menuButton.Enabled = true;
+            homeButton.Enabled = true;
+            insertButton.Enabled = true;
+            alertButton.Enabled = true;
+            helpButton.Enabled = true;
+            reportButton.Enabled= true;
 
-
+            Color activaButton = Color.FromArgb(52, 56, 57);
+            homeButton.BackColor = activaButton;
+            insertButton.BackColor = activaButton;
+            alertButton.BackColor = activaButton;
+            reportButton.BackColor = activaButton;
+            helpButton.BackColor = activaButton;
         }
 
         private void sideBarTimer_tick(object sender, EventArgs e)
@@ -211,8 +226,16 @@ namespace Inventory_Management_System.Views.Main
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            //string passwordHashed = Helper.LockPickHelper.HashPassword("jeffrey");
-            //bool check = Helper.LockPickHelper.VerifyPassword(passwordHashed, "jeffrey2");
+            UserDAO userDAO = new Controllers.UserDAO();
+
+            bool valid = userDAO.checkCredentials(userNameTextBox.Text, passwordTextBox.Text);
+
+            if (!valid) { MessageBox.Show("Password do not match, Try again or contact Label Technician", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning); return; }
+
+            MessageBox.Show("Login Success", "Success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            enableAllBUtton();
+
+            openChild(new Views.Home.Home(), homeButton);
         }
     }
 }
