@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 05, 2022 at 03:10 PM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 8.1.10
+-- Generation Time: Dec 06, 2022 at 01:53 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `rosehill`
 --
-CREATE DATABASE IF NOT EXISTS `rosehill` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `rosehill`;
 
 -- --------------------------------------------------------
 
@@ -29,7 +27,6 @@ USE `rosehill`;
 -- Table structure for table `labeltech`
 --
 
-DROP TABLE IF EXISTS `labeltech`;
 CREATE TABLE `labeltech` (
   `lbl_ID` int(11) NOT NULL,
   `name` varchar(50) NOT NULL DEFAULT '''Label Technician''',
@@ -42,7 +39,6 @@ CREATE TABLE `labeltech` (
 -- Table structure for table `order`
 --
 
-DROP TABLE IF EXISTS `order`;
 CREATE TABLE `order` (
   `order_ID` int(11) NOT NULL,
   `orderNum` varchar(20) NOT NULL,
@@ -57,7 +53,6 @@ CREATE TABLE `order` (
 -- Table structure for table `orderdetails`
 --
 
-DROP TABLE IF EXISTS `orderdetails`;
 CREATE TABLE `orderdetails` (
   `product_ID` int(11) NOT NULL,
   `order_ID` int(11) NOT NULL
@@ -69,7 +64,6 @@ CREATE TABLE `orderdetails` (
 -- Table structure for table `ordertech`
 --
 
-DROP TABLE IF EXISTS `ordertech`;
 CREATE TABLE `ordertech` (
   `orderTech_ID` int(11) NOT NULL,
   `name` varchar(50) NOT NULL DEFAULT '''Order Technician''',
@@ -82,7 +76,6 @@ CREATE TABLE `ordertech` (
 -- Table structure for table `packaging`
 --
 
-DROP TABLE IF EXISTS `packaging`;
 CREATE TABLE `packaging` (
   `packaging_ID` int(11) NOT NULL,
   `name` varchar(50) NOT NULL DEFAULT '''Packaging''',
@@ -95,7 +88,6 @@ CREATE TABLE `packaging` (
 -- Table structure for table `product`
 --
 
-DROP TABLE IF EXISTS `product`;
 CREATE TABLE `product` (
   `product_ID` int(11) NOT NULL,
   `productLotNum` varchar(20) NOT NULL,
@@ -195,7 +187,6 @@ INSERT INTO `product` (`product_ID`, `productLotNum`, `productCode`, `productNam
 -- Table structure for table `report`
 --
 
-DROP TABLE IF EXISTS `report`;
 CREATE TABLE `report` (
   `report_ID` int(11) NOT NULL,
   `description` varchar(200) DEFAULT NULL,
@@ -211,7 +202,6 @@ CREATE TABLE `report` (
 -- Table structure for table `shipping`
 --
 
-DROP TABLE IF EXISTS `shipping`;
 CREATE TABLE `shipping` (
   `shipping_ID` int(11) NOT NULL,
   `name` varchar(50) NOT NULL DEFAULT '''Shipping''',
@@ -224,13 +214,19 @@ CREATE TABLE `shipping` (
 -- Table structure for table `user`
 --
 
-DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `userID` int(11) NOT NULL,
   `userName` varchar(50) NOT NULL,
-  `password` varchar(20) NOT NULL,
-  `role` enum('Label Technician','Order Technician','Shipping','Packaging') NOT NULL
+  `password` varchar(100) NOT NULL,
+  `role` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`userID`, `userName`, `password`, `role`) VALUES
+(1, 'LabelTech', 'AQAAAAIAAYagAAAAEDaaWzNhmW2P5h9qudUQ3sRUPrZ/ckAGrSRhNu+eNACdY1IrJwoVosU+SuKXMnCjeg==', 'Label Technician');
 
 --
 -- Indexes for dumped tables
@@ -351,7 +347,7 @@ ALTER TABLE `shipping`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
