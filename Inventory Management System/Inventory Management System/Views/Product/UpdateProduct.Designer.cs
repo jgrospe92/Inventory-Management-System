@@ -28,268 +28,365 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lotNumberDetailLabel = new System.Windows.Forms.Label();
-            this.lotNumberDetailTextBox = new System.Windows.Forms.TextBox();
-            this.nameDetailLabel = new System.Windows.Forms.Label();
-            this.nameDetailTextBox = new System.Windows.Forms.TextBox();
-            this.sizeDetailLabel = new System.Windows.Forms.Label();
-            this.tb_sizeWidth = new System.Windows.Forms.TextBox();
-            this.codeDetailLabel = new System.Windows.Forms.Label();
-            this.codeDetailTextBox = new System.Windows.Forms.TextBox();
-            this.categoryDetailLabel = new System.Windows.Forms.Label();
-            this.stockDetailLabel = new System.Windows.Forms.Label();
-            this.notifyAtDetailLabel = new System.Windows.Forms.Label();
-            this.notifyAtDetailTextBox = new System.Windows.Forms.TextBox();
-            this.locationDetailLabel = new System.Windows.Forms.Label();
-            this.brandDetailLabel = new System.Windows.Forms.Label();
-            this.brandDetailTextBox = new System.Windows.Forms.TextBox();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.locationDetailTextBox = new System.Windows.Forms.TextBox();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.tb_sizeHeight = new System.Windows.Forms.TextBox();
+            this.updatedLabel = new System.Windows.Forms.Label();
+            this.dateAddedLabel = new System.Windows.Forms.Label();
+            this.dtp_DateUpdatedUpdate = new System.Windows.Forms.DateTimePicker();
+            this.dtp_DateAddedUpdate = new System.Windows.Forms.DateTimePicker();
+            this.cb_inventoryStatusUpdate = new System.Windows.Forms.ComboBox();
+            this.inventoryLabel = new System.Windows.Forms.Label();
+            this.cb_productStatusUpdate = new System.Windows.Forms.ComboBox();
+            this.cb_typeUpdate = new System.Windows.Forms.ComboBox();
+            this.productStatusLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cb_categoryUpdate = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cb_category = new System.Windows.Forms.ComboBox();
-            this.stockDetailTextBox = new System.Windows.Forms.TextBox();
+            this.tb_sizeHeightUpdate = new System.Windows.Forms.TextBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.minToOrderLabel = new System.Windows.Forms.Label();
+            this.tb_minToOrderUpdate = new System.Windows.Forms.TextBox();
+            this.locationLabel = new System.Windows.Forms.Label();
+            this.tb_locationUpdate = new System.Windows.Forms.TextBox();
+            this.stockDetailLabel = new System.Windows.Forms.Label();
+            this.tb_qtyUpdate = new System.Windows.Forms.TextBox();
+            this.categoryDetailLabel = new System.Windows.Forms.Label();
+            this.codeDetailLabel = new System.Windows.Forms.Label();
+            this.cb_codeUpdate = new System.Windows.Forms.TextBox();
+            this.sizeLabel = new System.Windows.Forms.Label();
+            this.tb_sizeWidthUpdate = new System.Windows.Forms.TextBox();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.tb_nameUpdate = new System.Windows.Forms.TextBox();
+            this.lotNumberLabel = new System.Windows.Forms.Label();
+            this.tb_lotNumberUpdate = new System.Windows.Forms.TextBox();
+            this.btnCancelUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // lotNumberDetailLabel
+            // updatedLabel
             // 
-            this.lotNumberDetailLabel.AutoSize = true;
-            this.lotNumberDetailLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lotNumberDetailLabel.Location = new System.Drawing.Point(78, 26);
-            this.lotNumberDetailLabel.Name = "lotNumberDetailLabel";
-            this.lotNumberDetailLabel.Size = new System.Drawing.Size(125, 28);
-            this.lotNumberDetailLabel.TabIndex = 3;
-            this.lotNumberDetailLabel.Text = "Lot Number";
+            this.updatedLabel.AutoSize = true;
+            this.updatedLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.updatedLabel.Location = new System.Drawing.Point(691, 221);
+            this.updatedLabel.Name = "updatedLabel";
+            this.updatedLabel.Size = new System.Drawing.Size(136, 28);
+            this.updatedLabel.TabIndex = 117;
+            this.updatedLabel.Text = "Last Updated";
             // 
-            // lotNumberDetailTextBox
+            // dateAddedLabel
             // 
-            this.lotNumberDetailTextBox.Location = new System.Drawing.Point(78, 66);
-            this.lotNumberDetailTextBox.Name = "lotNumberDetailTextBox";
-            this.lotNumberDetailTextBox.PlaceholderText = "Enter Lot Number";
-            this.lotNumberDetailTextBox.Size = new System.Drawing.Size(277, 27);
-            this.lotNumberDetailTextBox.TabIndex = 2;
+            this.dateAddedLabel.AutoSize = true;
+            this.dateAddedLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dateAddedLabel.Location = new System.Drawing.Point(691, 124);
+            this.dateAddedLabel.Name = "dateAddedLabel";
+            this.dateAddedLabel.Size = new System.Drawing.Size(124, 28);
+            this.dateAddedLabel.TabIndex = 116;
+            this.dateAddedLabel.Text = "Date Added";
             // 
-            // nameDetailLabel
+            // dtp_DateUpdatedUpdate
             // 
-            this.nameDetailLabel.AutoSize = true;
-            this.nameDetailLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.nameDetailLabel.Location = new System.Drawing.Point(78, 115);
-            this.nameDetailLabel.Name = "nameDetailLabel";
-            this.nameDetailLabel.Size = new System.Drawing.Size(68, 28);
-            this.nameDetailLabel.TabIndex = 5;
-            this.nameDetailLabel.Text = "Name";
+            this.dtp_DateUpdatedUpdate.Location = new System.Drawing.Point(691, 259);
+            this.dtp_DateUpdatedUpdate.Name = "dtp_DateUpdatedUpdate";
+            this.dtp_DateUpdatedUpdate.Size = new System.Drawing.Size(250, 27);
+            this.dtp_DateUpdatedUpdate.TabIndex = 115;
             // 
-            // nameDetailTextBox
+            // dtp_DateAddedUpdate
             // 
-            this.nameDetailTextBox.Location = new System.Drawing.Point(78, 155);
-            this.nameDetailTextBox.Name = "nameDetailTextBox";
-            this.nameDetailTextBox.PlaceholderText = "Enter Name";
-            this.nameDetailTextBox.Size = new System.Drawing.Size(277, 27);
-            this.nameDetailTextBox.TabIndex = 4;
+            this.dtp_DateAddedUpdate.Location = new System.Drawing.Point(691, 161);
+            this.dtp_DateAddedUpdate.Name = "dtp_DateAddedUpdate";
+            this.dtp_DateAddedUpdate.Size = new System.Drawing.Size(250, 27);
+            this.dtp_DateAddedUpdate.TabIndex = 114;
             // 
-            // sizeDetailLabel
+            // cb_inventoryStatusUpdate
             // 
-            this.sizeDetailLabel.AutoSize = true;
-            this.sizeDetailLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.sizeDetailLabel.Location = new System.Drawing.Point(78, 212);
-            this.sizeDetailLabel.Name = "sizeDetailLabel";
-            this.sizeDetailLabel.Size = new System.Drawing.Size(50, 28);
-            this.sizeDetailLabel.TabIndex = 7;
-            this.sizeDetailLabel.Text = "Size";
+            this.cb_inventoryStatusUpdate.FormattingEnabled = true;
+            this.cb_inventoryStatusUpdate.Items.AddRange(new object[] {
+            "IN STOCK",
+            "OUT OF STOCK"});
+            this.cb_inventoryStatusUpdate.Location = new System.Drawing.Point(691, 358);
+            this.cb_inventoryStatusUpdate.Name = "cb_inventoryStatusUpdate";
+            this.cb_inventoryStatusUpdate.Size = new System.Drawing.Size(277, 28);
+            this.cb_inventoryStatusUpdate.TabIndex = 113;
             // 
-            // tb_sizeWidth
+            // inventoryLabel
             // 
-            this.tb_sizeWidth.Location = new System.Drawing.Point(78, 252);
-            this.tb_sizeWidth.Name = "tb_sizeWidth";
-            this.tb_sizeWidth.PlaceholderText = "width";
-            this.tb_sizeWidth.Size = new System.Drawing.Size(68, 27);
-            this.tb_sizeWidth.TabIndex = 6;
+            this.inventoryLabel.AutoSize = true;
+            this.inventoryLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.inventoryLabel.Location = new System.Drawing.Point(691, 318);
+            this.inventoryLabel.Name = "inventoryLabel";
+            this.inventoryLabel.Size = new System.Drawing.Size(169, 28);
+            this.inventoryLabel.TabIndex = 112;
+            this.inventoryLabel.Text = "Inventory Status";
             // 
-            // codeDetailLabel
+            // cb_productStatusUpdate
             // 
-            this.codeDetailLabel.AutoSize = true;
-            this.codeDetailLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.codeDetailLabel.Location = new System.Drawing.Point(463, 26);
-            this.codeDetailLabel.Name = "codeDetailLabel";
-            this.codeDetailLabel.Size = new System.Drawing.Size(59, 28);
-            this.codeDetailLabel.TabIndex = 9;
-            this.codeDetailLabel.Text = "Code";
+            this.cb_productStatusUpdate.FormattingEnabled = true;
+            this.cb_productStatusUpdate.Items.AddRange(new object[] {
+            "ACTIVE ",
+            "DISCONTINUED"});
+            this.cb_productStatusUpdate.Location = new System.Drawing.Point(691, 75);
+            this.cb_productStatusUpdate.Name = "cb_productStatusUpdate";
+            this.cb_productStatusUpdate.Size = new System.Drawing.Size(277, 28);
+            this.cb_productStatusUpdate.TabIndex = 111;
             // 
-            // codeDetailTextBox
+            // cb_typeUpdate
             // 
-            this.codeDetailTextBox.Location = new System.Drawing.Point(463, 66);
-            this.codeDetailTextBox.Name = "codeDetailTextBox";
-            this.codeDetailTextBox.PlaceholderText = "Enter item code";
-            this.codeDetailTextBox.Size = new System.Drawing.Size(277, 27);
-            this.codeDetailTextBox.TabIndex = 8;
+            this.cb_typeUpdate.FormattingEnabled = true;
+            this.cb_typeUpdate.Items.AddRange(new object[] {
+            "PRIVATE",
+            "RH",
+            "OTHER"});
+            this.cb_typeUpdate.Location = new System.Drawing.Point(357, 358);
+            this.cb_typeUpdate.Name = "cb_typeUpdate";
+            this.cb_typeUpdate.Size = new System.Drawing.Size(277, 28);
+            this.cb_typeUpdate.TabIndex = 110;
             // 
-            // categoryDetailLabel
+            // productStatusLabel
             // 
-            this.categoryDetailLabel.AutoSize = true;
-            this.categoryDetailLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.categoryDetailLabel.Location = new System.Drawing.Point(463, 115);
-            this.categoryDetailLabel.Name = "categoryDetailLabel";
-            this.categoryDetailLabel.Size = new System.Drawing.Size(98, 28);
-            this.categoryDetailLabel.TabIndex = 11;
-            this.categoryDetailLabel.Text = "Category";
+            this.productStatusLabel.AutoSize = true;
+            this.productStatusLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.productStatusLabel.Location = new System.Drawing.Point(691, 35);
+            this.productStatusLabel.Name = "productStatusLabel";
+            this.productStatusLabel.Size = new System.Drawing.Size(151, 28);
+            this.productStatusLabel.TabIndex = 109;
+            this.productStatusLabel.Text = "Product Status";
             // 
-            // stockDetailLabel
+            // label2
             // 
-            this.stockDetailLabel.AutoSize = true;
-            this.stockDetailLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.stockDetailLabel.Location = new System.Drawing.Point(463, 212);
-            this.stockDetailLabel.Name = "stockDetailLabel";
-            this.stockDetailLabel.Size = new System.Drawing.Size(64, 28);
-            this.stockDetailLabel.TabIndex = 13;
-            this.stockDetailLabel.Text = "Stock";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(357, 318);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 28);
+            this.label2.TabIndex = 108;
+            this.label2.Text = "Brand";
             // 
-            // notifyAtDetailLabel
+            // cb_categoryUpdate
             // 
-            this.notifyAtDetailLabel.AutoSize = true;
-            this.notifyAtDetailLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.notifyAtDetailLabel.Location = new System.Drawing.Point(78, 406);
-            this.notifyAtDetailLabel.Name = "notifyAtDetailLabel";
-            this.notifyAtDetailLabel.Size = new System.Drawing.Size(212, 28);
-            this.notifyAtDetailLabel.TabIndex = 17;
-            this.notifyAtDetailLabel.Text = "Minimum To Reorder";
-            // 
-            // notifyAtDetailTextBox
-            // 
-            this.notifyAtDetailTextBox.Location = new System.Drawing.Point(78, 446);
-            this.notifyAtDetailTextBox.Name = "notifyAtDetailTextBox";
-            this.notifyAtDetailTextBox.PlaceholderText = "Enter minium amount to reorder";
-            this.notifyAtDetailTextBox.Size = new System.Drawing.Size(277, 27);
-            this.notifyAtDetailTextBox.TabIndex = 16;
-            // 
-            // locationDetailLabel
-            // 
-            this.locationDetailLabel.AutoSize = true;
-            this.locationDetailLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.locationDetailLabel.Location = new System.Drawing.Point(78, 309);
-            this.locationDetailLabel.Name = "locationDetailLabel";
-            this.locationDetailLabel.Size = new System.Drawing.Size(93, 28);
-            this.locationDetailLabel.TabIndex = 15;
-            this.locationDetailLabel.Text = "Location";
-            // 
-            // brandDetailLabel
-            // 
-            this.brandDetailLabel.AutoSize = true;
-            this.brandDetailLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.brandDetailLabel.Location = new System.Drawing.Point(463, 309);
-            this.brandDetailLabel.Name = "brandDetailLabel";
-            this.brandDetailLabel.Size = new System.Drawing.Size(68, 28);
-            this.brandDetailLabel.TabIndex = 19;
-            this.brandDetailLabel.Text = "Brand";
-            // 
-            // brandDetailTextBox
-            // 
-            this.brandDetailTextBox.Location = new System.Drawing.Point(463, 349);
-            this.brandDetailTextBox.Name = "brandDetailTextBox";
-            this.brandDetailTextBox.PlaceholderText = "Enter product brand (ex: Rosehill )";
-            this.brandDetailTextBox.Size = new System.Drawing.Size(277, 27);
-            this.brandDetailTextBox.TabIndex = 18;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(604, 421);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(136, 52);
-            this.btnUpdate.TabIndex = 20;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            // 
-            // locationDetailTextBox
-            // 
-            this.locationDetailTextBox.Location = new System.Drawing.Point(78, 349);
-            this.locationDetailTextBox.Name = "locationDetailTextBox";
-            this.locationDetailTextBox.PlaceholderText = "Enter Item location";
-            this.locationDetailTextBox.Size = new System.Drawing.Size(277, 27);
-            this.locationDetailTextBox.TabIndex = 14;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.IndianRed;
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(450, 421);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(136, 52);
-            this.btnCancel.TabIndex = 21;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            // 
-            // tb_sizeHeight
-            // 
-            this.tb_sizeHeight.Location = new System.Drawing.Point(177, 252);
-            this.tb_sizeHeight.Name = "tb_sizeHeight";
-            this.tb_sizeHeight.PlaceholderText = "height";
-            this.tb_sizeHeight.Size = new System.Drawing.Size(68, 27);
-            this.tb_sizeHeight.TabIndex = 22;
+            this.cb_categoryUpdate.FormattingEnabled = true;
+            this.cb_categoryUpdate.Items.AddRange(new object[] {
+            "PLAIN",
+            "COLORED",
+            "SAUCE",
+            "GRAVY",
+            "SOUP",
+            "BOUILLON",
+            "SEASONING",
+            "MARINADE",
+            "OTHER"});
+            this.cb_categoryUpdate.Location = new System.Drawing.Point(357, 163);
+            this.cb_categoryUpdate.Name = "cb_categoryUpdate";
+            this.cb_categoryUpdate.Size = new System.Drawing.Size(277, 28);
+            this.cb_categoryUpdate.TabIndex = 107;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(146, 251);
+            this.label1.Location = new System.Drawing.Point(97, 260);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(25, 28);
-            this.label1.TabIndex = 23;
+            this.label1.TabIndex = 106;
             this.label1.Text = "X";
             // 
-            // cb_category
+            // tb_sizeHeightUpdate
             // 
-            this.cb_category.FormattingEnabled = true;
-            this.cb_category.Items.AddRange(new object[] {
-            "white Plain",
-            "colored",
-            "sauces",
-            "gravy",
-            "seasoning",
-            "marinade",
-            "ink",
-            "Other"});
-            this.cb_category.Location = new System.Drawing.Point(463, 154);
-            this.cb_category.Name = "cb_category";
-            this.cb_category.Size = new System.Drawing.Size(277, 28);
-            this.cb_category.TabIndex = 24;
+            this.tb_sizeHeightUpdate.Location = new System.Drawing.Point(128, 261);
+            this.tb_sizeHeightUpdate.Name = "tb_sizeHeightUpdate";
+            this.tb_sizeHeightUpdate.PlaceholderText = "height";
+            this.tb_sizeHeightUpdate.Size = new System.Drawing.Size(68, 27);
+            this.tb_sizeHeightUpdate.TabIndex = 105;
             // 
-            // stockDetailTextBox
+            // btnUpdate
             // 
-            this.stockDetailTextBox.Location = new System.Drawing.Point(463, 252);
-            this.stockDetailTextBox.Name = "stockDetailTextBox";
-            this.stockDetailTextBox.PlaceholderText = "Enter product quantity";
-            this.stockDetailTextBox.Size = new System.Drawing.Size(277, 27);
-            this.stockDetailTextBox.TabIndex = 12;
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(832, 430);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(136, 52);
+            this.btnUpdate.TabIndex = 104;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            // 
+            // minToOrderLabel
+            // 
+            this.minToOrderLabel.AutoSize = true;
+            this.minToOrderLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.minToOrderLabel.Location = new System.Drawing.Point(29, 415);
+            this.minToOrderLabel.Name = "minToOrderLabel";
+            this.minToOrderLabel.Size = new System.Drawing.Size(212, 28);
+            this.minToOrderLabel.TabIndex = 103;
+            this.minToOrderLabel.Text = "Minimum To Reorder";
+            // 
+            // tb_minToOrderUpdate
+            // 
+            this.tb_minToOrderUpdate.Location = new System.Drawing.Point(29, 455);
+            this.tb_minToOrderUpdate.Name = "tb_minToOrderUpdate";
+            this.tb_minToOrderUpdate.PlaceholderText = "Enter minium amount to reorder";
+            this.tb_minToOrderUpdate.Size = new System.Drawing.Size(277, 27);
+            this.tb_minToOrderUpdate.TabIndex = 102;
+            // 
+            // locationLabel
+            // 
+            this.locationLabel.AutoSize = true;
+            this.locationLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.locationLabel.Location = new System.Drawing.Point(29, 318);
+            this.locationLabel.Name = "locationLabel";
+            this.locationLabel.Size = new System.Drawing.Size(93, 28);
+            this.locationLabel.TabIndex = 101;
+            this.locationLabel.Text = "Location";
+            // 
+            // tb_locationUpdate
+            // 
+            this.tb_locationUpdate.Location = new System.Drawing.Point(29, 358);
+            this.tb_locationUpdate.Name = "tb_locationUpdate";
+            this.tb_locationUpdate.PlaceholderText = "Enter Item location";
+            this.tb_locationUpdate.Size = new System.Drawing.Size(277, 27);
+            this.tb_locationUpdate.TabIndex = 100;
+            // 
+            // stockDetailLabel
+            // 
+            this.stockDetailLabel.AutoSize = true;
+            this.stockDetailLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.stockDetailLabel.Location = new System.Drawing.Point(357, 221);
+            this.stockDetailLabel.Name = "stockDetailLabel";
+            this.stockDetailLabel.Size = new System.Drawing.Size(64, 28);
+            this.stockDetailLabel.TabIndex = 99;
+            this.stockDetailLabel.Text = "Stock";
+            // 
+            // tb_qtyUpdate
+            // 
+            this.tb_qtyUpdate.Location = new System.Drawing.Point(357, 261);
+            this.tb_qtyUpdate.Name = "tb_qtyUpdate";
+            this.tb_qtyUpdate.PlaceholderText = "Enter product quantity";
+            this.tb_qtyUpdate.Size = new System.Drawing.Size(277, 27);
+            this.tb_qtyUpdate.TabIndex = 98;
+            // 
+            // categoryDetailLabel
+            // 
+            this.categoryDetailLabel.AutoSize = true;
+            this.categoryDetailLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.categoryDetailLabel.Location = new System.Drawing.Point(357, 124);
+            this.categoryDetailLabel.Name = "categoryDetailLabel";
+            this.categoryDetailLabel.Size = new System.Drawing.Size(98, 28);
+            this.categoryDetailLabel.TabIndex = 97;
+            this.categoryDetailLabel.Text = "Category";
+            // 
+            // codeDetailLabel
+            // 
+            this.codeDetailLabel.AutoSize = true;
+            this.codeDetailLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.codeDetailLabel.Location = new System.Drawing.Point(357, 35);
+            this.codeDetailLabel.Name = "codeDetailLabel";
+            this.codeDetailLabel.Size = new System.Drawing.Size(59, 28);
+            this.codeDetailLabel.TabIndex = 96;
+            this.codeDetailLabel.Text = "Code";
+            // 
+            // cb_codeUpdate
+            // 
+            this.cb_codeUpdate.Location = new System.Drawing.Point(357, 75);
+            this.cb_codeUpdate.Name = "cb_codeUpdate";
+            this.cb_codeUpdate.PlaceholderText = "Enter item code";
+            this.cb_codeUpdate.Size = new System.Drawing.Size(277, 27);
+            this.cb_codeUpdate.TabIndex = 95;
+            // 
+            // sizeLabel
+            // 
+            this.sizeLabel.AutoSize = true;
+            this.sizeLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.sizeLabel.Location = new System.Drawing.Point(29, 221);
+            this.sizeLabel.Name = "sizeLabel";
+            this.sizeLabel.Size = new System.Drawing.Size(50, 28);
+            this.sizeLabel.TabIndex = 94;
+            this.sizeLabel.Text = "Size";
+            // 
+            // tb_sizeWidthUpdate
+            // 
+            this.tb_sizeWidthUpdate.Location = new System.Drawing.Point(29, 261);
+            this.tb_sizeWidthUpdate.Name = "tb_sizeWidthUpdate";
+            this.tb_sizeWidthUpdate.PlaceholderText = "width";
+            this.tb_sizeWidthUpdate.Size = new System.Drawing.Size(68, 27);
+            this.tb_sizeWidthUpdate.TabIndex = 93;
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.nameLabel.Location = new System.Drawing.Point(29, 124);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(68, 28);
+            this.nameLabel.TabIndex = 92;
+            this.nameLabel.Text = "Name";
+            // 
+            // tb_nameUpdate
+            // 
+            this.tb_nameUpdate.Location = new System.Drawing.Point(29, 164);
+            this.tb_nameUpdate.Name = "tb_nameUpdate";
+            this.tb_nameUpdate.PlaceholderText = "Enter Name";
+            this.tb_nameUpdate.Size = new System.Drawing.Size(277, 27);
+            this.tb_nameUpdate.TabIndex = 91;
+            // 
+            // lotNumberLabel
+            // 
+            this.lotNumberLabel.AutoSize = true;
+            this.lotNumberLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lotNumberLabel.Location = new System.Drawing.Point(29, 35);
+            this.lotNumberLabel.Name = "lotNumberLabel";
+            this.lotNumberLabel.Size = new System.Drawing.Size(125, 28);
+            this.lotNumberLabel.TabIndex = 90;
+            this.lotNumberLabel.Text = "Lot Number";
+            // 
+            // tb_lotNumberUpdate
+            // 
+            this.tb_lotNumberUpdate.Location = new System.Drawing.Point(29, 75);
+            this.tb_lotNumberUpdate.Name = "tb_lotNumberUpdate";
+            this.tb_lotNumberUpdate.PlaceholderText = "Enter Lot Number";
+            this.tb_lotNumberUpdate.Size = new System.Drawing.Size(277, 27);
+            this.tb_lotNumberUpdate.TabIndex = 89;
+            // 
+            // btnCancelUpdate
+            // 
+            this.btnCancelUpdate.BackColor = System.Drawing.Color.IndianRed;
+            this.btnCancelUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnCancelUpdate.Location = new System.Drawing.Point(679, 430);
+            this.btnCancelUpdate.Name = "btnCancelUpdate";
+            this.btnCancelUpdate.Size = new System.Drawing.Size(136, 52);
+            this.btnCancelUpdate.TabIndex = 118;
+            this.btnCancelUpdate.Text = "Cancel";
+            this.btnCancelUpdate.UseVisualStyleBackColor = false;
             // 
             // UpdateProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 512);
-            this.Controls.Add(this.cb_category);
+            this.ClientSize = new System.Drawing.Size(991, 519);
+            this.Controls.Add(this.btnCancelUpdate);
+            this.Controls.Add(this.updatedLabel);
+            this.Controls.Add(this.dateAddedLabel);
+            this.Controls.Add(this.dtp_DateUpdatedUpdate);
+            this.Controls.Add(this.dtp_DateAddedUpdate);
+            this.Controls.Add(this.cb_inventoryStatusUpdate);
+            this.Controls.Add(this.inventoryLabel);
+            this.Controls.Add(this.cb_productStatusUpdate);
+            this.Controls.Add(this.cb_typeUpdate);
+            this.Controls.Add(this.productStatusLabel);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cb_categoryUpdate);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tb_sizeHeight);
-            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.tb_sizeHeightUpdate);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.brandDetailLabel);
-            this.Controls.Add(this.brandDetailTextBox);
-            this.Controls.Add(this.notifyAtDetailLabel);
-            this.Controls.Add(this.notifyAtDetailTextBox);
-            this.Controls.Add(this.locationDetailLabel);
-            this.Controls.Add(this.locationDetailTextBox);
+            this.Controls.Add(this.minToOrderLabel);
+            this.Controls.Add(this.tb_minToOrderUpdate);
+            this.Controls.Add(this.locationLabel);
+            this.Controls.Add(this.tb_locationUpdate);
             this.Controls.Add(this.stockDetailLabel);
-            this.Controls.Add(this.stockDetailTextBox);
+            this.Controls.Add(this.tb_qtyUpdate);
             this.Controls.Add(this.categoryDetailLabel);
             this.Controls.Add(this.codeDetailLabel);
-            this.Controls.Add(this.codeDetailTextBox);
-            this.Controls.Add(this.sizeDetailLabel);
-            this.Controls.Add(this.tb_sizeWidth);
-            this.Controls.Add(this.nameDetailLabel);
-            this.Controls.Add(this.nameDetailTextBox);
-            this.Controls.Add(this.lotNumberDetailLabel);
-            this.Controls.Add(this.lotNumberDetailTextBox);
+            this.Controls.Add(this.cb_codeUpdate);
+            this.Controls.Add(this.sizeLabel);
+            this.Controls.Add(this.tb_sizeWidthUpdate);
+            this.Controls.Add(this.nameLabel);
+            this.Controls.Add(this.tb_nameUpdate);
+            this.Controls.Add(this.lotNumberLabel);
+            this.Controls.Add(this.tb_lotNumberUpdate);
             this.Name = "UpdateProduct";
             this.Text = "ProductDetails";
             this.ResumeLayout(false);
@@ -299,27 +396,35 @@
 
         #endregion
 
-        private Label lotNumberDetailLabel;
-        private TextBox lotNumberDetailTextBox;
-        private Label nameDetailLabel;
-        private TextBox nameDetailTextBox;
-        private Label sizeDetailLabel;
-        private TextBox tb_sizeWidth;
-        private Label codeDetailLabel;
-        private TextBox codeDetailTextBox;
-        private Label categoryDetailLabel;
-        private Label stockDetailLabel;
-        private Label notifyAtDetailLabel;
-        private TextBox notifyAtDetailTextBox;
-        private Label locationDetailLabel;
-        private Label brandDetailLabel;
-        private TextBox brandDetailTextBox;
-        private Button btnUpdate;
-        private TextBox locationDetailTextBox;
-        private Button btnCancel;
-        private TextBox tb_sizeHeight;
+        private Label updatedLabel;
+        private Label dateAddedLabel;
+        private DateTimePicker dtp_DateUpdatedUpdate;
+        private DateTimePicker dtp_DateAddedUpdate;
+        private ComboBox cb_inventoryStatusUpdate;
+        private Label inventoryLabel;
+        private ComboBox cb_productStatusUpdate;
+        private ComboBox cb_typeUpdate;
+        private Label productStatusLabel;
+        private Label label2;
+        private ComboBox cb_categoryUpdate;
         private Label label1;
-        private ComboBox cb_category;
-        private TextBox stockDetailTextBox;
+        private TextBox tb_sizeHeightUpdate;
+        private Button btnUpdate;
+        private Label minToOrderLabel;
+        private TextBox tb_minToOrderUpdate;
+        private Label locationLabel;
+        private TextBox tb_locationUpdate;
+        private Label stockDetailLabel;
+        private TextBox tb_qtyUpdate;
+        private Label categoryDetailLabel;
+        private Label codeDetailLabel;
+        private TextBox cb_codeUpdate;
+        private Label sizeLabel;
+        private TextBox tb_sizeWidthUpdate;
+        private Label nameLabel;
+        private TextBox tb_nameUpdate;
+        private Label lotNumberLabel;
+        private TextBox tb_lotNumberUpdate;
+        private Button btnCancelUpdate;
     }
 }
