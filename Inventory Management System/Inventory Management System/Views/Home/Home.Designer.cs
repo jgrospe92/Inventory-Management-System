@@ -45,9 +45,6 @@
             this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader8 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader9 = new System.Windows.Forms.ColumnHeader();
-            this.label4 = new System.Windows.Forms.Label();
-            this.curretUserLabel = new System.Windows.Forms.Label();
-            this.currentDateLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -185,44 +182,11 @@
             this.columnHeader9.Text = "Delete";
             this.columnHeader9.Width = 80;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label4.Location = new System.Drawing.Point(0, 570);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(164, 23);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Current User: ";
-            // 
-            // curretUserLabel
-            // 
-            this.curretUserLabel.AutoSize = true;
-            this.curretUserLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.curretUserLabel.Location = new System.Drawing.Point(0, 547);
-            this.curretUserLabel.Name = "curretUserLabel";
-            this.curretUserLabel.Size = new System.Drawing.Size(186, 23);
-            this.curretUserLabel.TabIndex = 9;
-            this.curretUserLabel.Text = "Label Technician";
-            // 
-            // currentDateLabel
-            // 
-            this.currentDateLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.currentDateLabel.AutoSize = true;
-            this.currentDateLabel.Location = new System.Drawing.Point(739, 547);
-            this.currentDateLabel.Name = "currentDateLabel";
-            this.currentDateLabel.Size = new System.Drawing.Size(208, 23);
-            this.currentDateLabel.TabIndex = 10;
-            this.currentDateLabel.Text = "10:00 | 2022/12/07";
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(998, 593);
-            this.Controls.Add(this.currentDateLabel);
-            this.Controls.Add(this.curretUserLabel);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.applyButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.orderByComboBox);
@@ -250,9 +214,6 @@
         private ComboBox orderByComboBox;
         private Label label3;
         private Button applyButton;
-        private Label label4;
-        private Label curretUserLabel;
-        private Label currentDateLabel;
         private ListView homeProductListView;
         private ColumnHeader columnHeader1;
         private ColumnHeader columnHeader2;

@@ -60,6 +60,10 @@
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.userNameTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.currentDateLabel = new System.Windows.Forms.Label();
+            this.currentUserLabel = new System.Windows.Forms.Label();
+            this.dateTime = new System.Windows.Forms.Timer(this.components);
+            this.panel10 = new System.Windows.Forms.Panel();
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
@@ -74,6 +78,7 @@
             this.titleBar.SuspendLayout();
             this.containerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidebar
@@ -369,7 +374,6 @@
             this.containerPanel.Controls.Add(this.passwordTextBox);
             this.containerPanel.Controls.Add(this.userNameTextBox);
             this.containerPanel.Controls.Add(this.pictureBox1);
-            this.containerPanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.containerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.containerPanel.ForeColor = System.Drawing.Color.Black;
             this.containerPanel.Location = new System.Drawing.Point(66, 63);
@@ -448,11 +452,51 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // currentDateLabel
+            // 
+            this.currentDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.currentDateLabel.AutoSize = true;
+            this.currentDateLabel.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.currentDateLabel.Location = new System.Drawing.Point(768, 6);
+            this.currentDateLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.currentDateLabel.Name = "currentDateLabel";
+            this.currentDateLabel.Size = new System.Drawing.Size(152, 18);
+            this.currentDateLabel.TabIndex = 12;
+            this.currentDateLabel.Text = "10:00 | 2022/12/07";
+            // 
+            // currentUserLabel
+            // 
+            this.currentUserLabel.AutoSize = true;
+            this.currentUserLabel.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.currentUserLabel.Location = new System.Drawing.Point(6, 6);
+            this.currentUserLabel.Name = "currentUserLabel";
+            this.currentUserLabel.Size = new System.Drawing.Size(256, 18);
+            this.currentUserLabel.TabIndex = 11;
+            this.currentUserLabel.Text = "Logged in as : Label Technician";
+            // 
+            // dateTime
+            // 
+            this.dateTime.Enabled = true;
+            this.dateTime.Tick += new System.EventHandler(this.dateTime_Tick);
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.currentUserLabel);
+            this.panel10.Controls.Add(this.currentDateLabel);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel10.Location = new System.Drawing.Point(66, 673);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(1016, 30);
+            this.panel10.TabIndex = 13;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 703);
+            this.Controls.Add(this.panel10);
             this.Controls.Add(this.containerPanel);
             this.Controls.Add(this.titleBar);
             this.Controls.Add(this.sidebar);
@@ -479,6 +523,8 @@
             this.containerPanel.ResumeLayout(false);
             this.containerPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -515,5 +561,9 @@
         private TextBox userNameTextBox;
         private Button cancelLoginButton;
         private Button loginButton;
+        private Label currentUserLabel;
+        private Label currentDateLabel;
+        private System.Windows.Forms.Timer dateTime;
+        private Panel panel10;
     }
 }

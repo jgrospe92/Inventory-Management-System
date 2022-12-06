@@ -45,16 +45,16 @@ namespace Inventory_Management_System.Controllers
             throw new NotImplementedException();
         }
 
-        public bool checkCredentials(string username, string password)
+        public User checkCredentials(string username, string password)
         {
             
             User userCheck = user.get(username);
-            if (userCheck == null) { return false; }
+            if (userCheck == null) { return null; }
 
             bool verifyPasswordHashed = Helper.LockPickHelper.VerifyPassword(userCheck.Password, password);
-            if (!verifyPasswordHashed) { return false;}
+            if (!verifyPasswordHashed) { return null;}
     
-            return true;
+            return userCheck;
         }
     }
 }

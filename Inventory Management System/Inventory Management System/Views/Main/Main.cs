@@ -38,7 +38,8 @@ namespace Inventory_Management_System.Views.Main
             menuButton.Image = openIcon;
             alertButton.Image = noAlert;
             revealPasswordButton.Image = showPasswordIcon;
-
+            currentUserLabel.Visible = false;
+            dateTime.Start();
             disableAllButton();
         }
 
@@ -65,7 +66,7 @@ namespace Inventory_Management_System.Views.Main
             titleLabel.Text = childForm.Text;
         }
         
-      
+   
 
         private void disableAllButton()
         {
@@ -230,18 +231,26 @@ namespace Inventory_Management_System.Views.Main
         {
             UserDAO userDAO = new Controllers.UserDAO();
 
-            bool valid = userDAO.checkCredentials(userNameTextBox.Text, passwordTextBox.Text);
+            Models.User valid = userDAO.checkCredentials(userNameTextBox.Text, passwordTextBox.Text);
 
-            if (!valid) { MessageBox.Show("Password do not match, Try again or contact Label Technician", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning); return; }
+            if (valid == null) { MessageBox.Show("Password do not match, Try again or contact Label Technician", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning); return; }
 
             MessageBox.Show("Login Success", "Success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             enableAllBUtton();
-           
+            currentUserLabel.Visible = true;
+            currentUserLabel.Text = "Logged in as : " + valid.Role;
             openChild(new Views.Home.Home(), null);
 
 
 
 
         }
+
+        private void dateTime_Tick(object sender, EventArgs e)
+        {
+            currentDateLabel.Text = DateTime.Now.ToLongDateString() + " " + DateTime.Now.ToLongTimeString();
+
+        }
+
     }
 }
