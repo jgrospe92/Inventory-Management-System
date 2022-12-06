@@ -17,10 +17,10 @@ namespace Inventory_Management_System.Controllers
 
         public Product_ get<A>()
         {
+            // Use this to get a specific product
             Models.Product_ product = new Models.Product_();
             product = product.get(1);
-            MessageBox.Show( product.LastUpdated.ToString());
-
+        
             return null;
         }
 
@@ -28,10 +28,8 @@ namespace Inventory_Management_System.Controllers
         {
             Models.Product_ product = new Models.Product_();
             List<Product_> proudcts = new List<Product_>();
-            proudcts = product.getAllProducts();
-
-            MessageBox.Show(proudcts[0].ProductName); ;
-            return null;
+            proudcts = product.getAllProducts(); ;
+            return proudcts;
         }
 
         public void insert()

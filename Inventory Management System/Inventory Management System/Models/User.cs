@@ -35,7 +35,8 @@ namespace Inventory_Management_System.Models
        
             MySqlConnection con = Helper.DbHelper.createConnection();
 
-            con.OpenAsync().Wait();
+            //con.OpenAsync().Wait();
+            con.Open();
 
             var cmd = new MySqlCommand();
             cmd.Connection = con;
@@ -45,15 +46,17 @@ namespace Inventory_Management_System.Models
             cmd.Parameters.AddWithValue("role", this.Role);
 
             int i = await cmd.ExecuteNonQueryAsync();
-            con.CloseAsync().Wait();
-            MessageBox.Show("Done " + i);
+        
+            con.Close();
+         
 
         }
         public User get(string username)
         {
            
             MySqlConnection con = Helper.DbHelper.createConnection();
-            con.OpenAsync().Wait();
+            //con.OpenAsync().Wait();
+            con.Open();
 
             var cmd = new MySqlCommand();
             cmd.Connection = con;
@@ -64,10 +67,14 @@ namespace Inventory_Management_System.Models
 
             if (rdr.Read())
             {
-                return new User(rdr.GetString(1), rdr.GetString(2), rdr.GetString(3));
+           
+                User user = new User(rdr.GetString(1), rdr.GetString(2), rdr.GetString(3));
+                con.Close();
+                return user;
 
             }
-            con.CloseAsync().Wait();
+            //con.CloseAsync().Wait();
+            con.Close();
 
             return null;
         }

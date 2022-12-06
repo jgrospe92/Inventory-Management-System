@@ -32,11 +32,7 @@
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.filterByComboBox = new System.Windows.Forms.ComboBox();
-            this.orderByComboBox = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.applyButton = new System.Windows.Forms.Button();
-            this.productsDataGrid = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.productsDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -80,30 +76,10 @@
             this.filterByComboBox.Size = new System.Drawing.Size(161, 31);
             this.filterByComboBox.TabIndex = 3;
             // 
-            // orderByComboBox
-            // 
-            this.orderByComboBox.FormattingEnabled = true;
-            this.orderByComboBox.Items.AddRange(new object[] {
-            "Ascending",
-            "Descending"});
-            this.orderByComboBox.Location = new System.Drawing.Point(604, 72);
-            this.orderByComboBox.Name = "orderByComboBox";
-            this.orderByComboBox.Size = new System.Drawing.Size(151, 31);
-            this.orderByComboBox.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(604, 44);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 23);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Order by";
-            // 
             // applyButton
             // 
             this.applyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.applyButton.Location = new System.Drawing.Point(840, 74);
+            this.applyButton.Location = new System.Drawing.Point(558, 70);
             this.applyButton.Name = "applyButton";
             this.applyButton.Padding = new System.Windows.Forms.Padding(5);
             this.applyButton.Size = new System.Drawing.Size(94, 37);
@@ -111,25 +87,12 @@
             this.applyButton.Text = "APPLY";
             this.applyButton.UseVisualStyleBackColor = true;
             // 
-            // productsDataGrid
-            // 
-            this.productsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.productsDataGrid.Location = new System.Drawing.Point(40, 192);
-            this.productsDataGrid.Name = "productsDataGrid";
-            this.productsDataGrid.RowHeadersWidth = 51;
-            this.productsDataGrid.RowTemplate.Height = 29;
-            this.productsDataGrid.Size = new System.Drawing.Size(894, 347);
-            this.productsDataGrid.TabIndex = 7;
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(998, 593);
-            this.Controls.Add(this.productsDataGrid);
             this.Controls.Add(this.applyButton);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.orderByComboBox);
             this.Controls.Add(this.filterByComboBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.searchTextBox);
@@ -139,7 +102,6 @@
             this.MaximumSize = new System.Drawing.Size(1016, 640);
             this.Name = "Home";
             this.Text = "Home";
-            ((System.ComponentModel.ISupportInitialize)(this.productsDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,9 +113,6 @@
         private TextBox searchTextBox;
         private Label label2;
         private ComboBox filterByComboBox;
-        private ComboBox orderByComboBox;
-        private Label label3;
         private Button applyButton;
-        private DataGridView productsDataGrid;
     }
 }

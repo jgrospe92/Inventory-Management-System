@@ -70,7 +70,8 @@ namespace Inventory_Management_System.Models
         public Product_ get(int product_ID)
         {
             MySqlConnection con = Helper.DbHelper.createConnection();
-            con.OpenAsync().Wait();
+            //con.OpenAsync().Wait();
+            con.Open();
 
             var cmd = new MySqlCommand();
             cmd.Connection = con;
@@ -100,7 +101,8 @@ namespace Inventory_Management_System.Models
                 return p;
 
             }
-            con.CloseAsync().Wait();
+            //con.CloseAsync().Wait();
+            con.Close();
 
             return null;
          
@@ -129,7 +131,8 @@ namespace Inventory_Management_System.Models
         public List<Product_> getAllProducts()
         {
             MySqlConnection con = Helper.DbHelper.createConnection();
-            con.OpenAsync().Wait();
+            //con.OpenAsync().Wait();
+            con.Open();
 
             var cmd = new MySqlCommand();
             cmd.Connection = con;
@@ -158,6 +161,7 @@ namespace Inventory_Management_System.Models
 
                 products.Add(p);
             }
+            con.Close();
             return products;
         }
     }
