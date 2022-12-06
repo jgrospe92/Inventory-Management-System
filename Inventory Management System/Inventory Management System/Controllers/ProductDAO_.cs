@@ -17,8 +17,8 @@ namespace Inventory_Management_System.Controllers
         public Product_ get<A>()
         {
             Models.Product_ product = new Models.Product_();
-            product.get(1);
-
+            product = product.get(1);
+            MessageBox.Show(product.ProductName + " " + product.ProdLocation);
 
             return null;
         }
