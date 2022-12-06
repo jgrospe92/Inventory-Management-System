@@ -1,5 +1,6 @@
 ﻿using Inventory_Management_System.Models;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,14 +19,19 @@ namespace Inventory_Management_System.Controllers
         {
             Models.Product_ product = new Models.Product_();
             product = product.get(1);
-            MessageBox.Show(product.ProductName + " " + product.ProdLocation);
+            MessageBox.Show( product.LastUpdated.ToString());
 
             return null;
         }
 
-        public void getAll()
+        public List<Product_> getAll()
         {
-            throw new NotImplementedException();
+            Models.Product_ product = new Models.Product_();
+            List<Product_> proudcts = new List<Product_>();
+            proudcts = product.getAllProducts();
+
+            MessageBox.Show(proudcts[0].ProductName); ;
+            return null;
         }
 
         public void insert()

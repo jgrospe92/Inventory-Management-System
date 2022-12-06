@@ -4,7 +4,7 @@ using System.Linq;
 using MySqlConnector;
 using Inventory_Management_System.Models;
 using System.Drawing;
-
+using System.Collections;
 
 namespace Inventory_Management_System.Controllers
 {
@@ -30,7 +30,7 @@ namespace Inventory_Management_System.Controllers
             throw new NotImplementedException();
         }
 
-        public void getAll()
+        public List<User> getAll()
         {
             throw new NotImplementedException();
         }

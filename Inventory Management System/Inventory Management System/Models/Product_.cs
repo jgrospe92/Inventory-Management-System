@@ -1,5 +1,6 @@
 ﻿using MySqlConnector;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -87,14 +88,14 @@ namespace Inventory_Management_System.Models
                 p.Size = rdr.GetString("size");
                 p.Category = rdr.GetString("category");
                 p.MinToReorder = rdr.GetInt32("minToReorder");
-                string location = (rdr["prodLocation"] == DBNull.Value) ? "" : rdr.GetString("prodLocation");
+                string location = (rdr["prodLocation"] == DBNull.Value) ? "NA" : rdr.GetString("prodLocation");
                 p.ProdLocation = location;
                 p.ProductType = rdr.GetString("productType");
                 p.ProductStatus = rdr.GetString("productStatus");
                 p.DateAdded = rdr.GetDateTime("dateAdded");
-                p.LastUpdated = (DateTime)((rdr["lastUpdated"] == DBNull.Value) ? (DateTime?)null : rdr.GetDateTime("lastUpdated"));
-
-                //p.InventoryStatus = rdr.GetString("inventoryStatus");
+                //DateTime? date = (DateTime)((rdr["lastUpdated"] == DBNull.Value) ? (DateTime?)null : rdr.GetDateTime("lastUpdated"));
+                p.LastUpdated = Helper.DateHelper.ConvertFromDBVal<DateTime>(rdr["lastUpdated"]);
+                p.InventoryStatus = rdr.GetString("inventoryStatus");
 
                 return p;
 
@@ -123,6 +124,41 @@ namespace Inventory_Management_System.Models
             newProduct.DateAdded = dateAdded;
             newProduct.InventoryStatus= invetoryStatus;
             return newProduct;
+        }
+
+        public List<Product_> getAllProducts()
+        {
+            MySqlConnection con = Helper.DbHelper.createConnection();
+            con.OpenAsync().Wait();
+
+            var cmd = new MySqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "SELECT * FROM product";
+            using MySqlDataReader rdr = cmd.ExecuteReader();
+
+            List<Product_> products = new List<Product_>();
+            while (rdr.Read())
+            {
+                Product_ p = new Product_();
+
+                p.ProductLotNum = rdr.GetString("productLotNum");
+                p.ProductCode = rdr.GetString("productCode");
+                p.ProductName = rdr.GetString("productName");
+                p.ProductQTY = rdr.GetInt32("productQTY");
+                p.Size = rdr.GetString("size");
+                p.Category = rdr.GetString("category");
+                p.MinToReorder = rdr.GetInt32("minToReorder");
+                string location = (rdr["prodLocation"] == DBNull.Value) ? "NA" : rdr.GetString("prodLocation");
+                p.ProdLocation = location;
+                p.ProductType = rdr.GetString("productType");
+                p.ProductStatus = rdr.GetString("productStatus");
+                p.DateAdded = rdr.GetDateTime("dateAdded");
+                p.LastUpdated = Helper.DateHelper.ConvertFromDBVal<DateTime>(rdr["lastUpdated"]);
+                p.InventoryStatus = rdr.GetString("inventoryStatus");
+
+                products.Add(p);
+            }
+            return products;
         }
     }
 }

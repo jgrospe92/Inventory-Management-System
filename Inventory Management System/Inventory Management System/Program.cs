@@ -24,7 +24,7 @@ namespace Inventory_Management_System
             //Application.Run(new Main());
 
             Controllers.ProductDAO_ prod = new Controllers.ProductDAO_();
-            prod.get<Models.Product_>();
+            prod.getAll();
             //string passwordhashed = Helper.LockPickHelper.HashPassword("1234");
             ////bool check = Helper.LockPickHelper.VerifyPassword(passwordHashed, "jeffrey2");
             ////MessageBox.Show("password id :" + check);
