@@ -35,6 +35,16 @@
             this.orderByComboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.applyButton = new System.Windows.Forms.Button();
+            this.homeProductListView = new System.Windows.Forms.ListView();
+            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader8 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader9 = new System.Windows.Forms.ColumnHeader();
             this.label4 = new System.Windows.Forms.Label();
             this.curretUserLabel = new System.Windows.Forms.Label();
             this.currentDateLabel = new System.Windows.Forms.Label();
@@ -111,6 +121,69 @@
             this.applyButton.Text = "APPLY";
             this.applyButton.UseVisualStyleBackColor = true;
             // 
+            // homeProductListView
+            // 
+            this.homeProductListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9});
+            this.homeProductListView.Location = new System.Drawing.Point(40, 144);
+            this.homeProductListView.Name = "homeProductListView";
+            this.homeProductListView.Size = new System.Drawing.Size(946, 321);
+            this.homeProductListView.TabIndex = 7;
+            this.homeProductListView.UseCompatibleStateImageBehavior = false;
+            this.homeProductListView.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "CODE";
+            this.columnHeader1.Width = 70;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Name";
+            this.columnHeader2.Width = 150;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Category";
+            this.columnHeader3.Width = 150;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Size";
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Stock";
+            this.columnHeader5.Width = 80;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Min To Order";
+            this.columnHeader6.Width = 150;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Location";
+            this.columnHeader7.Width = 100;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Update";
+            this.columnHeader8.Width = 100;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Delete";
+            this.columnHeader9.Width = 80;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -153,6 +226,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.orderByComboBox);
             this.Controls.Add(this.filterByComboBox);
+            this.Controls.Add(this.homeProductListView);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.label1);
@@ -178,5 +252,15 @@
         private Label label4;
         private Label curretUserLabel;
         private Label currentDateLabel;
+        private ListView homeProductListView;
+        private ColumnHeader columnHeader1;
+        private ColumnHeader columnHeader2;
+        private ColumnHeader columnHeader3;
+        private ColumnHeader columnHeader4;
+        private ColumnHeader columnHeader5;
+        private ColumnHeader columnHeader6;
+        private ColumnHeader columnHeader7;
+        private ColumnHeader columnHeader8;
+        private ColumnHeader columnHeader9;
     }
 }
