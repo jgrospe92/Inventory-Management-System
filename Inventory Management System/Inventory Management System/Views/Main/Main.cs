@@ -64,6 +64,8 @@ namespace Inventory_Management_System.Views.Main
             childForm.Show();
             titleLabel.Text = childForm.Text;
         }
+        
+      
 
         private void disableAllButton()
         {
@@ -234,8 +236,12 @@ namespace Inventory_Management_System.Views.Main
 
             MessageBox.Show("Login Success", "Success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             enableAllBUtton();
+           
+            openChild(new Views.Home.Home(), null);
 
-            openChild(new Views.Home.Home(), homeButton);
+
+
+
         }
     }
 }

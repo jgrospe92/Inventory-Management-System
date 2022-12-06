@@ -362,7 +362,7 @@
             // 
             // containerPanel
             // 
-            this.containerPanel.BackColor = System.Drawing.Color.White;
+            this.containerPanel.BackColor = System.Drawing.SystemColors.Control;
             this.containerPanel.Controls.Add(this.cancelLoginButton);
             this.containerPanel.Controls.Add(this.loginButton);
             this.containerPanel.Controls.Add(this.revealPasswordButton);
@@ -371,7 +371,7 @@
             this.containerPanel.Controls.Add(this.pictureBox1);
             this.containerPanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.containerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.containerPanel.ForeColor = System.Drawing.Color.Transparent;
+            this.containerPanel.ForeColor = System.Drawing.Color.Black;
             this.containerPanel.Location = new System.Drawing.Point(66, 63);
             this.containerPanel.Name = "containerPanel";
             this.containerPanel.Size = new System.Drawing.Size(1016, 640);
