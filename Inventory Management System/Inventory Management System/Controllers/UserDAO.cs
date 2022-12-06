@@ -8,7 +8,7 @@ using System.Drawing;
 
 namespace Inventory_Management_System.Controllers
 {
-    public class UserDAO : Controllers.DataAccessObject
+    public class UserDAO : Controllers.DataAccessObject<User>
     {
 
         User user;
@@ -25,7 +25,7 @@ namespace Inventory_Management_System.Controllers
             throw new NotImplementedException();
         }
 
-        public void get()
+        public User get<A>()
         {
             throw new NotImplementedException();
         }

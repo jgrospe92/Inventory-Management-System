@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Inventory_Management_System.Controllers
 {
-    internal interface DataAccessObject
+    internal interface DataAccessObject<T>
     {
-        void get();
+        T get<A>();
         void getAll();
         void insert();
         void update();

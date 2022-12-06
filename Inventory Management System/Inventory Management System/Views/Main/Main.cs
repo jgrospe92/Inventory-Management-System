@@ -240,10 +240,6 @@ namespace Inventory_Management_System.Views.Main
             currentUserLabel.Visible = true;
             currentUserLabel.Text = "Logged in as : " + valid.Role;
             openChild(new Views.Home.Home(), null);
-
-
-
-
         }
 
         private void dateTime_Tick(object sender, EventArgs e)
