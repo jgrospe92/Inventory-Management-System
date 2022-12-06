@@ -106,12 +106,9 @@
             this.reportTypeComboBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.reportTypeComboBox.FormattingEnabled = true;
             this.reportTypeComboBox.Items.AddRange(new object[] {
-            "Code",
-            "Name",
-            "Catergory",
-            "Size",
-            "Quantity"});
-            this.reportTypeComboBox.Location = new System.Drawing.Point(278, 47);
+            "ANNUALLY",
+            "MONTHLY"});
+            this.reportTypeComboBox.Location = new System.Drawing.Point(261, 42);
             this.reportTypeComboBox.Name = "reportTypeComboBox";
             this.reportTypeComboBox.Size = new System.Drawing.Size(161, 31);
             this.reportTypeComboBox.TabIndex = 14;
