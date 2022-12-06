@@ -35,16 +35,8 @@
             this.orderByComboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.applyButton = new System.Windows.Forms.Button();
-            this.homeProductListView = new System.Windows.Forms.ListView();
-            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader8 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader9 = new System.Windows.Forms.ColumnHeader();
+            this.productsDataGrid = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.productsDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -119,79 +111,26 @@
             this.applyButton.Text = "APPLY";
             this.applyButton.UseVisualStyleBackColor = true;
             // 
-            // homeProductListView
+            // productsDataGrid
             // 
-            this.homeProductListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9});
-            this.homeProductListView.Location = new System.Drawing.Point(40, 144);
-            this.homeProductListView.Name = "homeProductListView";
-            this.homeProductListView.Size = new System.Drawing.Size(946, 321);
-            this.homeProductListView.TabIndex = 7;
-            this.homeProductListView.UseCompatibleStateImageBehavior = false;
-            this.homeProductListView.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "CODE";
-            this.columnHeader1.Width = 70;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Name";
-            this.columnHeader2.Width = 150;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Category";
-            this.columnHeader3.Width = 150;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Size";
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Stock";
-            this.columnHeader5.Width = 80;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Min To Order";
-            this.columnHeader6.Width = 150;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Location";
-            this.columnHeader7.Width = 100;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Update";
-            this.columnHeader8.Width = 100;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Delete";
-            this.columnHeader9.Width = 80;
+            this.productsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.productsDataGrid.Location = new System.Drawing.Point(40, 192);
+            this.productsDataGrid.Name = "productsDataGrid";
+            this.productsDataGrid.RowHeadersWidth = 51;
+            this.productsDataGrid.RowTemplate.Height = 29;
+            this.productsDataGrid.Size = new System.Drawing.Size(894, 347);
+            this.productsDataGrid.TabIndex = 7;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(998, 593);
+            this.Controls.Add(this.productsDataGrid);
             this.Controls.Add(this.applyButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.orderByComboBox);
             this.Controls.Add(this.filterByComboBox);
-            this.Controls.Add(this.homeProductListView);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.label1);
@@ -200,6 +139,7 @@
             this.MaximumSize = new System.Drawing.Size(1016, 640);
             this.Name = "Home";
             this.Text = "Home";
+            ((System.ComponentModel.ISupportInitialize)(this.productsDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,15 +154,6 @@
         private ComboBox orderByComboBox;
         private Label label3;
         private Button applyButton;
-        private ListView homeProductListView;
-        private ColumnHeader columnHeader1;
-        private ColumnHeader columnHeader2;
-        private ColumnHeader columnHeader3;
-        private ColumnHeader columnHeader4;
-        private ColumnHeader columnHeader5;
-        private ColumnHeader columnHeader6;
-        private ColumnHeader columnHeader7;
-        private ColumnHeader columnHeader8;
-        private ColumnHeader columnHeader9;
+        private DataGridView productsDataGrid;
     }
 }

@@ -66,7 +66,11 @@ namespace Inventory_Management_System.Views.Main
             titleLabel.Text = childForm.Text;
         }
         
-   
+        private void LoadAllProducts()
+        {
+           
+
+        }
 
         private void disableAllButton()
         {
@@ -186,12 +190,12 @@ namespace Inventory_Management_System.Views.Main
 
         private void insertButton_Click(object sender, EventArgs e)
         {
-            openChild(new Views.Product.ProductDetails(), sender);
+            openChild(new Views.Product.AddItem(), sender);
         }
 
         private void reportButton_Click(object sender, EventArgs e)
         {
-            activeButton(sender);
+            openChild(new Views.Report.Report(), sender);
         }
 
         private void helpButton_Click(object sender, EventArgs e)

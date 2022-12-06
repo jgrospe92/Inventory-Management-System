@@ -17,5 +17,13 @@ namespace Inventory_Management_System.Views.Home
             InitializeComponent();
         }
 
+        public void loadProducts()
+        {
+            Controllers.ProductDAO_ productDAO = new Controllers.ProductDAO_();
+            DataTable dataTable = new DataTable();
+          
+            productsDataGrid.DataSource = dataTable;
+        }
+
     }
 }

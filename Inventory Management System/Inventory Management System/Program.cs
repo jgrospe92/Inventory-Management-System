@@ -20,11 +20,11 @@ namespace Inventory_Management_System
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
 
-            //ApplicationConfiguration.Initialize();
-            //Application.Run(new Main());
+            ApplicationConfiguration.Initialize();
+            Application.Run(new Main());
 
-            Controllers.ProductDAO_ prod = new Controllers.ProductDAO_();
-            prod.getAll();
+            //Controllers.ProductDAO_ prod = new Controllers.ProductDAO_();
+            //prod.getAll();
             //string passwordhashed = Helper.LockPickHelper.HashPassword("1234");
             ////bool check = Helper.LockPickHelper.VerifyPassword(passwordHashed, "jeffrey2");
             ////MessageBox.Show("password id :" + check);
