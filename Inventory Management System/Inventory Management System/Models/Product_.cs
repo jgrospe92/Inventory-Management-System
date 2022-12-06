@@ -86,11 +86,17 @@ namespace Inventory_Management_System.Models
                 p.ProductQTY = rdr.GetInt32("productQTY");
                 p.Size = rdr.GetString("size");
                 p.Category = rdr.GetString("category");
-                p.MinToReorder = rdr.GetInt32("minToOrder");
-                p.ProdLocation = rdr.GetString("minToOrder") == null ? "" : rdr.GetString("minToOrder");
+                p.MinToReorder = rdr.GetInt32("minToReorder");
+                string location = (rdr["prodLocation"] == DBNull.Value) ? "" : rdr.GetString("prodLocation");
+                p.ProdLocation = location;
+                p.ProductType = rdr.GetString("productType");
+                p.ProductStatus = rdr.GetString("productStatus");
+                p.DateAdded = rdr.GetDateTime("dateAdded");
+                p.LastUpdated = (DateTime)((rdr["lastUpdated"] == DBNull.Value) ? (DateTime?)null : rdr.GetDateTime("lastUpdated"));
 
+                //p.InventoryStatus = rdr.GetString("inventoryStatus");
 
-                return null;
+                return p;
 
             }
             con.CloseAsync().Wait();
