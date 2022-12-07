@@ -34,6 +34,7 @@ namespace Inventory_Management_System.Models
         {
        
             MySqlConnection con = Helper.DbHelper.createConnection();
+            string passwordHashed = Helper.LockPickHelper.HashPassword(this.Password);
 
             //con.OpenAsync().Wait();
             con.Open();
@@ -42,11 +43,11 @@ namespace Inventory_Management_System.Models
             cmd.Connection = con;
             cmd.CommandText = "INSERT INTO user(userName, password, role) VALUES(@userName, @password, @role)";
             cmd.Parameters.AddWithValue("userName", this.Username);
-            cmd.Parameters.AddWithValue("password", this.Password);
+            cmd.Parameters.AddWithValue("password", passwordHashed);
             cmd.Parameters.AddWithValue("role", this.Role);
 
             int i = await cmd.ExecuteNonQueryAsync();
-        
+            MessageBox.Show("Inserted");
             con.Close();
          
 

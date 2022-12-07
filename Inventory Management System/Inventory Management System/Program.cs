@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Runtime.InteropServices;
 using MySqlConnector;
 using Inventory_Management_System.Models;
+using Inventory_Management_System.Controllers;
 using Microsoft.AspNetCore.Identity;
 
 namespace Inventory_Management_System
@@ -22,6 +23,11 @@ namespace Inventory_Management_System
 
             ApplicationConfiguration.Initialize();
             Application.Run(new Main());
+
+            // INSERT NEW USER
+            //User user = new User("order", "1234", "Order");
+            //UserDAO userDAO = new UserDAO(user);
+            //userDAO.insert();
 
             //Controllers.ProductDAO_ prod = new Controllers.ProductDAO_();
             //prod.getAll();
