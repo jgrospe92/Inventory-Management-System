@@ -40,10 +40,10 @@
             // helpMenuLabel
             // 
             this.helpMenuLabel.AutoSize = true;
-            this.helpMenuLabel.Font = new System.Drawing.Font("Consolas", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.helpMenuLabel.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.helpMenuLabel.Location = new System.Drawing.Point(168, 78);
             this.helpMenuLabel.Name = "helpMenuLabel";
-            this.helpMenuLabel.Size = new System.Drawing.Size(450, 33);
+            this.helpMenuLabel.Size = new System.Drawing.Size(389, 28);
             this.helpMenuLabel.TabIndex = 17;
             this.helpMenuLabel.Text = "Welcome to the Help Menu Page";
             // 
