@@ -10,9 +10,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Inventory_Management_System.Models
 {
+
     public class Product_
     {
-        private int product_ID;
         private String productLotNum;
         private String productCode;
         private String productName;
@@ -29,13 +29,12 @@ namespace Inventory_Management_System.Models
 
         public Product_() { }
 
-        public Product_(int product_ID, string productLotNum,
+        public Product_(string productLotNum,
             string productCode, string productName, int productQTY,
             string size, string category, int minToReorder, string prodLocation,
             string productType, string productStatus, DateTime dateAdded,
             DateTime lastUpdated, string inventoryStatus)
         {
-            this.Product_ID = product_ID;
             this.ProductLotNum = productLotNum;
             this.ProductCode = productCode;
             this.ProductName = productName;
@@ -51,7 +50,6 @@ namespace Inventory_Management_System.Models
             this.InventoryStatus = inventoryStatus;
         }
 
-        public int Product_ID { get => product_ID; set => product_ID = value; }
         public string ProductLotNum { get => productLotNum; set => productLotNum = value; }
         public string ProductCode { get => productCode; set => productCode = value; }
         public string ProductName { get => productName; set => productName = value; }
@@ -121,7 +119,7 @@ namespace Inventory_Management_System.Models
             newProduct.Category = category;
             newProduct.MinToReorder= minToOrder;
             newProduct.ProdLocation = location;
-            newProduct.ProductType= type;
+            newProduct.ProductType = type;
             newProduct.ProductStatus= prodStatus;
             newProduct.DateAdded = dateAdded;
             newProduct.InventoryStatus= invetoryStatus;
@@ -200,6 +198,41 @@ namespace Inventory_Management_System.Models
             }
             con.Close();
             return products;
+        }
+
+       
+        public async void insert()
+        {
+            MySqlConnection con = Helper.DbHelper.createConnection();
+    
+
+            //con.OpenAsync().Wait();
+            con.Open();
+
+            var cmd = new MySqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "INSERT INTO product(productLotNum, productCode, productName, productQTY, size," +
+                "category, minToReorder, prodLocation, productType, productStatus, dateAdded, lastUpdated, inventoryStatus)" +
+                "VALUES(@productLotNum, @productCode, @productName, @productQTY, @size, @category, @minToReorder, @prodLocation," +
+                " @productType, @productStatus, @dateAdded, @lastUpdated, @inventoryStatus)";
+
+            cmd.Parameters.AddWithValue("productLotNum", this.ProductLotNum);
+            cmd.Parameters.AddWithValue("productCode", this.ProductCode);
+            cmd.Parameters.AddWithValue("productName", this.ProductName);
+            cmd.Parameters.AddWithValue("productQTY", this.ProductQTY);
+            cmd.Parameters.AddWithValue("size", this.Size);
+            cmd.Parameters.AddWithValue("category", this.Category);
+            cmd.Parameters.AddWithValue("minToReorder", this.MinToReorder);
+            cmd.Parameters.AddWithValue("prodLocation", this.ProdLocation);
+            cmd.Parameters.AddWithValue("productType", this.ProductType);
+            cmd.Parameters.AddWithValue("productStatus", this.ProductStatus);
+            cmd.Parameters.AddWithValue("dateAdded", this.DateAdded);
+            cmd.Parameters.AddWithValue("lastUpdated", this.LastUpdated);
+            cmd.Parameters.AddWithValue("inventoryStatus", this.InventoryStatus);
+          
+            int i = await cmd.ExecuteNonQueryAsync();
+            MessageBox.Show("New Product Inserted");
+            con.Close();
         }
     }
 }

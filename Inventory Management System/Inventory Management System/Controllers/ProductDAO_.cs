@@ -10,6 +10,13 @@ namespace Inventory_Management_System.Controllers
 {
     public class ProductDAO_ : Controllers.DataAccessObject<Product_>
     {
+
+        Product_ product_;
+
+        public ProductDAO_() { this.product_ = new Product_(); }
+
+        public ProductDAO_(Product_ product_) { this.product_ = product_; }
+
         public void delete()
         {
             throw new NotImplementedException();
@@ -42,12 +49,13 @@ namespace Inventory_Management_System.Controllers
 
         public void insert()
         {
-            throw new NotImplementedException();
+
+            product_.insert();
         }
 
         public void update()
         {
-            throw new NotImplementedException();
+           
         }
     }
 }

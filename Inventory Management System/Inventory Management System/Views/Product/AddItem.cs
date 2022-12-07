@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace Inventory_Management_System.Views.Product
 {
@@ -15,6 +17,94 @@ namespace Inventory_Management_System.Views.Product
         public AddItem()
         {
             InitializeComponent();
+        }
+
+        // Insert new product
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+           
+            Models.Product_ product = new Models.Product_();
+            Controllers.ProductDAO_ productDAO = new Controllers.ProductDAO_(product);
+
+            if (!validateTextBox(tb_lotNumberAdd) || !validateTextBox(cb_codeAdd) || !validateTextBox(tb_nameAdd)
+                || !validateTextBox(tb_qtyAdd) || !validateTextBox(tb_sizeWidthAdd) || !validateTextBox(tb_sizeHeightAdd)
+                || !validateTextBox(tb_locationAdd) || !validateTextBox(cb_codeAdd) || !validateTextBox(tb_qtyAdd)
+                || !validateTextBox(tb_minToOrderAdd) || !validateComboBox(cb_categoryAdd) || !validateComboBox(cb_typeAdd)
+                || !validateComboBox(cb_productStatusAdd) || !validateComboBox(cb_inventoryStatusAdd)){
+                
+                MessageBox.Show("Please provide all info or type NA", "WARNING",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
+
+            product.ProductLotNum = tb_lotNumberAdd.Text;
+            product.ProductCode = cb_codeAdd.Text;
+            product.ProductName = tb_nameAdd.Text;
+            product.ProductQTY = Int32.Parse(tb_qtyAdd.Text);
+            product.Size = tb_sizeWidthAdd.Text + " x " + tb_sizeHeightAdd.Text;
+            product.Category = checkCMBifNull(cb_categoryAdd);
+            product.MinToReorder = Int32.Parse(tb_minToOrderAdd.Text);
+            product.ProdLocation = tb_locationAdd.Text;
+            product.ProductType = cb_typeAdd.SelectedText.ToString();
+            product.ProductStatus = checkCMBStatus(cb_inventoryStatusAdd);
+            DateTime current = DateTime.Now;
+            product.DateAdded = current;
+            product.LastUpdated = current;
+            product.InventoryStatus = cb_inventoryStatusAdd.SelectedItem.ToString();
+
+            productDAO.insert();
+        }
+
+        private Boolean validateTextBox(TextBox textBox)
+        {
+            if (String.IsNullOrEmpty(textBox.Text))
+            {
+                return false;
+            }
+            return true;
+        }
+
+        private Boolean validateComboBox(ComboBox comboBox)
+        {
+            if (String.IsNullOrEmpty(comboBox.Text))
+            {
+                return false;
+            }
+            return true;
+        }
+
+        private void ClearTextBoxes(Control control)
+        {
+            foreach (var c in control.Controls)
+            {
+                if (c is TextBox) ((TextBox)c).Text = String.Empty;
+                if (c is ComboBox) ((ComboBox)c).SelectedItem = null;
+            }
+        }
+
+
+        private string checkCMBifNull(ComboBox comboBox)
+        {
+            if (comboBox.SelectedItem != null)
+            {
+                string? category = comboBox.SelectedItem.ToString();
+                return category;
+            }
+            return "OTHER";
+        }
+
+        private string checkCMBStatus(ComboBox comboBox)
+        {
+            if (comboBox.SelectedItem != null)
+            {
+                string? status = comboBox.SelectedItem.ToString();
+                return status;
+            }
+            return "ACTIVE";
+        }
+
+        private void btnCancelAdd_Click(object sender, EventArgs e)
+        {
+            ClearTextBoxes(this);
         }
     }
 }
