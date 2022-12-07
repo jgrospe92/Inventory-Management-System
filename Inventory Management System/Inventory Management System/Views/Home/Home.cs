@@ -4,8 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
@@ -78,8 +80,16 @@ namespace Inventory_Management_System.Views.Home
         }
 
         private void productsDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (currentUser.Role == "Packaging" || currentUser.Role == "Order")
+        {   
+            if (currentUser.Role == "Packaging")
+            {
+                if (productsDataGrid.Columns[e.ColumnIndex].Name == "productEdit")
+                {
+                    Product.Update update = new Product.Update();
+                    update.Show();
+                }
+            }
+            if (currentUser.Role == "Order")
             {
                 return;
             }

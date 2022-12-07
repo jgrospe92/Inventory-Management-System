@@ -20,6 +20,9 @@ SET time_zone = "+00:00";
 --
 -- Database: `rosehill`
 --
+DROP DATABASE IF EXISTS rosehill;
+CREATE DATABASE rosehill;
+USE rosehill;
 
 -- --------------------------------------------------------
 
