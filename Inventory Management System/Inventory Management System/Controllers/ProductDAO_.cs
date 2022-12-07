@@ -32,6 +32,14 @@ namespace Inventory_Management_System.Controllers
             return proudcts;
         }
 
+       public List<Product_> searchByKeyWord(string name) 
+        {
+            Models.Product_ product = new Models.Product_();
+            List<Product_> proudcts = new List<Product_>();
+            proudcts = product.searchByName(name);
+            return proudcts;
+        }
+
         public void insert()
         {
             throw new NotImplementedException();

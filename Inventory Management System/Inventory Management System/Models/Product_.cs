@@ -128,6 +128,43 @@ namespace Inventory_Management_System.Models
             return newProduct;
         }
 
+        public List<Product_> searchByName(string keyword)
+        {
+            MySqlConnection con = Helper.DbHelper.createConnection();
+            //con.OpenAsync().Wait();
+            con.Open();
+
+            var cmd = new MySqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "SELECT * FROM product WHERE productName LIKE @productName";
+            cmd.Parameters.AddWithValue("productName", "%" + keyword + "%");
+            using MySqlDataReader rdr = cmd.ExecuteReader();
+            List<Product_> products = new List<Product_>();
+            while (rdr.Read())
+            {
+                Product_ p = new Product_();
+
+                p.ProductLotNum = rdr.GetString("productLotNum");
+                p.ProductCode = rdr.GetString("productCode");
+                p.ProductName = rdr.GetString("productName");
+                p.ProductQTY = rdr.GetInt32("productQTY");
+                p.Size = rdr.GetString("size");
+                p.Category = rdr.GetString("category");
+                p.MinToReorder = rdr.GetInt32("minToReorder");
+                string location = (rdr["prodLocation"] == DBNull.Value) ? "NA" : rdr.GetString("prodLocation");
+                p.ProdLocation = location;
+                p.ProductType = rdr.GetString("productType");
+                p.ProductStatus = rdr.GetString("productStatus");
+                p.DateAdded = rdr.GetDateTime("dateAdded");
+                p.LastUpdated = Helper.DateHelper.ConvertFromDBVal<DateTime>(rdr["lastUpdated"]);
+                p.InventoryStatus = rdr.GetString("inventoryStatus");
+
+                products.Add(p);
+            }
+            con.Close();
+            return products;
+        }
+
         public List<Product_> getAllProducts()
         {
             MySqlConnection con = Helper.DbHelper.createConnection();
