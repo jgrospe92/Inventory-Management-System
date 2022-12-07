@@ -30,7 +30,7 @@ namespace Inventory_Management_System.Views.Main
         Button currentButton = null;
         Form activeForm;
 
-        bool hasActiveUser = false;
+        Models.User currentUser;
 
         public Main()
         {
@@ -87,6 +87,13 @@ namespace Inventory_Management_System.Views.Main
             alertButton.BackColor= disabledBackColor;
             reportButton.BackColor= disabledBackColor;
             helpButton.BackColor= disabledBackColor;
+        }
+
+        private void disableButton(Button button)
+        {
+            button.Enabled = false;
+            Color disabledBackColor = Color.FromArgb(188, 188, 188);
+            button.BackColor = disabledBackColor;
         }
 
         private void enableAllBUtton()
@@ -185,7 +192,7 @@ namespace Inventory_Management_System.Views.Main
 
         private void homeButton_Click(object sender, EventArgs e)
         {
-            openChild(new Views.Home.Home(), sender);
+            openChild(new Views.Home.Home(currentUser), sender);
         }
 
         private void insertButton_Click(object sender, EventArgs e)
@@ -241,9 +248,25 @@ namespace Inventory_Management_System.Views.Main
 
             MessageBox.Show("Login Success", "Success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             enableAllBUtton();
+            checkUserRole(valid.Role);
+            currentUser = valid;
             currentUserLabel.Visible = true;
             currentUserLabel.Text = "Logged in as : " + valid.Role;
-            openChild(new Views.Home.Home(), null);
+            openChild(new Views.Home.Home(currentUser), null);
+        }
+
+        public void checkUserRole(string role)
+        {
+            switch (role)
+            {
+                case "Packaging":
+                    disableButton(insertButton); disableButton(alertButton); disableButton(reportButton);
+                    break;
+                case "Shipping":
+                    disableButton(alertButton); disableButton(reportButton); break;
+                case "Order": disableButton(insertButton); break;
+             
+            }
         }
 
         private void dateTime_Tick(object sender, EventArgs e)

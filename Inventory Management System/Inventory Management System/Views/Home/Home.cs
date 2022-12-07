@@ -1,4 +1,5 @@
 ﻿using Inventory_Management_System.Models;
+using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,9 +15,11 @@ namespace Inventory_Management_System.Views.Home
 {
     public partial class Home : Form
     {
-        public Home()
+        Models.User currentUser;
+        public Home(Models.User user)
         {
             InitializeComponent();
+            this.currentUser =  user;
             loadProducts();
         }
      
@@ -76,6 +79,10 @@ namespace Inventory_Management_System.Views.Home
 
         private void productsDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (currentUser.Role == "Packaging" || currentUser.Role == "Order")
+            {
+                return;
+            }
             if (productsDataGrid.Columns[e.ColumnIndex].Name == "deleteProduct")
             {
                 if(MessageBox.Show("Are you sure you want to delete this item?", "WARNING", MessageBoxButtons.YesNo,
