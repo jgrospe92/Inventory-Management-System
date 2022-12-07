@@ -18,7 +18,7 @@ namespace Inventory_Management_System.Views.Home
             InitializeComponent();
             loadProducts();
         }
-
+     
         public void loadProducts()
         {
             Controllers.ProductDAO_ productDAO = new Controllers.ProductDAO_();
@@ -71,6 +71,18 @@ namespace Inventory_Management_System.Views.Home
         {
             productsDataGrid.Rows.Clear();
             loadProducts();
+        }
+
+        private void productsDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (productsDataGrid.Columns[e.ColumnIndex].Name == "deleteProduct")
+            {
+                if(MessageBox.Show("Are you sure you want to delete this item?", "WARNING", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    productsDataGrid.Rows.RemoveAt(e.RowIndex);
+                }
+            }
         }
     }
 }
