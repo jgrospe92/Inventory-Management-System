@@ -30,9 +30,10 @@ namespace Inventory_Management_System.Views.Product
                 || !validateTextBox(tb_qtyAdd) || !validateTextBox(tb_sizeWidthAdd) || !validateTextBox(tb_sizeHeightAdd)
                 || !validateTextBox(tb_locationAdd) || !validateTextBox(cb_codeAdd) || !validateTextBox(tb_qtyAdd)
                 || !validateTextBox(tb_minToOrderAdd) || !validateComboBox(cb_categoryAdd) || !validateComboBox(cb_typeAdd)
-                || !validateComboBox(cb_productStatusAdd) || !validateComboBox(cb_inventoryStatusAdd)){
-                
-                MessageBox.Show("Please provide all info or type NA", "WARNING",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                || !validateComboBox(cb_productStatusAdd) || !validateComboBox(cb_inventoryStatusAdd))
+            {
+
+                MessageBox.Show("Please provide all info or type NA", "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -41,16 +42,16 @@ namespace Inventory_Management_System.Views.Product
             product.ProductName = tb_nameAdd.Text;
             product.ProductQTY = Int32.Parse(tb_qtyAdd.Text);
             product.Size = tb_sizeWidthAdd.Text + " x " + tb_sizeHeightAdd.Text;
-            product.Category = checkCMBifNull(cb_categoryAdd);
+            product.Category = cb_categoryAdd.Text;
             product.MinToReorder = Int32.Parse(tb_minToOrderAdd.Text);
             product.ProdLocation = tb_locationAdd.Text;
-            product.ProductType = cb_typeAdd.SelectedText.ToString();
-            product.ProductStatus = checkCMBStatus(cb_inventoryStatusAdd);
+            product.ProductType = cb_typeAdd.Text;
+            product.ProductStatus = cb_productStatusAdd.Text;
             DateTime current = DateTime.Now;
             product.DateAdded = current;
             product.LastUpdated = current;
             product.InventoryStatus = cb_inventoryStatusAdd.SelectedItem.ToString();
-
+            
             productDAO.insert();
         }
 

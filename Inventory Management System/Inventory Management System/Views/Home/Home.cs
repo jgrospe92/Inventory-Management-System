@@ -87,6 +87,7 @@ namespace Inventory_Management_System.Views.Home
                 {
                     Product.Update update = new Product.Update();
                     update.Show();
+                    return;
                 }
             }
             if (currentUser.Role == "Order")
