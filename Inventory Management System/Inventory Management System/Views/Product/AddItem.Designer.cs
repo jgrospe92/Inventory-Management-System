@@ -70,16 +70,16 @@
             "SEASONING",
             "MARINADE",
             "OTHER"});
-            this.cb_categoryAdd.Location = new System.Drawing.Point(356, 160);
+            this.cb_categoryAdd.Location = new System.Drawing.Point(356, 144);
             this.cb_categoryAdd.Name = "cb_categoryAdd";
-            this.cb_categoryAdd.Size = new System.Drawing.Size(277, 28);
+            this.cb_categoryAdd.Size = new System.Drawing.Size(277, 26);
             this.cb_categoryAdd.TabIndex = 31;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(96, 257);
+            this.label1.Location = new System.Drawing.Point(96, 231);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(25, 28);
             this.label1.TabIndex = 45;
@@ -87,19 +87,19 @@
             // 
             // tb_sizeHeightAdd
             // 
-            this.tb_sizeHeightAdd.Location = new System.Drawing.Point(127, 258);
+            this.tb_sizeHeightAdd.Location = new System.Drawing.Point(127, 232);
             this.tb_sizeHeightAdd.Name = "tb_sizeHeightAdd";
             this.tb_sizeHeightAdd.PlaceholderText = "height";
-            this.tb_sizeHeightAdd.Size = new System.Drawing.Size(68, 27);
+            this.tb_sizeHeightAdd.Size = new System.Drawing.Size(68, 25);
             this.tb_sizeHeightAdd.TabIndex = 28;
             // 
             // btnCancelAdd
             // 
             this.btnCancelAdd.BackColor = System.Drawing.Color.IndianRed;
             this.btnCancelAdd.ForeColor = System.Drawing.Color.White;
-            this.btnCancelAdd.Location = new System.Drawing.Point(677, 427);
+            this.btnCancelAdd.Location = new System.Drawing.Point(677, 490);
             this.btnCancelAdd.Name = "btnCancelAdd";
-            this.btnCancelAdd.Size = new System.Drawing.Size(136, 52);
+            this.btnCancelAdd.Size = new System.Drawing.Size(136, 47);
             this.btnCancelAdd.TabIndex = 43;
             this.btnCancelAdd.Text = "Clear";
             this.btnCancelAdd.UseVisualStyleBackColor = false;
@@ -109,9 +109,9 @@
             // 
             this.btnAdd.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(831, 427);
+            this.btnAdd.Location = new System.Drawing.Point(831, 490);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(136, 52);
+            this.btnAdd.Size = new System.Drawing.Size(136, 47);
             this.btnAdd.TabIndex = 42;
             this.btnAdd.Text = "Create";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -121,7 +121,7 @@
             // 
             this.minToOrderLabel.AutoSize = true;
             this.minToOrderLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.minToOrderLabel.Location = new System.Drawing.Point(690, 121);
+            this.minToOrderLabel.Location = new System.Drawing.Point(690, 109);
             this.minToOrderLabel.Name = "minToOrderLabel";
             this.minToOrderLabel.Size = new System.Drawing.Size(212, 28);
             this.minToOrderLabel.TabIndex = 39;
@@ -129,17 +129,17 @@
             // 
             // tb_minToOrderAdd
             // 
-            this.tb_minToOrderAdd.Location = new System.Drawing.Point(690, 161);
+            this.tb_minToOrderAdd.Location = new System.Drawing.Point(690, 145);
             this.tb_minToOrderAdd.Name = "tb_minToOrderAdd";
             this.tb_minToOrderAdd.PlaceholderText = "Enter minium amount to reorder";
-            this.tb_minToOrderAdd.Size = new System.Drawing.Size(277, 27);
+            this.tb_minToOrderAdd.Size = new System.Drawing.Size(277, 25);
             this.tb_minToOrderAdd.TabIndex = 35;
             // 
             // locationLabel
             // 
             this.locationLabel.AutoSize = true;
             this.locationLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.locationLabel.Location = new System.Drawing.Point(28, 315);
+            this.locationLabel.Location = new System.Drawing.Point(28, 284);
             this.locationLabel.Name = "locationLabel";
             this.locationLabel.Size = new System.Drawing.Size(93, 28);
             this.locationLabel.TabIndex = 37;
@@ -147,17 +147,17 @@
             // 
             // tb_locationAdd
             // 
-            this.tb_locationAdd.Location = new System.Drawing.Point(28, 355);
+            this.tb_locationAdd.Location = new System.Drawing.Point(28, 320);
             this.tb_locationAdd.Name = "tb_locationAdd";
             this.tb_locationAdd.PlaceholderText = "Enter Item location";
-            this.tb_locationAdd.Size = new System.Drawing.Size(277, 27);
+            this.tb_locationAdd.Size = new System.Drawing.Size(277, 25);
             this.tb_locationAdd.TabIndex = 29;
             // 
             // stockDetailLabel
             // 
             this.stockDetailLabel.AutoSize = true;
             this.stockDetailLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.stockDetailLabel.Location = new System.Drawing.Point(356, 218);
+            this.stockDetailLabel.Location = new System.Drawing.Point(356, 196);
             this.stockDetailLabel.Name = "stockDetailLabel";
             this.stockDetailLabel.Size = new System.Drawing.Size(64, 28);
             this.stockDetailLabel.TabIndex = 35;
@@ -165,17 +165,17 @@
             // 
             // tb_qtyAdd
             // 
-            this.tb_qtyAdd.Location = new System.Drawing.Point(356, 258);
+            this.tb_qtyAdd.Location = new System.Drawing.Point(356, 232);
             this.tb_qtyAdd.Name = "tb_qtyAdd";
             this.tb_qtyAdd.PlaceholderText = "Enter product quantity";
-            this.tb_qtyAdd.Size = new System.Drawing.Size(277, 27);
+            this.tb_qtyAdd.Size = new System.Drawing.Size(277, 25);
             this.tb_qtyAdd.TabIndex = 32;
             // 
             // categoryDetailLabel
             // 
             this.categoryDetailLabel.AutoSize = true;
             this.categoryDetailLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.categoryDetailLabel.Location = new System.Drawing.Point(356, 121);
+            this.categoryDetailLabel.Location = new System.Drawing.Point(356, 109);
             this.categoryDetailLabel.Name = "categoryDetailLabel";
             this.categoryDetailLabel.Size = new System.Drawing.Size(98, 28);
             this.categoryDetailLabel.TabIndex = 33;
@@ -185,7 +185,7 @@
             // 
             this.codeDetailLabel.AutoSize = true;
             this.codeDetailLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.codeDetailLabel.Location = new System.Drawing.Point(356, 32);
+            this.codeDetailLabel.Location = new System.Drawing.Point(356, 29);
             this.codeDetailLabel.Name = "codeDetailLabel";
             this.codeDetailLabel.Size = new System.Drawing.Size(59, 28);
             this.codeDetailLabel.TabIndex = 32;
@@ -193,17 +193,17 @@
             // 
             // cb_codeAdd
             // 
-            this.cb_codeAdd.Location = new System.Drawing.Point(356, 72);
+            this.cb_codeAdd.Location = new System.Drawing.Point(356, 65);
             this.cb_codeAdd.Name = "cb_codeAdd";
             this.cb_codeAdd.PlaceholderText = "Enter item code";
-            this.cb_codeAdd.Size = new System.Drawing.Size(277, 27);
+            this.cb_codeAdd.Size = new System.Drawing.Size(277, 25);
             this.cb_codeAdd.TabIndex = 30;
             // 
             // sizeLabel
             // 
             this.sizeLabel.AutoSize = true;
             this.sizeLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.sizeLabel.Location = new System.Drawing.Point(28, 218);
+            this.sizeLabel.Location = new System.Drawing.Point(28, 196);
             this.sizeLabel.Name = "sizeLabel";
             this.sizeLabel.Size = new System.Drawing.Size(50, 28);
             this.sizeLabel.TabIndex = 30;
@@ -211,17 +211,17 @@
             // 
             // tb_sizeWidthAdd
             // 
-            this.tb_sizeWidthAdd.Location = new System.Drawing.Point(28, 258);
+            this.tb_sizeWidthAdd.Location = new System.Drawing.Point(28, 232);
             this.tb_sizeWidthAdd.Name = "tb_sizeWidthAdd";
             this.tb_sizeWidthAdd.PlaceholderText = "width";
-            this.tb_sizeWidthAdd.Size = new System.Drawing.Size(68, 27);
+            this.tb_sizeWidthAdd.Size = new System.Drawing.Size(68, 25);
             this.tb_sizeWidthAdd.TabIndex = 27;
             // 
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
             this.nameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.nameLabel.Location = new System.Drawing.Point(28, 121);
+            this.nameLabel.Location = new System.Drawing.Point(28, 109);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(68, 28);
             this.nameLabel.TabIndex = 28;
@@ -229,17 +229,17 @@
             // 
             // tb_nameAdd
             // 
-            this.tb_nameAdd.Location = new System.Drawing.Point(28, 161);
+            this.tb_nameAdd.Location = new System.Drawing.Point(28, 145);
             this.tb_nameAdd.Name = "tb_nameAdd";
             this.tb_nameAdd.PlaceholderText = "Enter Name";
-            this.tb_nameAdd.Size = new System.Drawing.Size(277, 27);
+            this.tb_nameAdd.Size = new System.Drawing.Size(277, 25);
             this.tb_nameAdd.TabIndex = 26;
             // 
             // lotNumberLabel
             // 
             this.lotNumberLabel.AutoSize = true;
             this.lotNumberLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lotNumberLabel.Location = new System.Drawing.Point(28, 32);
+            this.lotNumberLabel.Location = new System.Drawing.Point(28, 29);
             this.lotNumberLabel.Name = "lotNumberLabel";
             this.lotNumberLabel.Size = new System.Drawing.Size(125, 28);
             this.lotNumberLabel.TabIndex = 26;
@@ -247,17 +247,17 @@
             // 
             // tb_lotNumberAdd
             // 
-            this.tb_lotNumberAdd.Location = new System.Drawing.Point(28, 72);
+            this.tb_lotNumberAdd.Location = new System.Drawing.Point(28, 65);
             this.tb_lotNumberAdd.Name = "tb_lotNumberAdd";
             this.tb_lotNumberAdd.PlaceholderText = "Enter Lot Number";
-            this.tb_lotNumberAdd.Size = new System.Drawing.Size(277, 27);
+            this.tb_lotNumberAdd.Size = new System.Drawing.Size(277, 25);
             this.tb_lotNumberAdd.TabIndex = 25;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(356, 315);
+            this.label2.Location = new System.Drawing.Point(356, 284);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 28);
             this.label2.TabIndex = 48;
@@ -267,7 +267,7 @@
             // 
             this.productStatusLabel.AutoSize = true;
             this.productStatusLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.productStatusLabel.Location = new System.Drawing.Point(690, 32);
+            this.productStatusLabel.Location = new System.Drawing.Point(690, 29);
             this.productStatusLabel.Name = "productStatusLabel";
             this.productStatusLabel.Size = new System.Drawing.Size(151, 28);
             this.productStatusLabel.TabIndex = 50;
@@ -281,9 +281,9 @@
             "PRIVATE",
             "RH",
             "OTHER"});
-            this.cb_typeAdd.Location = new System.Drawing.Point(356, 355);
+            this.cb_typeAdd.Location = new System.Drawing.Point(356, 320);
             this.cb_typeAdd.Name = "cb_typeAdd";
-            this.cb_typeAdd.Size = new System.Drawing.Size(277, 28);
+            this.cb_typeAdd.Size = new System.Drawing.Size(277, 26);
             this.cb_typeAdd.TabIndex = 33;
             // 
             // cb_productStatusAdd
@@ -293,9 +293,9 @@
             this.cb_productStatusAdd.Items.AddRange(new object[] {
             "ACTIVE ",
             "DISCONTINUED"});
-            this.cb_productStatusAdd.Location = new System.Drawing.Point(690, 72);
+            this.cb_productStatusAdd.Location = new System.Drawing.Point(690, 65);
             this.cb_productStatusAdd.Name = "cb_productStatusAdd";
-            this.cb_productStatusAdd.Size = new System.Drawing.Size(277, 28);
+            this.cb_productStatusAdd.Size = new System.Drawing.Size(277, 26);
             this.cb_productStatusAdd.TabIndex = 34;
             // 
             // cb_inventoryStatusAdd
@@ -305,16 +305,16 @@
             this.cb_inventoryStatusAdd.Items.AddRange(new object[] {
             "IN STOCK",
             "OUT OF STOCK"});
-            this.cb_inventoryStatusAdd.Location = new System.Drawing.Point(690, 258);
+            this.cb_inventoryStatusAdd.Location = new System.Drawing.Point(690, 232);
             this.cb_inventoryStatusAdd.Name = "cb_inventoryStatusAdd";
-            this.cb_inventoryStatusAdd.Size = new System.Drawing.Size(277, 28);
+            this.cb_inventoryStatusAdd.Size = new System.Drawing.Size(277, 26);
             this.cb_inventoryStatusAdd.TabIndex = 36;
             // 
             // inventoryLabel
             // 
             this.inventoryLabel.AutoSize = true;
             this.inventoryLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.inventoryLabel.Location = new System.Drawing.Point(690, 218);
+            this.inventoryLabel.Location = new System.Drawing.Point(690, 196);
             this.inventoryLabel.Name = "inventoryLabel";
             this.inventoryLabel.Size = new System.Drawing.Size(169, 28);
             this.inventoryLabel.TabIndex = 53;
@@ -322,9 +322,9 @@
             // 
             // AddItem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(991, 519);
+            this.ClientSize = new System.Drawing.Size(998, 593);
             this.Controls.Add(this.cb_inventoryStatusAdd);
             this.Controls.Add(this.inventoryLabel);
             this.Controls.Add(this.cb_productStatusAdd);
@@ -351,6 +351,7 @@
             this.Controls.Add(this.tb_nameAdd);
             this.Controls.Add(this.lotNumberLabel);
             this.Controls.Add(this.tb_lotNumberAdd);
+            this.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "AddItem";
             this.Text = "AddItem";
             this.ResumeLayout(false);

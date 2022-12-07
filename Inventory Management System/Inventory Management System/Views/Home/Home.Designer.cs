@@ -35,10 +35,6 @@
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.applyButton = new System.Windows.Forms.Button();
             this.productsDataGrid = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.clearHomeButton = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.recordLabel = new System.Windows.Forms.Label();
             this.productCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Size = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +44,10 @@
             this.productLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deleteProduct = new System.Windows.Forms.DataGridViewButtonColumn();
             this.productEdit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.clearHomeButton = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.recordLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.productsDataGrid)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -136,50 +136,6 @@
             this.productsDataGrid.TabIndex = 7;
             this.productsDataGrid.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productsDataGrid_CellContentClick);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.clearHomeButton);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.searchTextBox);
-            this.panel1.Controls.Add(this.applyButton);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(998, 80);
-            this.panel1.TabIndex = 8;
-            // 
-            // clearHomeButton
-            // 
-            this.clearHomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clearHomeButton.Location = new System.Drawing.Point(428, 33);
-            this.clearHomeButton.Name = "clearHomeButton";
-            this.clearHomeButton.Padding = new System.Windows.Forms.Padding(5);
-            this.clearHomeButton.Size = new System.Drawing.Size(94, 37);
-            this.clearHomeButton.TabIndex = 7;
-            this.clearHomeButton.Text = "CLEAR";
-            this.clearHomeButton.UseVisualStyleBackColor = true;
-            this.clearHomeButton.Click += new System.EventHandler(this.clearHomeButton_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.recordLabel);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 571);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(998, 22);
-            this.panel2.TabIndex = 9;
-            // 
-            // recordLabel
-            // 
-            this.recordLabel.AutoSize = true;
-            this.recordLabel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.recordLabel.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.recordLabel.Location = new System.Drawing.Point(0, 0);
-            this.recordLabel.Name = "recordLabel";
-            this.recordLabel.Size = new System.Drawing.Size(81, 20);
-            this.recordLabel.TabIndex = 0;
-            this.recordLabel.Text = "Record: ";
-            // 
             // productCode
             // 
             this.productCode.HeaderText = "Code";
@@ -246,6 +202,50 @@
             this.productEdit.ReadOnly = true;
             this.productEdit.Text = "Update";
             this.productEdit.UseColumnTextForButtonValue = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.clearHomeButton);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.searchTextBox);
+            this.panel1.Controls.Add(this.applyButton);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(998, 80);
+            this.panel1.TabIndex = 8;
+            // 
+            // clearHomeButton
+            // 
+            this.clearHomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearHomeButton.Location = new System.Drawing.Point(428, 33);
+            this.clearHomeButton.Name = "clearHomeButton";
+            this.clearHomeButton.Padding = new System.Windows.Forms.Padding(5);
+            this.clearHomeButton.Size = new System.Drawing.Size(94, 37);
+            this.clearHomeButton.TabIndex = 7;
+            this.clearHomeButton.Text = "CLEAR";
+            this.clearHomeButton.UseVisualStyleBackColor = true;
+            this.clearHomeButton.Click += new System.EventHandler(this.clearHomeButton_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.recordLabel);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 571);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(998, 22);
+            this.panel2.TabIndex = 9;
+            // 
+            // recordLabel
+            // 
+            this.recordLabel.AutoSize = true;
+            this.recordLabel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.recordLabel.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.recordLabel.Location = new System.Drawing.Point(0, 0);
+            this.recordLabel.Name = "recordLabel";
+            this.recordLabel.Size = new System.Drawing.Size(81, 20);
+            this.recordLabel.TabIndex = 0;
+            this.recordLabel.Text = "Record: ";
             // 
             // Home
             // 

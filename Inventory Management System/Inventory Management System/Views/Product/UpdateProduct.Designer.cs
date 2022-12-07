@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.updatedLabel = new System.Windows.Forms.Label();
-            this.dateAddedLabel = new System.Windows.Forms.Label();
-            this.dtp_DateUpdatedUpdate = new System.Windows.Forms.DateTimePicker();
-            this.dtp_DateAddedUpdate = new System.Windows.Forms.DateTimePicker();
             this.cb_inventoryStatusUpdate = new System.Windows.Forms.ComboBox();
             this.inventoryLabel = new System.Windows.Forms.Label();
             this.cb_productStatusUpdate = new System.Windows.Forms.ComboBox();
@@ -60,47 +56,14 @@
             this.btnCancelUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // updatedLabel
-            // 
-            this.updatedLabel.AutoSize = true;
-            this.updatedLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.updatedLabel.Location = new System.Drawing.Point(691, 221);
-            this.updatedLabel.Name = "updatedLabel";
-            this.updatedLabel.Size = new System.Drawing.Size(136, 28);
-            this.updatedLabel.TabIndex = 117;
-            this.updatedLabel.Text = "Last Updated";
-            // 
-            // dateAddedLabel
-            // 
-            this.dateAddedLabel.AutoSize = true;
-            this.dateAddedLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.dateAddedLabel.Location = new System.Drawing.Point(691, 124);
-            this.dateAddedLabel.Name = "dateAddedLabel";
-            this.dateAddedLabel.Size = new System.Drawing.Size(124, 28);
-            this.dateAddedLabel.TabIndex = 116;
-            this.dateAddedLabel.Text = "Date Added";
-            // 
-            // dtp_DateUpdatedUpdate
-            // 
-            this.dtp_DateUpdatedUpdate.Location = new System.Drawing.Point(691, 259);
-            this.dtp_DateUpdatedUpdate.Name = "dtp_DateUpdatedUpdate";
-            this.dtp_DateUpdatedUpdate.Size = new System.Drawing.Size(250, 27);
-            this.dtp_DateUpdatedUpdate.TabIndex = 115;
-            // 
-            // dtp_DateAddedUpdate
-            // 
-            this.dtp_DateAddedUpdate.Location = new System.Drawing.Point(691, 161);
-            this.dtp_DateAddedUpdate.Name = "dtp_DateAddedUpdate";
-            this.dtp_DateAddedUpdate.Size = new System.Drawing.Size(250, 27);
-            this.dtp_DateAddedUpdate.TabIndex = 114;
-            // 
             // cb_inventoryStatusUpdate
             // 
+            this.cb_inventoryStatusUpdate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_inventoryStatusUpdate.FormattingEnabled = true;
             this.cb_inventoryStatusUpdate.Items.AddRange(new object[] {
             "IN STOCK",
             "OUT OF STOCK"});
-            this.cb_inventoryStatusUpdate.Location = new System.Drawing.Point(691, 358);
+            this.cb_inventoryStatusUpdate.Location = new System.Drawing.Point(691, 261);
             this.cb_inventoryStatusUpdate.Name = "cb_inventoryStatusUpdate";
             this.cb_inventoryStatusUpdate.Size = new System.Drawing.Size(277, 28);
             this.cb_inventoryStatusUpdate.TabIndex = 113;
@@ -109,7 +72,7 @@
             // 
             this.inventoryLabel.AutoSize = true;
             this.inventoryLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.inventoryLabel.Location = new System.Drawing.Point(691, 318);
+            this.inventoryLabel.Location = new System.Drawing.Point(691, 221);
             this.inventoryLabel.Name = "inventoryLabel";
             this.inventoryLabel.Size = new System.Drawing.Size(169, 28);
             this.inventoryLabel.TabIndex = 112;
@@ -117,6 +80,7 @@
             // 
             // cb_productStatusUpdate
             // 
+            this.cb_productStatusUpdate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_productStatusUpdate.FormattingEnabled = true;
             this.cb_productStatusUpdate.Items.AddRange(new object[] {
             "ACTIVE ",
@@ -128,6 +92,7 @@
             // 
             // cb_typeUpdate
             // 
+            this.cb_typeUpdate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_typeUpdate.FormattingEnabled = true;
             this.cb_typeUpdate.Items.AddRange(new object[] {
             "PRIVATE",
@@ -160,6 +125,7 @@
             // 
             // cb_categoryUpdate
             // 
+            this.cb_categoryUpdate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_categoryUpdate.FormattingEnabled = true;
             this.cb_categoryUpdate.Items.AddRange(new object[] {
             "PLAIN",
@@ -198,18 +164,19 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(832, 430);
+            this.btnUpdate.Location = new System.Drawing.Point(832, 496);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(136, 52);
             this.btnUpdate.TabIndex = 104;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // minToOrderLabel
             // 
             this.minToOrderLabel.AutoSize = true;
             this.minToOrderLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.minToOrderLabel.Location = new System.Drawing.Point(29, 415);
+            this.minToOrderLabel.Location = new System.Drawing.Point(691, 124);
             this.minToOrderLabel.Name = "minToOrderLabel";
             this.minToOrderLabel.Size = new System.Drawing.Size(212, 28);
             this.minToOrderLabel.TabIndex = 103;
@@ -217,7 +184,7 @@
             // 
             // tb_minToOrderUpdate
             // 
-            this.tb_minToOrderUpdate.Location = new System.Drawing.Point(29, 455);
+            this.tb_minToOrderUpdate.Location = new System.Drawing.Point(691, 164);
             this.tb_minToOrderUpdate.Name = "tb_minToOrderUpdate";
             this.tb_minToOrderUpdate.PlaceholderText = "Enter minium amount to reorder";
             this.tb_minToOrderUpdate.Size = new System.Drawing.Size(277, 27);
@@ -345,23 +312,20 @@
             // 
             this.btnCancelUpdate.BackColor = System.Drawing.Color.IndianRed;
             this.btnCancelUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnCancelUpdate.Location = new System.Drawing.Point(679, 430);
+            this.btnCancelUpdate.Location = new System.Drawing.Point(679, 496);
             this.btnCancelUpdate.Name = "btnCancelUpdate";
             this.btnCancelUpdate.Size = new System.Drawing.Size(136, 52);
             this.btnCancelUpdate.TabIndex = 118;
             this.btnCancelUpdate.Text = "Cancel";
             this.btnCancelUpdate.UseVisualStyleBackColor = false;
+            this.btnCancelUpdate.Click += new System.EventHandler(this.btnCancelUpdate_Click);
             // 
             // UpdateProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(991, 519);
+            this.ClientSize = new System.Drawing.Size(998, 593);
             this.Controls.Add(this.btnCancelUpdate);
-            this.Controls.Add(this.updatedLabel);
-            this.Controls.Add(this.dateAddedLabel);
-            this.Controls.Add(this.dtp_DateUpdatedUpdate);
-            this.Controls.Add(this.dtp_DateAddedUpdate);
             this.Controls.Add(this.cb_inventoryStatusUpdate);
             this.Controls.Add(this.inventoryLabel);
             this.Controls.Add(this.cb_productStatusUpdate);
@@ -388,18 +352,14 @@
             this.Controls.Add(this.lotNumberLabel);
             this.Controls.Add(this.tb_lotNumberUpdate);
             this.Name = "UpdateProduct";
-            this.Text = "ProductDetails";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Update";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private Label updatedLabel;
-        private Label dateAddedLabel;
-        private DateTimePicker dtp_DateUpdatedUpdate;
-        private DateTimePicker dtp_DateAddedUpdate;
         private ComboBox cb_inventoryStatusUpdate;
         private Label inventoryLabel;
         private ComboBox cb_productStatusUpdate;

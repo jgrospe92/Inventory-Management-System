@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Inventory_Management_System.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -82,6 +83,18 @@ namespace Inventory_Management_System.Views.Home
                 {
                     productsDataGrid.Rows.RemoveAt(e.RowIndex);
                 }
+            }
+
+            if (productsDataGrid.Columns[e.ColumnIndex].Name == "productEdit")
+            {
+              
+                Product_ product = new Product_();
+                product.ProductName = productsDataGrid.CurrentRow.Cells["ProductName"].Value.ToString();
+                Product.UpdateProduct updateForm = new Product.UpdateProduct(productsDataGrid);
+                updateForm.Show();
+                //MessageBox.Show(productsDataGrid.CurrentRow.Cells[1].Value.ToString());
+                //MessageBox.Show(product.ProductName);
+
             }
         }
     }
