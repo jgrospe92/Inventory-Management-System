@@ -36,7 +36,7 @@ namespace Inventory_Management_System.Views.Main
         {
             InitializeComponent();
             menuButton.Image = openIcon;
-            alertButton.Image = noAlert;
+            notifyLowStock();
             revealPasswordButton.Image = showPasswordIcon;
             currentUserLabel.Visible = false;
             dateTime.Start();
@@ -70,6 +70,18 @@ namespace Inventory_Management_System.Views.Main
         {
            
 
+        }
+
+        public void notifyLowStock()
+        {
+            Controllers.ProductDAO_ productDAO = new Controllers.ProductDAO_();
+            if (productDAO.checkLowStock())
+            {
+                alertButton.Image = hasAlert;
+            } else
+            {
+                alertButton.Image = noAlert;
+            }
         }
 
         private void disableAllButton()
@@ -176,17 +188,7 @@ namespace Inventory_Management_System.Views.Main
 
         private void alertButton_Click(object sender, EventArgs e)
         {
-            activeButton(sender);
-
-            if (alertButton.Image == noAlert)
-            {
-                alertButton.Image = hasAlert;
-            }
-            else
-            {
-                alertButton.Image = noAlert;
-            }
-
+           
             openChild(new Views.Product.Notification(), sender);
         }
 

@@ -44,6 +44,7 @@ namespace Inventory_Management_System.Views.Product
             product.ProductQTY = product.ProductQTY - valueToRemove;
             // TODO: If productQTY is 0, insert it to report and notification table
             prodHelper.updateProdQTY(product);
+            if(product.ProductQTY < product.MinToReorder) { product.insertToNotif(product.Product_ID); }
             cuurentProductData.CurrentRow.Cells["productStock"].Value = product.ProductQTY;
             this.Close();
         }

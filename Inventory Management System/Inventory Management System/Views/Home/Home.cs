@@ -49,6 +49,7 @@ namespace Inventory_Management_System.Views.Home
            
         }
 
+
         private void searchTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
            
@@ -126,8 +127,7 @@ namespace Inventory_Management_System.Views.Home
                 product.ProductName = productsDataGrid.CurrentRow.Cells["ProductName"].Value.ToString();
                 Product.UpdateProduct updateForm = new Product.UpdateProduct(productsDataGrid);
                 updateForm.Show();
-                //MessageBox.Show(productsDataGrid.CurrentRow.Cells[1].Value.ToString());
-                //MessageBox.Show(product.ProductName);
+               
 
             }
         }

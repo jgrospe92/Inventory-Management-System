@@ -41,7 +41,7 @@ namespace Inventory_Management_System.Views.Product
             product.ProductCode = cb_codeAdd.Text;
             product.ProductName = tb_nameAdd.Text;
             product.ProductQTY = Int32.Parse(tb_qtyAdd.Text);
-            product.Size = tb_sizeWidthAdd.Text + " x " + tb_sizeHeightAdd.Text;
+            product.Size = tb_sizeWidthAdd.Text + "x" + tb_sizeHeightAdd.Text;
             product.Category = cb_categoryAdd.Text;
             product.MinToReorder = Int32.Parse(tb_minToOrderAdd.Text);
             product.ProdLocation = tb_locationAdd.Text;

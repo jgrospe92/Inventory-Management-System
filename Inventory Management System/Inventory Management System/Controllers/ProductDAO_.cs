@@ -73,5 +73,18 @@ namespace Inventory_Management_System.Controllers
             }
             return false;
         }
+
+        // NOTIFICATION TABLE
+        public bool checkLowStock()
+        {
+            Product_ product = new Product_();
+            if (product.checkNotificationTable())
+            {
+                return true;
+            }
+            return false;
+        }
     }
+
+
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic.Devices;
+﻿using Inventory_Management_System.Controllers;
+using Microsoft.VisualBasic.Devices;
 using MySqlConnector;
 using System;
 using System.Collections;
@@ -246,7 +247,100 @@ namespace Inventory_Management_System.Models
             return false;
         }
 
-       
+        public bool update()
+        {
+            MySqlConnection con = Helper.DbHelper.createConnection();
+
+            //con.OpenAsync().Wait();
+            con.Open();
+            try
+            {
+
+            var cmd = new MySqlCommand();
+            cmd.Connection = con;
+
+            cmd.CommandText = "UPDATE product SET productLotNum=@productLotNum, productCode=@productCode, productName=@productName, productQTY=@productQTY, size=@size, category=@category, minToReorder=@minToReorder, prodLocation=@prodLocation," +
+                    " productType=@productType, productStatus=@productStatus, dateAdded=@dateAdded, lastUpdated=@lastUpdated, inventoryStatus=@inventoryStatus WHERE product_ID=@product_ID";
+
+                cmd.Parameters.AddWithValue("product_ID", Product_ID);
+                cmd.Parameters.AddWithValue("productLotNum", ProductLotNum);
+                cmd.Parameters.AddWithValue("productCode", ProductCode);
+                cmd.Parameters.AddWithValue("productName", ProductName);
+                cmd.Parameters.AddWithValue("productQTY", ProductQTY);
+                cmd.Parameters.AddWithValue("size", Size);
+                cmd.Parameters.AddWithValue("category", Category);
+                cmd.Parameters.AddWithValue("minToReorder", MinToReorder);
+                cmd.Parameters.AddWithValue("prodLocation", ProdLocation);
+                cmd.Parameters.AddWithValue("productType", ProductType);
+                cmd.Parameters.AddWithValue("productStatus", ProductStatus);
+                cmd.Parameters.AddWithValue("dateAdded", DateAdded);
+                cmd.Parameters.AddWithValue("lastUpdated", LastUpdated);
+                cmd.Parameters.AddWithValue("inventoryStatus", InventoryStatus);
+
+                cmd.ExecuteNonQuery();
+                return true;
+
+            } catch (Exception e)
+            {
+                MessageBox.Show("DATABASE ERROR: " + e.Message);
+            } finally
+            {
+                con.Close();
+            }
+
+            return false;
+        }
+
+        public bool insertToNotif(int product_ID)
+        {
+            MySqlConnection con = Helper.DbHelper.createConnection();
+            con.Open();
+            try
+            {
+                var cmd = new MySqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = "INSERT INTO notification(product_ID) VALUES (@product_ID)";
+                cmd.Parameters.AddWithValue("product_ID", product_ID);
+                cmd.ExecuteNonQuery();
+                return true;
+            } catch (Exception e)
+            {
+                MessageBox.Show("DATABASE ERROR INSERT NOTIF: " + e);
+            }finally
+            {
+                con.Close();
+            }
+            return false;
+           
+        }
+        // CHECK IF Notificaton table has products
+        public bool checkNotificationTable()
+        {
+            MySqlConnection con = Helper.DbHelper.createConnection();
+            con.Open();
+            try
+            {
+                var cmd = new MySqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = "SELECT COUNT(*) FROM notification";
+                MySqlDataReader rdr = cmd.ExecuteReader();
+                if (rdr.HasRows)
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("DATABASE ERROR WHEN CHECKING NOTIF TABLE: " + e);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return false;
+        }
+
         public async void insert()
         {
             MySqlConnection con = Helper.DbHelper.createConnection();
@@ -276,7 +370,6 @@ namespace Inventory_Management_System.Models
             cmd.Parameters.AddWithValue("inventoryStatus", this.InventoryStatus);
           
             int i = await cmd.ExecuteNonQueryAsync();
-            MessageBox.Show("New Product Inserted");
             con.Close();
         }
 
