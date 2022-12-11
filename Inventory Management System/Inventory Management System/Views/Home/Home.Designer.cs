@@ -90,8 +90,6 @@
             this.productsDataGrid.AllowUserToDeleteRows = false;
             this.productsDataGrid.AllowUserToOrderColumns = true;
             this.productsDataGrid.AllowUserToResizeRows = false;
-            this.productsDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.productsDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -114,7 +112,7 @@
             this.productEdit});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -142,6 +140,7 @@
             this.productCode.MinimumWidth = 6;
             this.productCode.Name = "productCode";
             this.productCode.ReadOnly = true;
+            this.productCode.Width = 111;
             // 
             // ProductName
             // 
@@ -149,6 +148,7 @@
             this.ProductName.MinimumWidth = 6;
             this.ProductName.Name = "ProductName";
             this.ProductName.ReadOnly = true;
+            this.ProductName.Width = 110;
             // 
             // Size
             // 
@@ -156,6 +156,7 @@
             this.Size.MinimumWidth = 6;
             this.Size.Name = "Size";
             this.Size.ReadOnly = true;
+            this.Size.Width = 111;
             // 
             // productCategory
             // 
@@ -163,6 +164,7 @@
             this.productCategory.MinimumWidth = 6;
             this.productCategory.Name = "productCategory";
             this.productCategory.ReadOnly = true;
+            this.productCategory.Width = 110;
             // 
             // productStock
             // 
@@ -170,6 +172,7 @@
             this.productStock.MinimumWidth = 6;
             this.productStock.Name = "productStock";
             this.productStock.ReadOnly = true;
+            this.productStock.Width = 111;
             // 
             // minToReorder
             // 
@@ -177,6 +180,7 @@
             this.minToReorder.MinimumWidth = 6;
             this.minToReorder.Name = "minToReorder";
             this.minToReorder.ReadOnly = true;
+            this.minToReorder.Width = 110;
             // 
             // productLocation
             // 
@@ -184,6 +188,7 @@
             this.productLocation.MinimumWidth = 6;
             this.productLocation.Name = "productLocation";
             this.productLocation.ReadOnly = true;
+            this.productLocation.Width = 111;
             // 
             // deleteProduct
             // 
@@ -193,6 +198,7 @@
             this.deleteProduct.ReadOnly = true;
             this.deleteProduct.Text = "Delete";
             this.deleteProduct.UseColumnTextForButtonValue = true;
+            this.deleteProduct.Width = 110;
             // 
             // productEdit
             // 
@@ -202,6 +208,7 @@
             this.productEdit.ReadOnly = true;
             this.productEdit.Text = "Update";
             this.productEdit.UseColumnTextForButtonValue = true;
+            this.productEdit.Width = 111;
             // 
             // panel1
             // 

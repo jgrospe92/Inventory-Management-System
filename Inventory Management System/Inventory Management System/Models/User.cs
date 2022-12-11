@@ -27,8 +27,6 @@ namespace Inventory_Management_System.Models
         public string Role { get => role; set => role = value; }
 
       
-
-
         // CRUD OPERATIONS
         public async void insert()
         {

@@ -18,6 +18,7 @@ namespace Inventory_Management_System.Views.Home
     public partial class Home : Form
     {
         Models.User currentUser;
+        List<Models.Product_> products = new List<Models.Product_>();
         public Home(Models.User user)
         {
             InitializeComponent();
@@ -28,7 +29,7 @@ namespace Inventory_Management_System.Views.Home
         public void loadProducts()
         {
             Controllers.ProductDAO_ productDAO = new Controllers.ProductDAO_();
-            List<Models.Product_> products = productDAO.getAll();
+            products = productDAO.getAll();
 
             productsDataGrid.Rows.Clear();
 
@@ -99,7 +100,9 @@ namespace Inventory_Management_System.Views.Home
                 if(MessageBox.Show("Are you sure you want to delete this item?", "WARNING", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    productsDataGrid.Rows.RemoveAt(e.RowIndex);
+                    //productsDataGrid.Rows.RemoveAt(e.RowIndex);
+                    int i = productsDataGrid.CurrentRow.Index;
+                    MessageBox.Show("Product: " + products.ElementAt(i).Product_ID);
                 }
             }
 

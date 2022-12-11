@@ -13,6 +13,7 @@ namespace Inventory_Management_System.Models
 
     public class Product_
     {
+        private int product_ID;
         private String productLotNum;
         private String productCode;
         private String productName;
@@ -63,6 +64,7 @@ namespace Inventory_Management_System.Models
         public DateTime DateAdded { get => dateAdded; set => dateAdded = value; }
         public DateTime LastUpdated { get => lastUpdated; set => lastUpdated = value; }
         public string InventoryStatus { get => inventoryStatus; set => inventoryStatus = value; }
+        public int Product_ID { get => product_ID; set => product_ID = value; }
 
         // CRUD OPERATIONS
         public Product_ get(int product_ID)
@@ -80,6 +82,7 @@ namespace Inventory_Management_System.Models
             Product_ p = new Product_();
             if (rdr.Read())
             {
+                p.Product_ID = rdr.GetInt32("product_id");
                 p.ProductLotNum = rdr.GetString("productLotNum");
                 p.ProductCode = rdr.GetString("productCode");
                 p.ProductName = rdr.GetString("productName");
@@ -128,20 +131,22 @@ namespace Inventory_Management_System.Models
 
         public List<Product_> searchByName(string keyword)
         {
+            if (string.IsNullOrEmpty(keyword)) { return null; }
             MySqlConnection con = Helper.DbHelper.createConnection();
             //con.OpenAsync().Wait();
             con.Open();
 
             var cmd = new MySqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "SELECT * FROM product WHERE productName LIKE @productName";
+            cmd.CommandText = "SELECT * FROM product WHERE productName LIKE @productName OR productCode LIKE @productCode";
             cmd.Parameters.AddWithValue("productName", "%" + keyword + "%");
+            cmd.Parameters.AddWithValue("productCode", "%" + keyword + "%");
             using MySqlDataReader rdr = cmd.ExecuteReader();
             List<Product_> products = new List<Product_>();
             while (rdr.Read())
             {
                 Product_ p = new Product_();
-
+                p.Product_ID = rdr.GetInt32("product_id");
                 p.ProductLotNum = rdr.GetString("productLotNum");
                 p.ProductCode = rdr.GetString("productCode");
                 p.ProductName = rdr.GetString("productName");
@@ -179,6 +184,7 @@ namespace Inventory_Management_System.Models
             {
                 Product_ p = new Product_();
 
+                p.Product_ID = rdr.GetInt32("product_id");
                 p.ProductLotNum = rdr.GetString("productLotNum");
                 p.ProductCode = rdr.GetString("productCode");
                 p.ProductName = rdr.GetString("productName");
