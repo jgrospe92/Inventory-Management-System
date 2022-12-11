@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2022 at 12:55 AM
+-- Generation Time: Dec 07, 2022 at 07:29 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -20,6 +20,9 @@ SET time_zone = "+00:00";
 --
 -- Database: `rosehill`
 --
+DROP DATABASE IF EXISTS rosehill;
+CREATE DATABASE rosehill;
+USE rosehill;
 
 -- --------------------------------------------------------
 
@@ -32,24 +35,6 @@ CREATE TABLE `labeltech` (
   `name` varchar(50) NOT NULL DEFAULT '''Label Technician''',
   `userID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `notification`
---
-
-CREATE TABLE `notification` (
-  `notif_id` int(11) NOT NULL,
-  `product_ID` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `notification`
---
-
-INSERT INTO `notification` (`notif_id`, `product_ID`) VALUES
-(1, 73);
 
 -- --------------------------------------------------------
 
@@ -128,7 +113,8 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`product_ID`, `productLotNum`, `productCode`, `productName`, `productQTY`, `size`, `category`, `minToReorder`, `prodLocation`, `productType`, `productStatus`, `dateAdded`, `lastUpdated`, `inventoryStatus`) VALUES
-(2, 'A1', '2', 'GENERIC WHITE', 51, '21/8\"x53/16\"', 'PLAIN', 50, 'NA', 'RH', '', '2022-12-03 00:00:00', '2022-12-11 18:03:19', 'In Stock'),
+(1, 'A1', '1', 'GENERIC WHITE LABEL FOR DRUM TEAR PROF', 10, '4\" x 6\"', 'PLAIN', 5, NULL, 'RH', 'ACTIVE', '2022-12-03 00:00:00', NULL, 'In Stock'),
+(2, 'A1', '2', 'GENERIC WHITE', 10, '2 1/8\" x 5 3/16\"', 'PLAIN', 50, NULL, 'RH', 'ACTIVE', '2022-12-03 00:00:00', NULL, 'In Stock'),
 (3, 'A1', '3', 'GENERIC WHITE SMALL ROLL EXP DATE', 10, '1 1/2\" x 1/2\"', 'PLAIN', 5, NULL, 'RH', 'ACTIVE', '2022-12-03 00:00:00', NULL, 'In Stock'),
 (4, 'A1', '4', 'GENERIC WHITE (ONE SMALL/ROLL)', 10, '0.75\" x 1.5\"', 'PLAIN', 10, NULL, 'RH', 'ACTIVE', '2022-12-03 00:00:00', NULL, 'In Stock'),
 (5, 'A1', '5', 'GENERIC WHITE', 10, '6 3/8\" x 91/2\"', 'PLAIN', 5, NULL, 'RH', 'ACTIVE', '2022-12-03 00:00:00', NULL, 'In Stock'),
@@ -197,7 +183,7 @@ INSERT INTO `product` (`product_ID`, `productLotNum`, `productCode`, `productNam
 (68, 'A1', '68', 'RH CHOIX SANTE -HEALTHY CHOICE - HOT CHICKEN SAUCE 18 KG', 10, '9\" x 5\"', 'SAUCE', 1, NULL, 'PRIVATE', 'ACTIVE', '2022-12-03 00:00:00', NULL, 'In Stock'),
 (69, 'A1', '69', 'RH CHOIX SANTE -HEALTHY CHOICE - BEEF SOUP BASE 5 kg', 10, '9\" x 5\"', 'SOUP', 1, NULL, 'PRIVATE', 'ACTIVE', '2022-12-03 00:00:00', NULL, 'In Stock'),
 (70, 'A1', '70', 'RH CHOIX SANTE -HEALTHY CHOICE - CHICKEN SOUP BASE 5 kg', 10, '9\" x 5\"', 'SOUP', 1, NULL, 'PRIVATE', 'ACTIVE', '2022-12-03 00:00:00', NULL, 'In Stock'),
-(73, '1234', '71', 'Spicy mayo Korean', 12, '2x4', 'SAUCE', 15, 'A22', 'PRIVATE', '', '2022-12-11 15:41:35', '2022-12-11 16:33:00', 'In Stock');
+(71, '2211', '71', 'Test', 22, '2 x 2', 'PLAIN', 10, 'A22', '', '', '2022-12-06 22:26:29', '2022-12-06 22:26:29', 'In Stock');
 
 -- --------------------------------------------------------
 
@@ -261,13 +247,6 @@ ALTER TABLE `labeltech`
   ADD KEY `labelTech_to_user` (`userID`);
 
 --
--- Indexes for table `notification`
---
-ALTER TABLE `notification`
-  ADD PRIMARY KEY (`notif_id`),
-  ADD KEY `product_ID` (`product_ID`);
-
---
 -- Indexes for table `order`
 --
 ALTER TABLE `order`
@@ -307,7 +286,10 @@ ALTER TABLE `product`
 -- Indexes for table `report`
 --
 ALTER TABLE `report`
-  ADD PRIMARY KEY (`report_ID`);
+  ADD PRIMARY KEY (`report_ID`),
+  ADD KEY `report_to_labeltech` (`lbl_ID`),
+  ADD KEY `report_to_order` (`order_ID`),
+  ADD KEY `report_to_ordertech` (`orderTech`);
 
 --
 -- Indexes for table `shipping`
@@ -333,12 +315,6 @@ ALTER TABLE `labeltech`
   MODIFY `lbl_ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `notification`
---
-ALTER TABLE `notification`
-  MODIFY `notif_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT for table `order`
 --
 ALTER TABLE `order`
@@ -360,7 +336,7 @@ ALTER TABLE `packaging`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `product_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
+  MODIFY `product_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- AUTO_INCREMENT for table `report`
@@ -389,12 +365,6 @@ ALTER TABLE `user`
 --
 ALTER TABLE `labeltech`
   ADD CONSTRAINT `labelTech_to_user` FOREIGN KEY (`userID`) REFERENCES `user` (`userID`);
-
---
--- Constraints for table `notification`
---
-ALTER TABLE `notification`
-  ADD CONSTRAINT `notification_ibfk_1` FOREIGN KEY (`product_ID`) REFERENCES `product` (`product_ID`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `order`

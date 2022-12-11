@@ -60,7 +60,7 @@
             // reportLabel
             // 
             this.reportLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.reportLabel.Location = new System.Drawing.Point(367, 19);
+            this.reportLabel.Location = new System.Drawing.Point(381, 9);
             this.reportLabel.Name = "reportLabel";
             this.reportLabel.Size = new System.Drawing.Size(287, 42);
             this.reportLabel.TabIndex = 15;
@@ -179,7 +179,7 @@
             this.productLocation.MinimumWidth = 6;
             this.productLocation.Name = "productLocation";
             this.productLocation.ReadOnly = true;
-            this.productLocation.Width = 150;
+            this.productLocation.Width = 160;
             // 
             // deleteProduct
             // 
@@ -190,7 +190,7 @@
             this.deleteProduct.Text = "Delete";
             this.deleteProduct.UseColumnTextForButtonValue = true;
             this.deleteProduct.Visible = false;
-            this.deleteProduct.Width = 110;
+            this.deleteProduct.Width = 125;
             // 
             // productEdit
             // 
@@ -201,7 +201,7 @@
             this.productEdit.Text = "Update";
             this.productEdit.UseColumnTextForButtonValue = true;
             this.productEdit.Visible = false;
-            this.productEdit.Width = 111;
+            this.productEdit.Width = 125;
             // 
             // Report
             // 
@@ -210,6 +210,7 @@
             this.ClientSize = new System.Drawing.Size(998, 544);
             this.Controls.Add(this.productsDataGrid);
             this.Controls.Add(this.panel1);
+            this.MaximumSize = new System.Drawing.Size(1016, 640);
             this.Name = "Report";
             this.Text = "Report";
             this.panel1.ResumeLayout(false);
@@ -221,8 +222,8 @@
         #endregion
 
         private Panel panel1;
-        private DataGridView productsDataGrid;
         private Label reportLabel;
+        private DataGridView productsDataGrid;
         private DataGridViewTextBoxColumn product_ID;
         private DataGridViewTextBoxColumn productCode;
         private DataGridViewTextBoxColumn ProductName;
