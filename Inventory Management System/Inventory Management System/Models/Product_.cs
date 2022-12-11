@@ -1,4 +1,5 @@
-﻿using MySqlConnector;
+﻿using Microsoft.VisualBasic.Devices;
+using MySqlConnector;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -171,8 +172,8 @@ namespace Inventory_Management_System.Models
         public List<Product_> getAllProducts()
         {
             MySqlConnection con = Helper.DbHelper.createConnection();
-            //con.OpenAsync().Wait();
-            con.Open();
+            con.OpenAsync().Wait();
+            //con.Open();
 
             var cmd = new MySqlCommand();
             cmd.Connection = con;
@@ -200,7 +201,7 @@ namespace Inventory_Management_System.Models
                 p.LastUpdated = Helper.DateHelper.ConvertFromDBVal<DateTime>(rdr["lastUpdated"]);
                 p.InventoryStatus = rdr.GetString("inventoryStatus");
 
-                products.Add(p);
+               products.Add(p);
             }
             con.Close();
             return products;
@@ -211,7 +212,6 @@ namespace Inventory_Management_System.Models
         {
             MySqlConnection con = Helper.DbHelper.createConnection();
     
-
             //con.OpenAsync().Wait();
             con.Open();
 
@@ -240,5 +240,32 @@ namespace Inventory_Management_System.Models
             MessageBox.Show("New Product Inserted");
             con.Close();
         }
+
+        public bool delete(int product_ID)
+        {
+            MySqlConnection con = Helper.DbHelper.createConnection();
+
+            //con.OpenAsync().Wait();
+            try
+            {
+                con.Open();
+                var cmd = new MySqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = "DELETE FROM product WHERE product_ID = @product_ID";
+                cmd.Parameters.AddWithValue("product_ID", product_ID);
+                cmd.ExecuteNonQuery();
+                return true;
+            } catch(Exception ex)
+            {
+                MessageBox.Show("DATABASE ERROR, can't delete product");
+            }
+            finally
+            {
+                con.Close();
+            }
+            return false;
+        }
     }
+
+    
 }

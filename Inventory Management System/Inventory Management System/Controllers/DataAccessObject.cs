@@ -14,7 +14,7 @@ namespace Inventory_Management_System.Controllers
         List<T> getAll();
         void insert();
         void update();
-        void delete();
+        bool delete(int id);
 
     }
 }

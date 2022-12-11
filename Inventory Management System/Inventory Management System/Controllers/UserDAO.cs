@@ -20,7 +20,7 @@ namespace Inventory_Management_System.Controllers
             this.user = user;
         }
 
-        public void delete()
+        public bool delete(int userID)
         {
             throw new NotImplementedException();
         }

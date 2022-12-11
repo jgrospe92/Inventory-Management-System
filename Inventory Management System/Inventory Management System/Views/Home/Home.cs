@@ -37,6 +37,7 @@ namespace Inventory_Management_System.Views.Home
             {
                 int rowId = productsDataGrid.Rows.Add();
                 DataGridViewRow row = productsDataGrid.Rows[rowId];
+                row.Cells["product_ID"].Value = product.Product_ID;
                 row.Cells["productCode"].Value =  Int32.Parse(product.ProductCode);
                 row.Cells["ProductName"].Value = product.ProductName;
                 row.Cells["Size"].Value = product.Size;
@@ -64,6 +65,7 @@ namespace Inventory_Management_System.Views.Home
             {
                 int rowId = productsDataGrid.Rows.Add();
                 DataGridViewRow row = productsDataGrid.Rows[rowId];
+                row.Cells["product_ID"].Value = product.Product_ID;
                 row.Cells["productCode"].Value = Int32.Parse(product.ProductCode);
                 row.Cells["ProductName"].Value = product.ProductName;
                 row.Cells["Size"].Value = product.Size;
@@ -90,6 +92,7 @@ namespace Inventory_Management_System.Views.Home
                     update.Show();
                     return;
                 }
+                return;
             }
             if (currentUser.Role == "Order")
             {
@@ -100,9 +103,17 @@ namespace Inventory_Management_System.Views.Home
                 if(MessageBox.Show("Are you sure you want to delete this item?", "WARNING", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    //productsDataGrid.Rows.RemoveAt(e.RowIndex);
-                    int i = productsDataGrid.CurrentRow.Index;
-                    MessageBox.Show("Product: " + products.ElementAt(i).Product_ID);
+                   
+                    string i = productsDataGrid.CurrentRow.Cells["product_ID"].Value.ToString();
+                    Controllers.ProductDAO_ productHelper = new Controllers.ProductDAO_();
+                    if (productHelper.delete(Int32.Parse(i)))
+                    {
+                        productsDataGrid.Rows.RemoveAt(e.RowIndex);
+                        MessageBox.Show("DONE");
+                    } else
+                    {
+                        MessageBox.Show("Failed to delete product");
+                    }
                 }
             }
 

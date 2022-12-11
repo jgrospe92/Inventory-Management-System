@@ -35,6 +35,7 @@
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.applyButton = new System.Windows.Forms.Button();
             this.productsDataGrid = new System.Windows.Forms.DataGridView();
+            this.product_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Size = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -101,6 +102,7 @@
             this.productsDataGrid.ColumnHeadersHeight = 30;
             this.productsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.productsDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.product_ID,
             this.productCode,
             this.ProductName,
             this.Size,
@@ -133,6 +135,15 @@
             this.productsDataGrid.Size = new System.Drawing.Size(998, 491);
             this.productsDataGrid.TabIndex = 7;
             this.productsDataGrid.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productsDataGrid_CellContentClick);
+            // 
+            // product_ID
+            // 
+            this.product_ID.HeaderText = "id";
+            this.product_ID.MinimumWidth = 6;
+            this.product_ID.Name = "product_ID";
+            this.product_ID.ReadOnly = true;
+            this.product_ID.Visible = false;
+            this.product_ID.Width = 125;
             // 
             // productCode
             // 
@@ -286,6 +297,7 @@
         private Panel panel2;
         private Label recordLabel;
         private Button clearHomeButton;
+        private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn productCode;
         private DataGridViewTextBoxColumn ProductName;
         private DataGridViewTextBoxColumn Size;
@@ -295,5 +307,6 @@
         private DataGridViewTextBoxColumn productLocation;
         private DataGridViewButtonColumn deleteProduct;
         private DataGridViewButtonColumn productEdit;
+        private DataGridViewTextBoxColumn product_ID;
     }
 }

@@ -17,9 +17,15 @@ namespace Inventory_Management_System.Controllers
 
         public ProductDAO_(Product_ product_) { this.product_ = product_; }
 
-        public void delete()
+        public bool delete(int product_ID)
         {
-            throw new NotImplementedException();
+            Models.Product_ productHelper = new Models.Product_();
+            if (productHelper.delete(product_ID))
+            {
+                return true;
+            }
+            return false;
+          
         }
 
         public Product_ get<A>()
