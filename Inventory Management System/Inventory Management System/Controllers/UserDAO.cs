@@ -25,7 +25,7 @@ namespace Inventory_Management_System.Controllers
             throw new NotImplementedException();
         }
 
-        public User get<A>()
+        public User get(int id)
         {
             throw new NotImplementedException();
         }
@@ -40,7 +40,7 @@ namespace Inventory_Management_System.Controllers
             user.insert();
         }
 
-        public void update()
+        public bool update(int userID)
         {
             throw new NotImplementedException();
         }

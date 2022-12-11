@@ -28,13 +28,12 @@ namespace Inventory_Management_System.Controllers
           
         }
 
-        public Product_ get<A>()
+        public Product_ get(int id)
         {
             // Use this to get a specific product
             Models.Product_ product = new Models.Product_();
-            product = product.get(1);
-        
-            return null;
+            product = product.get(id);
+            return product;
         }
 
         public List<Product_> getAll()
@@ -59,9 +58,20 @@ namespace Inventory_Management_System.Controllers
             product_.insert();
         }
 
-        public void update()
+        public bool update(int product_ID)
+        {
+            return false;
+        }
+
+        // UPDATE JUST THE QTY
+        public bool updateProdQTY(Models.Product_ product)
         {
            
+            if (product.updateQTY(product.ProductQTY, product.Product_ID))
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

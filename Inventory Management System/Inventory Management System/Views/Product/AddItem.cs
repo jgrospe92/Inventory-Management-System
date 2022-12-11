@@ -53,6 +53,8 @@ namespace Inventory_Management_System.Views.Product
             product.InventoryStatus = cb_inventoryStatusAdd.SelectedItem.ToString();
             
             productDAO.insert();
+            MessageBox.Show("New Item Added");
+            ClearTextBoxes(this);
         }
 
         private Boolean validateTextBox(TextBox textBox)

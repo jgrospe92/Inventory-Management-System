@@ -69,6 +69,7 @@
             // 
             this.searchTextBox.Location = new System.Drawing.Point(43, 37);
             this.searchTextBox.Name = "searchTextBox";
+            this.searchTextBox.PlaceholderText = "seach by Code / Name";
             this.searchTextBox.Size = new System.Drawing.Size(236, 31);
             this.searchTextBox.TabIndex = 1;
             this.searchTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchTextBox_KeyPress);

@@ -75,36 +75,47 @@ namespace Inventory_Management_System.Models
             con.Open();
 
             var cmd = new MySqlCommand();
-            cmd.Connection = con;
-            cmd.CommandText = "SELECT * FROM product WHERE product_ID = @product_ID";
-            cmd.Parameters.AddWithValue("product_ID", product_ID);
 
-            using MySqlDataReader rdr = cmd.ExecuteReader();
-            Product_ p = new Product_();
-            if (rdr.Read())
+            try
             {
-                p.Product_ID = rdr.GetInt32("product_id");
-                p.ProductLotNum = rdr.GetString("productLotNum");
-                p.ProductCode = rdr.GetString("productCode");
-                p.ProductName = rdr.GetString("productName");
-                p.ProductQTY = rdr.GetInt32("productQTY");
-                p.Size = rdr.GetString("size");
-                p.Category = rdr.GetString("category");
-                p.MinToReorder = rdr.GetInt32("minToReorder");
-                string location = (rdr["prodLocation"] == DBNull.Value) ? "NA" : rdr.GetString("prodLocation");
-                p.ProdLocation = location;
-                p.ProductType = rdr.GetString("productType");
-                p.ProductStatus = rdr.GetString("productStatus");
-                p.DateAdded = rdr.GetDateTime("dateAdded");
-                //DateTime? date = (DateTime)((rdr["lastUpdated"] == DBNull.Value) ? (DateTime?)null : rdr.GetDateTime("lastUpdated"));
-                p.LastUpdated = Helper.DateHelper.ConvertFromDBVal<DateTime>(rdr["lastUpdated"]);
-                p.InventoryStatus = rdr.GetString("inventoryStatus");
+                cmd.Connection = con;
+                cmd.CommandText = "SELECT * FROM product WHERE product_ID = @product_ID";
+                cmd.Parameters.AddWithValue("product_id", product_ID);
 
-                return p;
+                using MySqlDataReader rdr = cmd.ExecuteReader();
+                Product_ p = new Product_();
 
+                if (rdr.Read())
+                {
+                    p.Product_ID = rdr.GetInt32("product_ID");
+                    p.ProductLotNum = rdr.GetString("productLotNum");
+                    p.ProductCode = rdr.GetString("productCode");
+                    p.ProductName = rdr.GetString("productName");
+                    p.ProductQTY = rdr.GetInt32("productQTY");
+                    p.Size = rdr.GetString("size");
+                    p.Category = rdr.GetString("category");
+                    p.MinToReorder = rdr.GetInt32("minToReorder");
+                    string location = (rdr["prodLocation"] == DBNull.Value) ? "NA" : rdr.GetString("prodLocation");
+                    p.ProdLocation = location;
+                    p.ProductType = rdr.GetString("productType");
+                    p.ProductStatus = rdr.GetString("productStatus");
+                    p.DateAdded = rdr.GetDateTime("dateAdded");
+                    //DateTime? date = (DateTime)((rdr["lastUpdated"] == DBNull.Value) ? (DateTime?)null : rdr.GetDateTime("lastUpdated"));
+                    p.LastUpdated = Helper.DateHelper.ConvertFromDBVal<DateTime>(rdr["lastUpdated"]);
+                    p.InventoryStatus = rdr.GetString("inventoryStatus");
+                    return p;
+
+                }
+               
+            } catch (Exception e)
+            {
+                MessageBox.Show("DATABASE ERROR, CANT RETRIEVE PRODUCT DATA");
             }
-            //con.CloseAsync().Wait();
-            con.Close();
+            finally
+            {
+                //con.CloseAsync().Wait();
+                con.Close();
+            }
 
             return null;
          
@@ -205,6 +216,34 @@ namespace Inventory_Management_System.Models
             }
             con.Close();
             return products;
+        }
+
+        // Update just the quantity
+        public bool updateQTY(int qty, int id)
+        {
+            MySqlConnection con = Helper.DbHelper.createConnection();
+          
+            try
+            {
+                con.OpenAsync().Wait();
+                var cmd = new MySqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = "UPDATE product SET productQTY = @productQTY WHERE product_ID = @product_ID ";
+                cmd.Parameters.AddWithValue("productQTY", qty);
+                cmd.Parameters.AddWithValue("product_ID", id);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Database ERROR: failesd to update ");
+            }
+            finally
+            {
+                con.Close();
+            }
+
+            return false;
         }
 
        

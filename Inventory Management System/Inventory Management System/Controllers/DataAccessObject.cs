@@ -10,10 +10,10 @@ namespace Inventory_Management_System.Controllers
 {
     internal interface DataAccessObject<T>
     {
-        T get<A>();
+        T get(int id);
         List<T> getAll();
         void insert();
-        void update();
+        bool update(int id);
         bool delete(int id);
 
     }

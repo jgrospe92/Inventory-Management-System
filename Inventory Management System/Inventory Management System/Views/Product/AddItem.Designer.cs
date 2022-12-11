@@ -195,7 +195,7 @@
             // 
             this.cb_codeAdd.Location = new System.Drawing.Point(356, 65);
             this.cb_codeAdd.Name = "cb_codeAdd";
-            this.cb_codeAdd.PlaceholderText = "Enter item code";
+            this.cb_codeAdd.PlaceholderText = "Enter item code / max 7 digits";
             this.cb_codeAdd.Size = new System.Drawing.Size(277, 25);
             this.cb_codeAdd.TabIndex = 30;
             // 
@@ -249,7 +249,7 @@
             // 
             this.tb_lotNumberAdd.Location = new System.Drawing.Point(28, 65);
             this.tb_lotNumberAdd.Name = "tb_lotNumberAdd";
-            this.tb_lotNumberAdd.PlaceholderText = "Enter Lot Number";
+            this.tb_lotNumberAdd.PlaceholderText = "Enter Lot Number / max 7 digits";
             this.tb_lotNumberAdd.Size = new System.Drawing.Size(277, 25);
             this.tb_lotNumberAdd.TabIndex = 25;
             // 

@@ -88,7 +88,9 @@ namespace Inventory_Management_System.Views.Home
             {
                 if (productsDataGrid.Columns[e.ColumnIndex].Name == "productEdit")
                 {
-                    Product.Update update = new Product.Update();
+                    
+                    int i = Int32.Parse(productsDataGrid.CurrentRow.Cells["product_ID"].Value.ToString());
+                    Product.Update update = new Product.Update(i, productsDataGrid);
                     update.Show();
                     return;
                 }
