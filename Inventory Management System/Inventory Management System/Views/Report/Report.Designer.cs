@@ -28,87 +28,210 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.homeProductListView = new System.Windows.Forms.ListView();
-            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
-            this.reportTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.reportLabel = new System.Windows.Forms.Label();
+            this.productsDataGrid = new System.Windows.Forms.DataGridView();
+            this.product_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Size = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.minToReorder = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deleteProduct = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.productEdit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productsDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // homeProductListView
+            // panel1
             // 
-            this.homeProductListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.homeProductListView.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.homeProductListView.Location = new System.Drawing.Point(27, 129);
-            this.homeProductListView.Name = "homeProductListView";
-            this.homeProductListView.Size = new System.Drawing.Size(946, 421);
-            this.homeProductListView.TabIndex = 18;
-            this.homeProductListView.UseCompatibleStateImageBehavior = false;
-            this.homeProductListView.View = System.Windows.Forms.View.Details;
+            this.panel1.Controls.Add(this.reportLabel);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(998, 65);
+            this.panel1.TabIndex = 19;
             // 
-            // columnHeader1
+            // reportLabel
             // 
-            this.columnHeader1.Text = "CODE";
-            this.columnHeader1.Width = 310;
+            this.reportLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.reportLabel.Location = new System.Drawing.Point(367, 19);
+            this.reportLabel.Name = "reportLabel";
+            this.reportLabel.Size = new System.Drawing.Size(287, 42);
+            this.reportLabel.TabIndex = 15;
+            this.reportLabel.Text = "Nothing to Report";
+            this.reportLabel.Visible = false;
             // 
-            // columnHeader2
+            // productsDataGrid
             // 
-            this.columnHeader2.Text = "Name";
-            this.columnHeader2.Width = 320;
+            this.productsDataGrid.AllowUserToAddRows = false;
+            this.productsDataGrid.AllowUserToDeleteRows = false;
+            this.productsDataGrid.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.productsDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.productsDataGrid.ColumnHeadersHeight = 30;
+            this.productsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.productsDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.product_ID,
+            this.productCode,
+            this.ProductName,
+            this.Size,
+            this.productCategory,
+            this.productStock,
+            this.minToReorder,
+            this.productLocation,
+            this.deleteProduct,
+            this.productEdit});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.productsDataGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            this.productsDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.productsDataGrid.EnableHeadersVisualStyles = false;
+            this.productsDataGrid.Location = new System.Drawing.Point(0, 65);
+            this.productsDataGrid.Name = "productsDataGrid";
+            this.productsDataGrid.ReadOnly = true;
+            this.productsDataGrid.RowHeadersVisible = false;
+            this.productsDataGrid.RowHeadersWidth = 50;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.productsDataGrid.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.productsDataGrid.RowTemplate.Height = 29;
+            this.productsDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.productsDataGrid.Size = new System.Drawing.Size(998, 479);
+            this.productsDataGrid.TabIndex = 20;
             // 
-            // columnHeader3
+            // product_ID
             // 
-            this.columnHeader3.Text = "Stock";
-            this.columnHeader3.Width = 310;
+            this.product_ID.HeaderText = "id";
+            this.product_ID.MinimumWidth = 6;
+            this.product_ID.Name = "product_ID";
+            this.product_ID.ReadOnly = true;
+            this.product_ID.Visible = false;
+            this.product_ID.Width = 125;
             // 
-            // reportTypeComboBox
+            // productCode
             // 
-            this.reportTypeComboBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.reportTypeComboBox.FormattingEnabled = true;
-            this.reportTypeComboBox.Items.AddRange(new object[] {
-            "ANNUALLY",
-            "MONTHLY"});
-            this.reportTypeComboBox.Location = new System.Drawing.Point(261, 42);
-            this.reportTypeComboBox.Name = "reportTypeComboBox";
-            this.reportTypeComboBox.Size = new System.Drawing.Size(161, 31);
-            this.reportTypeComboBox.TabIndex = 14;
+            this.productCode.HeaderText = "Code";
+            this.productCode.MinimumWidth = 6;
+            this.productCode.Name = "productCode";
+            this.productCode.ReadOnly = true;
+            this.productCode.Width = 142;
             // 
-            // label1
+            // ProductName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(46, 50);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 23);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Generate Report By";
+            this.ProductName.HeaderText = "Name";
+            this.ProductName.MinimumWidth = 6;
+            this.ProductName.Name = "ProductName";
+            this.ProductName.ReadOnly = true;
+            this.ProductName.Width = 142;
+            // 
+            // Size
+            // 
+            this.Size.HeaderText = "Size";
+            this.Size.MinimumWidth = 6;
+            this.Size.Name = "Size";
+            this.Size.ReadOnly = true;
+            this.Size.Width = 142;
+            // 
+            // productCategory
+            // 
+            this.productCategory.HeaderText = "Category";
+            this.productCategory.MinimumWidth = 6;
+            this.productCategory.Name = "productCategory";
+            this.productCategory.ReadOnly = true;
+            this.productCategory.Width = 143;
+            // 
+            // productStock
+            // 
+            this.productStock.HeaderText = "InStock";
+            this.productStock.MinimumWidth = 6;
+            this.productStock.Name = "productStock";
+            this.productStock.ReadOnly = true;
+            this.productStock.Width = 142;
+            // 
+            // minToReorder
+            // 
+            this.minToReorder.HeaderText = "Minimum";
+            this.minToReorder.MinimumWidth = 6;
+            this.minToReorder.Name = "minToReorder";
+            this.minToReorder.ReadOnly = true;
+            this.minToReorder.Width = 142;
+            // 
+            // productLocation
+            // 
+            this.productLocation.HeaderText = "Location";
+            this.productLocation.MinimumWidth = 6;
+            this.productLocation.Name = "productLocation";
+            this.productLocation.ReadOnly = true;
+            this.productLocation.Width = 150;
+            // 
+            // deleteProduct
+            // 
+            this.deleteProduct.HeaderText = "Delete";
+            this.deleteProduct.MinimumWidth = 6;
+            this.deleteProduct.Name = "deleteProduct";
+            this.deleteProduct.ReadOnly = true;
+            this.deleteProduct.Text = "Delete";
+            this.deleteProduct.UseColumnTextForButtonValue = true;
+            this.deleteProduct.Visible = false;
+            this.deleteProduct.Width = 110;
+            // 
+            // productEdit
+            // 
+            this.productEdit.HeaderText = "Edit";
+            this.productEdit.MinimumWidth = 6;
+            this.productEdit.Name = "productEdit";
+            this.productEdit.ReadOnly = true;
+            this.productEdit.Text = "Update";
+            this.productEdit.UseColumnTextForButtonValue = true;
+            this.productEdit.Visible = false;
+            this.productEdit.Width = 111;
             // 
             // Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(998, 593);
-            this.Controls.Add(this.homeProductListView);
-            this.Controls.Add(this.reportTypeComboBox);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(998, 544);
+            this.Controls.Add(this.productsDataGrid);
+            this.Controls.Add(this.panel1);
             this.Name = "Report";
             this.Text = "Report";
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.productsDataGrid)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private ListView homeProductListView;
-        private ColumnHeader columnHeader1;
-        private ColumnHeader columnHeader2;
-        private ColumnHeader columnHeader3;
-        private ComboBox reportTypeComboBox;
-        private Label label1;
+
+        private Panel panel1;
+        private DataGridView productsDataGrid;
+        private Label reportLabel;
+        private DataGridViewTextBoxColumn product_ID;
+        private DataGridViewTextBoxColumn productCode;
+        private DataGridViewTextBoxColumn ProductName;
+        private DataGridViewTextBoxColumn Size;
+        private DataGridViewTextBoxColumn productCategory;
+        private DataGridViewTextBoxColumn productStock;
+        private DataGridViewTextBoxColumn minToReorder;
+        private DataGridViewTextBoxColumn productLocation;
+        private DataGridViewButtonColumn deleteProduct;
+        private DataGridViewButtonColumn productEdit;
     }
 }

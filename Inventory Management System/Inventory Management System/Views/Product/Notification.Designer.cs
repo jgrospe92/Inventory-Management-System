@@ -28,157 +28,211 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader8 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader9 = new System.Windows.Forms.ColumnHeader();
-            this.currentDateLabel = new System.Windows.Forms.Label();
-            this.curretUserLabel = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.notificationLabel = new System.Windows.Forms.Label();
+            this.noLowStockLabel = new System.Windows.Forms.Panel();
+            this.productsDataGrid = new System.Windows.Forms.DataGridView();
+            this.product_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Size = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.minToReorder = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deleteProduct = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.productEdit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.noLowStockLabel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productsDataGrid)).BeginInit();
             this.SuspendLayout();
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9});
-            this.listView1.Location = new System.Drawing.Point(57, 138);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(946, 321);
-            this.listView1.TabIndex = 8;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "CODE";
-            this.columnHeader1.Width = 70;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Name";
-            this.columnHeader2.Width = 150;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Category";
-            this.columnHeader3.Width = 150;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Size";
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Stock";
-            this.columnHeader5.Width = 80;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Min To Order";
-            this.columnHeader6.Width = 150;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Location";
-            this.columnHeader7.Width = 100;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Update";
-            this.columnHeader8.Width = 100;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Delete";
-            this.columnHeader9.Width = 80;
-            // 
-            // currentDateLabel
-            // 
-            this.currentDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.currentDateLabel.AutoSize = true;
-            this.currentDateLabel.Location = new System.Drawing.Point(915, 515);
-            this.currentDateLabel.Name = "currentDateLabel";
-            this.currentDateLabel.Size = new System.Drawing.Size(132, 20);
-            this.currentDateLabel.TabIndex = 13;
-            this.currentDateLabel.Text = "10:00 | 2022/12/07";
-            // 
-            // curretUserLabel
-            // 
-            this.curretUserLabel.AutoSize = true;
-            this.curretUserLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.curretUserLabel.Location = new System.Drawing.Point(0, 504);
-            this.curretUserLabel.Name = "curretUserLabel";
-            this.curretUserLabel.Size = new System.Drawing.Size(118, 20);
-            this.curretUserLabel.TabIndex = 12;
-            this.curretUserLabel.Text = "Label Technician";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label4.Location = new System.Drawing.Point(0, 524);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 20);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Current User: ";
             // 
             // notificationLabel
             // 
             this.notificationLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.notificationLabel.Location = new System.Drawing.Point(401, 280);
+            this.notificationLabel.Location = new System.Drawing.Point(381, 9);
             this.notificationLabel.Name = "notificationLabel";
             this.notificationLabel.Size = new System.Drawing.Size(212, 42);
             this.notificationLabel.TabIndex = 14;
             this.notificationLabel.Text = "No Low Stock!";
+            this.notificationLabel.Visible = false;
+            // 
+            // noLowStockLabel
+            // 
+            this.noLowStockLabel.Controls.Add(this.notificationLabel);
+            this.noLowStockLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.noLowStockLabel.Location = new System.Drawing.Point(0, 0);
+            this.noLowStockLabel.Name = "noLowStockLabel";
+            this.noLowStockLabel.Size = new System.Drawing.Size(998, 65);
+            this.noLowStockLabel.TabIndex = 15;
+            // 
+            // productsDataGrid
+            // 
+            this.productsDataGrid.AllowUserToAddRows = false;
+            this.productsDataGrid.AllowUserToDeleteRows = false;
+            this.productsDataGrid.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.productsDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.productsDataGrid.ColumnHeadersHeight = 30;
+            this.productsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.productsDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.product_ID,
+            this.productCode,
+            this.ProductName,
+            this.Size,
+            this.productCategory,
+            this.productStock,
+            this.minToReorder,
+            this.productLocation,
+            this.deleteProduct,
+            this.productEdit});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.productsDataGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            this.productsDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.productsDataGrid.EnableHeadersVisualStyles = false;
+            this.productsDataGrid.Location = new System.Drawing.Point(0, 65);
+            this.productsDataGrid.Name = "productsDataGrid";
+            this.productsDataGrid.ReadOnly = true;
+            this.productsDataGrid.RowHeadersVisible = false;
+            this.productsDataGrid.RowHeadersWidth = 50;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.productsDataGrid.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.productsDataGrid.RowTemplate.Height = 29;
+            this.productsDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.productsDataGrid.Size = new System.Drawing.Size(998, 479);
+            this.productsDataGrid.TabIndex = 16;
+            // 
+            // product_ID
+            // 
+            this.product_ID.HeaderText = "id";
+            this.product_ID.MinimumWidth = 6;
+            this.product_ID.Name = "product_ID";
+            this.product_ID.ReadOnly = true;
+            this.product_ID.Visible = false;
+            this.product_ID.Width = 125;
+            // 
+            // productCode
+            // 
+            this.productCode.HeaderText = "Code";
+            this.productCode.MinimumWidth = 6;
+            this.productCode.Name = "productCode";
+            this.productCode.ReadOnly = true;
+            this.productCode.Width = 142;
+            // 
+            // ProductName
+            // 
+            this.ProductName.HeaderText = "Name";
+            this.ProductName.MinimumWidth = 6;
+            this.ProductName.Name = "ProductName";
+            this.ProductName.ReadOnly = true;
+            this.ProductName.Width = 142;
+            // 
+            // Size
+            // 
+            this.Size.HeaderText = "Size";
+            this.Size.MinimumWidth = 6;
+            this.Size.Name = "Size";
+            this.Size.ReadOnly = true;
+            this.Size.Width = 142;
+            // 
+            // productCategory
+            // 
+            this.productCategory.HeaderText = "Category";
+            this.productCategory.MinimumWidth = 6;
+            this.productCategory.Name = "productCategory";
+            this.productCategory.ReadOnly = true;
+            this.productCategory.Width = 143;
+            // 
+            // productStock
+            // 
+            this.productStock.HeaderText = "InStock";
+            this.productStock.MinimumWidth = 6;
+            this.productStock.Name = "productStock";
+            this.productStock.ReadOnly = true;
+            this.productStock.Width = 142;
+            // 
+            // minToReorder
+            // 
+            this.minToReorder.HeaderText = "Minimum";
+            this.minToReorder.MinimumWidth = 6;
+            this.minToReorder.Name = "minToReorder";
+            this.minToReorder.ReadOnly = true;
+            this.minToReorder.Width = 142;
+            // 
+            // productLocation
+            // 
+            this.productLocation.HeaderText = "Location";
+            this.productLocation.MinimumWidth = 6;
+            this.productLocation.Name = "productLocation";
+            this.productLocation.ReadOnly = true;
+            this.productLocation.Width = 160;
+            // 
+            // deleteProduct
+            // 
+            this.deleteProduct.HeaderText = "Delete";
+            this.deleteProduct.MinimumWidth = 6;
+            this.deleteProduct.Name = "deleteProduct";
+            this.deleteProduct.ReadOnly = true;
+            this.deleteProduct.Text = "Delete";
+            this.deleteProduct.UseColumnTextForButtonValue = true;
+            this.deleteProduct.Visible = false;
+            this.deleteProduct.Width = 125;
+            // 
+            // productEdit
+            // 
+            this.productEdit.HeaderText = "Edit";
+            this.productEdit.MinimumWidth = 6;
+            this.productEdit.Name = "productEdit";
+            this.productEdit.ReadOnly = true;
+            this.productEdit.Text = "Update";
+            this.productEdit.UseColumnTextForButtonValue = true;
+            this.productEdit.Visible = false;
+            this.productEdit.Width = 125;
             // 
             // Notification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1059, 544);
-            this.Controls.Add(this.notificationLabel);
-            this.Controls.Add(this.currentDateLabel);
-            this.Controls.Add(this.curretUserLabel);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.listView1);
+            this.ClientSize = new System.Drawing.Size(998, 544);
+            this.Controls.Add(this.productsDataGrid);
+            this.Controls.Add(this.noLowStockLabel);
+            this.MaximumSize = new System.Drawing.Size(1016, 640);
             this.Name = "Notification";
             this.Text = "Notification";
             this.Load += new System.EventHandler(this.Notification_Load);
+            this.noLowStockLabel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.productsDataGrid)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private ListView listView1;
-        private ColumnHeader columnHeader1;
-        private ColumnHeader columnHeader2;
-        private ColumnHeader columnHeader3;
-        private ColumnHeader columnHeader4;
-        private ColumnHeader columnHeader5;
-        private ColumnHeader columnHeader6;
-        private ColumnHeader columnHeader7;
-        private ColumnHeader columnHeader8;
-        private ColumnHeader columnHeader9;
-        private Label currentDateLabel;
-        private Label curretUserLabel;
-        private Label label4;
         private Label notificationLabel;
+        private Panel noLowStockLabel;
+        private DataGridView productsDataGrid;
+        private DataGridViewTextBoxColumn product_ID;
+        private DataGridViewTextBoxColumn productCode;
+        private DataGridViewTextBoxColumn ProductName;
+        private DataGridViewTextBoxColumn Size;
+        private DataGridViewTextBoxColumn productCategory;
+        private DataGridViewTextBoxColumn productStock;
+        private DataGridViewTextBoxColumn minToReorder;
+        private DataGridViewTextBoxColumn productLocation;
+        private DataGridViewButtonColumn deleteProduct;
+        private DataGridViewButtonColumn productEdit;
     }
 }

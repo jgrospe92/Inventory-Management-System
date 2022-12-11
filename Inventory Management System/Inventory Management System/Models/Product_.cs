@@ -219,6 +219,45 @@ namespace Inventory_Management_System.Models
             return products;
         }
 
+        // GET ALL LOW STOCK
+        public List<Product_> getAllLowStocks()
+        {
+            MySqlConnection con = Helper.DbHelper.createConnection();
+            con.OpenAsync().Wait();
+            //con.Open();
+
+            var cmd = new MySqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "SELECT * FROM product WHERE productQTY < minToReorder";
+            using MySqlDataReader rdr = cmd.ExecuteReader();
+
+            List<Product_> products = new List<Product_>();
+            while (rdr.Read())
+            {
+                Product_ p = new Product_();
+
+                p.Product_ID = rdr.GetInt32("product_id");
+                p.ProductLotNum = rdr.GetString("productLotNum");
+                p.ProductCode = rdr.GetString("productCode");
+                p.ProductName = rdr.GetString("productName");
+                p.ProductQTY = rdr.GetInt32("productQTY");
+                p.Size = rdr.GetString("size");
+                p.Category = rdr.GetString("category");
+                p.MinToReorder = rdr.GetInt32("minToReorder");
+                string location = (rdr["prodLocation"] == DBNull.Value) ? "NA" : rdr.GetString("prodLocation");
+                p.ProdLocation = location;
+                p.ProductType = rdr.GetString("productType");
+                p.ProductStatus = rdr.GetString("productStatus");
+                p.DateAdded = rdr.GetDateTime("dateAdded");
+                p.LastUpdated = Helper.DateHelper.ConvertFromDBVal<DateTime>(rdr["lastUpdated"]);
+                p.InventoryStatus = rdr.GetString("inventoryStatus");
+
+                products.Add(p);
+            }
+            con.Close();
+            return products;
+        }
+
         // Update just the quantity
         public bool updateQTY(int qty, int id)
         {
@@ -339,6 +378,45 @@ namespace Inventory_Management_System.Models
                 con.Close();
             }
             return false;
+        }
+
+        // GET ALL PRODUCTS FROM REPORT
+        public List<Product_> getAllProductsFromNotif()
+        {
+            MySqlConnection con = Helper.DbHelper.createConnection();
+            con.OpenAsync().Wait();
+            //con.Open();
+
+            var cmd = new MySqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "SELECT product.* from product INNER JOIN notification WHERE product.product_ID = notification.product_ID";
+            using MySqlDataReader rdr = cmd.ExecuteReader();
+
+            List<Product_> products = new List<Product_>();
+            while (rdr.Read())
+            {
+                Product_ p = new Product_();
+
+                p.Product_ID = rdr.GetInt32("product_id");
+                p.ProductLotNum = rdr.GetString("productLotNum");
+                p.ProductCode = rdr.GetString("productCode");
+                p.ProductName = rdr.GetString("productName");
+                p.ProductQTY = rdr.GetInt32("productQTY");
+                p.Size = rdr.GetString("size");
+                p.Category = rdr.GetString("category");
+                p.MinToReorder = rdr.GetInt32("minToReorder");
+                string location = (rdr["prodLocation"] == DBNull.Value) ? "NA" : rdr.GetString("prodLocation");
+                p.ProdLocation = location;
+                p.ProductType = rdr.GetString("productType");
+                p.ProductStatus = rdr.GetString("productStatus");
+                p.DateAdded = rdr.GetDateTime("dateAdded");
+                p.LastUpdated = Helper.DateHelper.ConvertFromDBVal<DateTime>(rdr["lastUpdated"]);
+                p.InventoryStatus = rdr.GetString("inventoryStatus");
+
+                products.Add(p);
+            }
+            con.Close();
+            return products;
         }
 
         public async void insert()

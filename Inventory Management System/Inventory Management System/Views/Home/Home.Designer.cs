@@ -90,7 +90,6 @@
             // 
             this.productsDataGrid.AllowUserToAddRows = false;
             this.productsDataGrid.AllowUserToDeleteRows = false;
-            this.productsDataGrid.AllowUserToOrderColumns = true;
             this.productsDataGrid.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;

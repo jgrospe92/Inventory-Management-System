@@ -43,8 +43,21 @@ namespace Inventory_Management_System.Controllers
             proudcts = product.getAllProducts(); ;
             return proudcts;
         }
+        public List<Product_> getAllFromNotification()
+        {
+            Product_ product = new Product_();
+            List<Product_> proudcts = product.getAllProductsFromNotif();
+            return proudcts;
+        }
 
-       public List<Product_> searchByKeyWord(string name) 
+        public List<Product_> getAllLowStocks()
+        {
+            Product_ product = new Product_();
+            List<Product_> proudcts = product.getAllLowStocks();
+            return proudcts;
+        }
+
+        public List<Product_> searchByKeyWord(string name) 
         {
             Models.Product_ product = new Models.Product_();
             List<Product_> proudcts = new List<Product_>();
