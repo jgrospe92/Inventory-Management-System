@@ -22,6 +22,7 @@ namespace Inventory_Management_System.Views.Help
 
         }
 
+
         private void loginHelpMenuLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             helpMenuLabel.Text = "How to login: \n\n Step 1: In the navigation bar to your left select the user icon \n\n Step 2: You will be redirected to the login page \n\n Step 3: Enter your username and password \n\n ** If an error occurs, contact your Lab Technician";
