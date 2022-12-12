@@ -159,6 +159,7 @@
             this.tb_sizeHeightUpdate.PlaceholderText = "height";
             this.tb_sizeHeightUpdate.Size = new System.Drawing.Size(68, 27);
             this.tb_sizeHeightUpdate.TabIndex = 105;
+            this.tb_sizeHeightUpdate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_sizeHeigthUpdate_KeyPress);
             // 
             // btnUpdate
             // 
@@ -189,6 +190,7 @@
             this.tb_minToOrderUpdate.PlaceholderText = "Enter minium amount to reorder";
             this.tb_minToOrderUpdate.Size = new System.Drawing.Size(277, 27);
             this.tb_minToOrderUpdate.TabIndex = 102;
+            this.tb_minToOrderUpdate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_minToOrderUpdate_KeyPress);
             // 
             // locationLabel
             // 
@@ -225,6 +227,7 @@
             this.tb_qtyUpdate.PlaceholderText = "Enter product quantity";
             this.tb_qtyUpdate.Size = new System.Drawing.Size(277, 27);
             this.tb_qtyUpdate.TabIndex = 98;
+            this.tb_qtyUpdate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_qtyUpdate_KeyPress);
             // 
             // categoryDetailLabel
             // 
@@ -250,9 +253,10 @@
             // 
             this.cb_codeUpdate.Location = new System.Drawing.Point(357, 75);
             this.cb_codeUpdate.Name = "cb_codeUpdate";
-            this.cb_codeUpdate.PlaceholderText = "Enter item code";
+            this.cb_codeUpdate.PlaceholderText = "Enter item code / max 7 digits";
             this.cb_codeUpdate.Size = new System.Drawing.Size(277, 27);
             this.cb_codeUpdate.TabIndex = 95;
+            this.cb_codeUpdate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cb_codeUpdate_KeyPress);
             // 
             // sizeLabel
             // 
@@ -271,6 +275,7 @@
             this.tb_sizeWidthUpdate.PlaceholderText = "width";
             this.tb_sizeWidthUpdate.Size = new System.Drawing.Size(68, 27);
             this.tb_sizeWidthUpdate.TabIndex = 93;
+            this.tb_sizeWidthUpdate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_sizeWidthUpdate_KeyPress);
             // 
             // nameLabel
             // 
@@ -304,7 +309,7 @@
             // 
             this.tb_lotNumberUpdate.Location = new System.Drawing.Point(29, 75);
             this.tb_lotNumberUpdate.Name = "tb_lotNumberUpdate";
-            this.tb_lotNumberUpdate.PlaceholderText = "Enter Lot Number";
+            this.tb_lotNumberUpdate.PlaceholderText = "Enter Lot Number / max 7 digits";
             this.tb_lotNumberUpdate.Size = new System.Drawing.Size(277, 27);
             this.tb_lotNumberUpdate.TabIndex = 89;
             // 

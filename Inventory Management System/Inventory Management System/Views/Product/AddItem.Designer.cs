@@ -92,6 +92,7 @@
             this.tb_sizeHeightAdd.PlaceholderText = "height";
             this.tb_sizeHeightAdd.Size = new System.Drawing.Size(68, 25);
             this.tb_sizeHeightAdd.TabIndex = 28;
+            this.tb_sizeHeightAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_sizeHeigthAdd_KeyPress);
             // 
             // btnCancelAdd
             // 
@@ -134,6 +135,7 @@
             this.tb_minToOrderAdd.PlaceholderText = "Enter minium amount to reorder";
             this.tb_minToOrderAdd.Size = new System.Drawing.Size(277, 25);
             this.tb_minToOrderAdd.TabIndex = 35;
+            this.tb_minToOrderAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_minToOrderAdd_KeyPress);
             // 
             // locationLabel
             // 
@@ -170,6 +172,7 @@
             this.tb_qtyAdd.PlaceholderText = "Enter product quantity";
             this.tb_qtyAdd.Size = new System.Drawing.Size(277, 25);
             this.tb_qtyAdd.TabIndex = 32;
+            this.tb_qtyAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_qtyAdd_KeyPress);
             // 
             // categoryDetailLabel
             // 
@@ -194,10 +197,12 @@
             // cb_codeAdd
             // 
             this.cb_codeAdd.Location = new System.Drawing.Point(356, 65);
+            this.cb_codeAdd.MaxLength = 7;
             this.cb_codeAdd.Name = "cb_codeAdd";
             this.cb_codeAdd.PlaceholderText = "Enter item code / max 7 digits";
             this.cb_codeAdd.Size = new System.Drawing.Size(277, 25);
             this.cb_codeAdd.TabIndex = 30;
+            this.cb_codeAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cb_codeAdd_KeyPress);
             // 
             // sizeLabel
             // 
@@ -216,6 +221,7 @@
             this.tb_sizeWidthAdd.PlaceholderText = "width";
             this.tb_sizeWidthAdd.Size = new System.Drawing.Size(68, 25);
             this.tb_sizeWidthAdd.TabIndex = 27;
+            this.tb_sizeWidthAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_sizeWidthAdd_KeyPress);
             // 
             // nameLabel
             // 
@@ -248,6 +254,7 @@
             // tb_lotNumberAdd
             // 
             this.tb_lotNumberAdd.Location = new System.Drawing.Point(28, 65);
+            this.tb_lotNumberAdd.MaxLength = 7;
             this.tb_lotNumberAdd.Name = "tb_lotNumberAdd";
             this.tb_lotNumberAdd.PlaceholderText = "Enter Lot Number / max 7 digits";
             this.tb_lotNumberAdd.Size = new System.Drawing.Size(277, 25);
