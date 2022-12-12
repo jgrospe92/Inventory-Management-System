@@ -42,5 +42,45 @@ namespace Inventory_Management_System.Views.Report
                 row.Cells["productLocation"].Value = product.ProdLocation;
             }
         }
+
+        Bitmap bitmap;
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawImage(bitmap, 0, 0);
+        }
+
+     
+        private void printButton_Click(object sender, EventArgs e)
+        {
+            //Graphics g = this.CreateGraphics();
+            //bmp = new Bitmap(this.Size.Width, this.Height, g);
+            //Graphics mg = Graphics.FromImage(bmp);
+            //mg.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, productsDataGrid.Size);
+            //printPreviewDialog1.ShowDialog();
+            //Resize DataGridView to full height.
+            int height = productsDataGrid.Height;
+            productsDataGrid.Height = productsDataGrid.RowCount * productsDataGrid.RowTemplate.Height;
+
+            //Create a Bitmap and draw the DataGridView on it.
+            bitmap = new Bitmap(this.productsDataGrid.Width, this.productsDataGrid.Height);
+            productsDataGrid.DrawToBitmap(bitmap, new Rectangle(0, 0, this.productsDataGrid.Width, this.productsDataGrid.Height));
+            //Resize DataGridView back to original height.
+            productsDataGrid.Height = height;
+
+            //Show the Print Preview Dialog.
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.PrintPreviewControl.Zoom = 1;
+            printPreviewDialog1.ShowDialog();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Report_Load(object sender, EventArgs e)
+        {
+        
+        }
     }
 }

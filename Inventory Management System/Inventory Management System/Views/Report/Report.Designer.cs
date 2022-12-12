@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Report));
             this.panel1 = new System.Windows.Forms.Panel();
             this.reportLabel = new System.Windows.Forms.Label();
             this.productsDataGrid = new System.Windows.Forms.DataGridView();
@@ -44,8 +45,13 @@
             this.productLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deleteProduct = new System.Windows.Forms.DataGridViewButtonColumn();
             this.productEdit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.printButton = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsDataGrid)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -56,6 +62,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(998, 65);
             this.panel1.TabIndex = 19;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // reportLabel
             // 
@@ -113,7 +120,7 @@
             this.productsDataGrid.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.productsDataGrid.RowTemplate.Height = 29;
             this.productsDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.productsDataGrid.Size = new System.Drawing.Size(998, 479);
+            this.productsDataGrid.Size = new System.Drawing.Size(998, 528);
             this.productsDataGrid.TabIndex = 20;
             // 
             // product_ID
@@ -203,18 +210,59 @@
             this.productEdit.Visible = false;
             this.productEdit.Width = 125;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.printButton);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 496);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(998, 97);
+            this.panel2.TabIndex = 21;
+            // 
+            // printButton
+            // 
+            this.printButton.BackColor = System.Drawing.Color.Black;
+            this.printButton.ForeColor = System.Drawing.Color.White;
+            this.printButton.Location = new System.Drawing.Point(912, 14);
+            this.printButton.Name = "printButton";
+            this.printButton.Size = new System.Drawing.Size(74, 38);
+            this.printButton.TabIndex = 0;
+            this.printButton.Text = "Print";
+            this.printButton.UseVisualStyleBackColor = false;
+            this.printButton.Click += new System.EventHandler(this.printButton_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(998, 544);
+            this.ClientSize = new System.Drawing.Size(998, 593);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.productsDataGrid);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1016, 640);
             this.Name = "Report";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Report";
+            this.Load += new System.EventHandler(this.Report_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.productsDataGrid)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -234,5 +282,9 @@
         private DataGridViewTextBoxColumn productLocation;
         private DataGridViewButtonColumn deleteProduct;
         private DataGridViewButtonColumn productEdit;
+        private Panel panel2;
+        private Button printButton;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private PrintPreviewDialog printPreviewDialog1;
     }
 }
