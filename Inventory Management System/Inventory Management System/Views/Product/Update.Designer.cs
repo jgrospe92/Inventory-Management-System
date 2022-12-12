@@ -38,11 +38,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 54);
+            this.label1.Location = new System.Drawing.Point(13, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(234, 20);
+            this.label1.Size = new System.Drawing.Size(288, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "How many labels you took?";
+            this.label1.Text = "How many labels have you taken?";
             // 
             // qtyTextBox
             // 
@@ -50,6 +50,7 @@
             this.qtyTextBox.Name = "qtyTextBox";
             this.qtyTextBox.Size = new System.Drawing.Size(101, 27);
             this.qtyTextBox.TabIndex = 1;
+            this.qtyTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.qtyTextBox_KeyPress);
             // 
             // updateButton
             // 

@@ -53,7 +53,16 @@ namespace Inventory_Management_System.Views.Product
         {
             this.Close();
         }
+        private void qtyTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                MessageBox.Show("You must enter a numeric value!");
+            }
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
 
-   
+        
+
     }
 }
